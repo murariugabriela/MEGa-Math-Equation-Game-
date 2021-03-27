@@ -8,35 +8,36 @@
 <link rel="stylesheet" href="stil.css">
 <script src="myscript.js"></script>
 </head>
-<body>
+<body onload="citat();">
 
   <div>
     <table class="meniu">
       <tr>
+        <td class="meniu_icon"><a href="index.html"><div class="elem_meniu_link"><img src="gallery_hero_il_fullxfull.1182454995_czcy.svg" alt="emblema" id="emblema"></div> </a></td>
         <td class="elem_meniu"><a href="algebra.html"><div class="elem_meniu_link">Algebră</div> </a></td>
         <td class="elem_meniu"><a href="analiza.html"><div class="elem_meniu_link">Analiză</div> </a></td>
         <td class="elem_meniu"><a href="geometrie.html"><div class="elem_meniu_link">Geometrie</div></a></td>
         <td class="elem_meniu ales"><a href="trigonometrie.html"><div class="elem_meniu_link">Trigonometrie</div> </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()" ><svg height="18" width="18"><line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(241, 170, 241);stroke-width:4"/><line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(241, 170, 241);stroke-width:4"/><line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(241, 170, 241);stroke-width:4"/></svg></button></td>
+        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()" ><svg height="18" width="18"><line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4"/></svg></button></td>
       </tr>
       </table>
 </div>
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
     <h1>Login</h1>
-    <label for="email"><b>Email</b></label>
+    <label><b>Email</b>
     <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
+    </label>
+    <label><b>Password</b>
     <input type="password" placeholder="Enter Password" name="psw" required>
-
+    </label>
     <button type="submit" class="btn">Login</button>
   </form>
 </div>
 
-<div class="footer">
-  <p>Resize the browser window to see how the content respond to the resizing.</p>
-</div>
+<footer>
+  <p id="citat"></p>
+</footer>
 
 </body>
 </html>
