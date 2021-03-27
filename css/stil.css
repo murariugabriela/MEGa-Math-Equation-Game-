@@ -1,21 +1,12 @@
 * {
     box-sizing: border-box;
   }
-  .row{
-      margin-top: 85px;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  [class*="col-"] {
-    float: left;
-    padding: 15px;
-  }
   html {
     font-family: "Lucida Sans", sans-serif;
+  }
+  body{
+    height: 1500px;
+    background-image: url("Picture1.png");
   }
   td{
     text-align: center;
@@ -24,51 +15,86 @@
       position: fixed;
       right: 0;
       top: 0;
-      height: 1.5cm;
+      height: 1cm;
       width: 100%;
-      background-color: #be70e2;
-      color: #ffffff;
+      background-color: #8c92f0;
+  }
+  .chenar{
+    z-index: -1;
+    position: relative;
+    display: flex;
+    float: right;
+    width: 30%;
+    height: 90%;
+    margin-top: 2cm;
+    margin-right: 0.3%;
+    background-color: rgb(188, 225, 247);
+    opacity: 0.8;
+    align-content: space-around;
+  }
+  #citat{
+    text-align: center;
+    font-size: 12px;
+    color:rgb(2, 37, 37);
+  }
+  .content{
+    font-family: sans-serif;
+    padding-right: 0.5cm;
+    padding-left: 0.5cm;
+    font-size: 20px;
+    text-align: justify;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    color: rgb(2, 37, 37);
+  }
+  .meniu_icon{
+    width: 5%;
   }
   .cerc_meniu{
-    animation: mymove 5s infinite;
     width: 100%;
     height: 1.5cm;
-    background-color: #be70e2;
-    border: #be70e2;
+    background-color:  #8c92f0;
+    border: #8c92f0;
   }
   .cerc_meniu:hover{
-    background-color: #a167be;
-    border: #a167be;
+    background-color:  #6f76db;
+    border:  #6f76db;
   }
   a{
+    color: white;
     text-decoration: none;
   }
   .elem_meniu{
-      width: 24%;
-      text-align: center;
-      font-size: 16px;
-      font-weight: bold;
+    width: 22.7%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
   }
   .ales{
-    background-color: #9042b8;
+       color: white;
+       background-color: #383d86;
   }
-  
+  .meniu_icon:hover{
+    background-color: #6f76db;
+  }
   .elem_meniu:hover{
-      background-color: #a167be;
+      background-color: #6f76db;
   }
   .ales:hover{
-    background-color: #9042b8;
+    background-color: #6f76db;
   }
-  
-  .footer{
+  #emblema{
+    width: 1.5cm;
+    height: 1.5cm;
+  }
+
+  footer{
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #ee9fd0;
-    color: #ffffff;
-    text-align: center;
-    font-size: 12px;
+    background-color: #82b2ce;
   }
   
   /* The popup form - hidden by default */
@@ -104,7 +130,7 @@
   
   /* Set a style for the submit/login button */
   .form-container .btn {
-    background-color: #4CAF50;
+    background-color: #76e07a;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -113,17 +139,24 @@
     opacity: 0.8;
   }
   
-  /* For mobile phones: */
-  [class*="meniu"] {
-    width: 100%;
-    font-size: 12px; 
-  }
-
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 320px) {
     /* For tablets: */
-      .meniu{ width: 100%; }
+    .meniu{width: 100%;}
+    .elem_meniu{font-size: 10px; }
+    .meniu_icon{width: 5%;}
+    .chenar{ width: 95%;}
+
+  }
+  @media only screen and (min-width: 425px) {
+    /* For tablets: */
+    .meniu{width: 100%;}
+    .elem_meniu{font-size: 14px;}
+    .chenar{ width: 45%;}
+
   }
   @media only screen and (min-width: 768px) {
     /* For desktop: */
-    .meniu {width: 100%;}
+    .meniu{width: 100%;}
+    .elem_meniu{font-size: 20px;}
+    .chenar{ width: 45%;}
   }
