@@ -1,51 +1,97 @@
-* {
-    box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
   }
   html {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    box-sizing: border-box;
+    height: 100%;
     font-family: "Lucida Sans", sans-serif;
   }
+  .pagecontent{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
   body{
-    height: 1500px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
     background-image: url("Picture1.png");
   }
   td{
     text-align: center;
   }
-  .meniu{
-      position: fixed;
-      right: 0;
-      top: 0;
-      height: 1cm;
-      width: 100%;
-      background-color: #8c92f0;
-  }
   .chenar{
-    z-index: -1;
-    position: relative;
-    display: flex;
-    float: right;
-    width: 30%;
-    height: 90%;
-    margin-top: 2cm;
-    margin-right: 0.3%;
-    background-color: rgb(188, 225, 247);
+    margin-top: 1cm;
+    text-align: center;
+    background-image: radial-gradient(rgb(188, 225, 247),rgba(255,0,0,0));
+  }
+  .jocx0{
     opacity: 0.8;
-    align-content: space-around;
+    padding-left: 2%;
+    border: 1px solid rgb(175, 175, 253);
+    border-collapse: collapse;
+  }
+  .joc-elem{
+    background-color: lightblue;
+    border: 1px solid rgb(175, 175, 253);
+    color: lightslategray;
+  }
+  .joc-elem:hover{
+    background-color: rgb(5, 6, 7);
+  }
+  .chenar_relaxare{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    padding-left: 0.5cm;
+  }
+  #zonarelaxare{
+    padding-left: 0.5cm;
+    text-align: left;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(231, 203, 143));
+  }
+  .meniu{
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #8c92f0;
+  }
+  .chenare{
+    flex-direction: column;
+    display: flex;
+    margin-top: 1cm;
+    height: 100%;
+    align-content: center;
+    font-weight: bold;
   }
   #citat{
+    padding: 0.1cm;
     text-align: center;
     font-size: 12px;
     color:rgb(2, 37, 37);
   }
   .content{
+    z-index: -1;
+    text-indent: 1cm;
     font-family: sans-serif;
     padding-right: 0.5cm;
     padding-left: 0.5cm;
-    font-size: 20px;
+    font-size: 16px;
     text-align: justify;
     opacity: 1;
-    display: flex;
-    justify-content: center;
     color: rgb(2, 37, 37);
   }
   .meniu_icon{
@@ -90,7 +136,9 @@
   }
 
   footer{
+    justify-content: center;
     position: fixed;
+    float: inline-end;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -140,23 +188,34 @@
   }
   
   @media only screen and (min-width: 320px) {
-    /* For tablets: */
+    /* For phones: */
+    .pagecontent{ align-content: center; flex-direction: column; }
     .meniu{width: 100%;}
     .elem_meniu{font-size: 10px; }
     .meniu_icon{width: 5%;}
-    .chenar{ width: 95%;}
-
-  }
-  @media only screen and (min-width: 425px) {
-    /* For tablets: */
-    .meniu{width: 100%;}
-    .elem_meniu{font-size: 14px;}
-    .chenar{ width: 45%;}
-
+    .chenare{ width: 95%;  justify-content: center; align-content: center; align-items: center;}
+    #poza_copil{display: none;}
+    .joc-elem{height: 80px; width: 80px;}
+    .jocx0{ width: 100%; height: 20%;  font-size: 30px; margin-bottom: 2cm;}
   }
   @media only screen and (min-width: 768px) {
-    /* For desktop: */
+    /* For tablets: */
+    .pagecontent{flex-direction: row; align-content:space-between; }
+    .meniu{width: 100%;}
+    .elem_meniu{font-size: 14px;}
+    #poza_copil{display: block; width: 100%;}
+    .chenare{ width: 70%; justify-content: flex-start; align-content:space-between; }
+    .jocx0{ width: 100%;  margin-bottom: 2cm;}
+    .joc-elem{ height: 80px; width: 33%; font-size: 30px;}
+  }
+  @media only screen and (min-width: 1024px) {
+    /* For laptops: */
+    .pagecontent{flex-direction: row; }
     .meniu{width: 100%;}
     .elem_meniu{font-size: 20px;}
-    .chenar{ width: 45%;}
+    .chenare{ width: 60%; }
+    #poza_copil{width: 100%; display: block;}
+    .jocx0{ width: 80%; height: 80%; margin-bottom: 1cm;}
+    .joc-elem{height: 100px; font-size: 30px;}
+    
   }
