@@ -1,0 +1,315 @@
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  html {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: "Lucida Sans", sans-serif;
+  }
+  body{
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url("Picture1.png");
+  }
+  td{
+    text-align: center;
+  }
+  .meniu{
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #8c92f0;
+  }
+  #citat{
+    padding: 0.1cm;
+    text-align: center;
+    font-size: 12px;
+    color:rgb(2, 37, 37);
+  }
+  .meniu_icon{
+    width: 5%;
+  }
+  .cerc_meniu{
+    width: 100%;
+    height: 1.5cm;
+    background-color:  #8c92f0;
+    border: #8c92f0;
+  }
+  .cerc_meniu:hover{
+    background-color:  #6f76db;
+    border:  #6f76db;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  .elem_meniu{
+    width: 22.7%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .ales{
+       color: white;
+       background-color: #383d86;
+  }
+  .meniu_icon:hover{
+    background-color: #6f76db;
+  }
+  .elem_meniu:hover{
+      background-color: #6f76db;
+  }
+  .ales:hover{
+    background-color: #6f76db;
+  }
+  #emblema{
+    width: 1.5cm;
+    height: 1.5cm;
+  }
+.pageContent{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2cm;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.leftMenu{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: #8fe44a;
+  opacity: 0.7;
+}
+.itemLeftMenu{
+  height: 25%;
+  background-color: #8fe44a;
+  color: #38571f;
+  font-size: large;
+  border-bottom: 3px solid #4f8027;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.itemLeftMenu:hover{
+  background-color: #72b839;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+.centerContent{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  opacity: 0.7;
+  padding-left: 0.5cm;
+  margin-bottom: 1cm;
+  width: 100%;
+  height: 100%;
+}
+.clasament{
+  display: flex;
+  justify-content: flex-end;
+  width: 15%;
+  height: calc(100vh - 130px);
+  opacity: 0.7;
+}
+#topClasament{
+  background-color: #e09f54;
+  text-align: center;
+  height: 100%;
+  border-collapse: collapse;
+  border: 2px solid  #925e21;
+}
+.elemClasament{
+  border: 2px solid #925e21;
+}
+  footer{
+    justify-content: center;
+    position: fixed;
+    float: inline-end;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #82b2ce;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    right: 0;
+    top: 2cm;
+    display: none;
+    position: absolute;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #76e07a;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+  }
+  
+  @media only screen and (min-width: 320px) {
+    /* For phones: */
+     /* .pagecontent{ align-content: center; flex-direction: column; } */
+    .meniu{width: 100%;}
+    .elem_meniu{font-size: 10px; }
+    .meniu_icon{width: 5%;}
+    .leftMenu{
+      flex-direction: row;
+      align-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+    .itemLeftMenu{
+      width: 25%;
+      height: 35px;
+      border-right: 1px solid #4f8027;
+      border-left: 1px solid #4f8027;
+      border-top: none;
+      border-bottom: none;
+      font-size: smaller;
+    }
+    .first{
+      border-left: 2px solid #4f8027;
+      border-right: 1px solid #4f8027;
+      border-top: none;
+      border-bottom: none;
+    }
+    .final{
+    border-right: 2px solid #4f8027;
+    border-left: 1px solid #4f8027;
+    border-top: none;
+    border-bottom: none;
+    }
+    .centerContent{
+      margin-top: 0.3cm;
+    }
+    .itemLeftMenu:hover{
+      font-size: small;
+    }
+    .clasament{
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    /* For tablets: */
+    /* .pagecontent{flex-direction: row; align-content:space-between; } */
+    .meniu{width: 100%;}
+    .elem_meniu{font-size: 14px;}
+    .leftMenu{
+      flex-direction: row;
+      align-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+    .pageContent{
+      flex-direction: row;
+    }
+    .itemLeftMenu{
+      width: 25%;
+      height: 35px;
+      border-right: 1px solid #4f8027;
+      border-left: 1px solid #4f8027;
+      border-top: none;
+      border-bottom: none;
+      font-size: smaller;
+    }
+    .centerContent{
+      margin-top: 0cm;
+      margin-left: 0.5cm;
+    }
+    .clasament{
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    /* For laptops: */
+    /* .pagecontent{flex-direction: row; } */
+    .meniu{width: 100%;}
+    .elem_meniu{font-size: 20px;}
+    .leftMenu{
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      width: 15%;
+      height: calc(100vh - 130px);
+    }
+    .pageContent{
+      flex-direction: row;
+    }
+    .itemLeftMenu{
+      width: 100%;
+      height: 100%;
+      border-right: none;
+      border-left: none;
+      border-top: 1px solid #4f8027;
+      border-bottom: 1px solid #4f8027;
+      font-size: large;
+    }
+    .first{
+      border-left: none;
+      border-right: none;
+      border-top: 2px solid #4f8027;
+      border-bottom: 1px solid #4f8027;
+    }
+    .final{
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid #4f8027;;
+    border-bottom: 2px solid #4f8027;
+    }
+    .itemLeftMenu:hover{
+      font-size: larger;
+    }
+    .centerContent{
+      margin-top: 0cm;
+      margin-left: 0.5cm;
+    }
+    .clasament{
+      display: flex;
+    }
+  }
