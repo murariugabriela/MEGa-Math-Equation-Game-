@@ -3,29 +3,121 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>MEGa</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="stil.css">
+  <title>MEGa - Analiză</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/analizastyle.css">
+  <script src="myscript.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
 </head>
-<body>
+
+<body onload="citat();">
+
 
   <div>
     <table class="meniu">
       <tr>
+        <td class="meniu_icon"><a href="index.html"><div class="elem_meniu_link"><img src="images/emblema.svg" alt="emblema" id="emblema"></div> </a></td>
         <td class="elem_meniu"><a href="algebra.html"><div class="elem_meniu_link">Algebră</div> </a></td>
         <td class="elem_meniu ales"><a href="analiza.html"><div class="elem_meniu_link">Analiză</div> </a></td>
         <td class="elem_meniu"><a href="geometrie.html"><div class="elem_meniu_link">Geometrie</div></a></td>
         <td class="elem_meniu"><a href="trigonometrie.html"><div class="elem_meniu_link">Trigonometrie</div> </a></td>
-        <td id="cerc_meniu"> <svg height="18" width="18"><line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(241, 170, 241);stroke-width:4"/><line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(241, 170, 241);stroke-width:4"/><line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(241, 170, 241);stroke-width:4"/></svg></td>
+        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()" ><svg height="18" width="18"><line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4"/></svg></button></td>
       </tr>
       </table>
-      
 </div>
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+      <label><b>Email</b>
+        <input type="text" placeholder="Enter Email" name="email" required>
+      </label>
+      <label><b>Password</b>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+      </label>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
 
 
-<div class="footer">
-  <p>Resize the browser window to see how the content respond to the resizing.</p>
-</div>
+  <div class="pageContent">
+    <div class="leftMenu">
+      <button class="itemLeftMenu first">Teorie</button>
+      <button class="itemLeftMenu">Probleme rezolvate</button>
+      <button class="itemLeftMenu">Probleme nerezolvate</button>
+      <button class="itemLeftMenu final">Test</button>
+    </div>
 
+    <div class="centerContent">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi quas nam tempora commodi molestiae dignissimos qui laborum consequatur ut dolorum accusantium voluptate sed, cupiditate mollitia ipsum ullam temporibus voluptatem!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus nam ab saepe. Placeat nostrum ipsa magni dolores autem, saepe harum, laborum est architecto quasi illo? Neque, laudantium quis. Dolorum!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos autem sequi doloremque ipsa. Provident, suscipit. Sed excepturi recusandae dolorem dicta nobis cupiditate animi mollitia aut illum, voluptate modi harum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis doloribus ullam non, fugit pariatur harum aperiam eveniet perspiciatis blanditiis, dolorum soluta error laboriosam ad obcaecati similique possimus ipsum tempora cum!</p>
+    </div>
+
+    <div class="clasament">
+      <table id="topClasament">
+        <tr class="elemClasament">
+          <td colspan="2" class="elemClasament">
+            <h3>Top 10 cursanți</h3>
+          </td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant1</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant2</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant3</td>
+          <td lass="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant4</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant5</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant6</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant7</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant8</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant9</td>
+          <td class="elemClasament">10</td>
+        </tr>
+        <tr class="elemClasament">
+          <td class="elemClasament">Cursant10</td>
+          <td class="elemClasament">10</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <p id="citat"></p>
+  </footer>
 </body>
+
 </html>
