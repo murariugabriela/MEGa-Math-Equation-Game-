@@ -10,7 +10,6 @@
     bottom: 0;
     top: 0;
     box-sizing: border-box;
-    height: 100%;
     font-family: "Lucida Sans", sans-serif;
   }
   body{
@@ -18,6 +17,7 @@
     left: 0;
     bottom: 0;
     top: 0;
+    overflow: hidden;
     background-image: url("../images/Picture1.png");
   }
   td{
@@ -84,7 +84,7 @@
   align-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   justify-content: space-between;
 }
 .leftMenu{
@@ -113,15 +113,24 @@
 .centerContent{
   display: flex;
   flex-direction: column;
+  text-align: left;
   background-color: white;
   opacity: 0.7;
-  padding-left: 0.5cm;
-  margin-bottom: 1cm;
+  overflow-y: scroll;
+  padding-left: 0.2cm;
+  margin-bottom: 2cm;
   width: 100%;
   height: 100%;
 }
 #teorie{
   display: block;
+}
+.formula{
+  margin-left: 0;
+}
+.formule{
+  text-align: left;
+  align-content: left;
 }
 #test,#probRezolvate,#probNerezolvate{
   display: none;
@@ -208,7 +217,7 @@
       align-content: center;
       text-align: center;
       width: 100%;
-      height: 100%;
+      height: 1cm;
     }
     .itemLeftMenu{
       width: 25%;
@@ -232,7 +241,7 @@
     border-bottom: none;
     }
     .centerContent{
-      margin-top: 0.3cm;
+      margin-top: 0cm;
     }
     .itemLeftMenu:hover{
       font-size: small;
@@ -251,10 +260,11 @@
       align-content: center;
       text-align: center;
       width: 100%;
-      height: 100%;
+      height: 1cm;
     }
     .pageContent{
-      flex-direction: row;
+      flex-direction: column;
+      height: 90vh;
     }
     .itemLeftMenu{
       width: 25%;
