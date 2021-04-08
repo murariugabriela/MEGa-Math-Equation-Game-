@@ -18,6 +18,7 @@
     left: 0;
     bottom: 0;
     top: 0;
+    overflow: hidden;
     background-image: url("../images/Picture1.png");
   }
   td{
@@ -84,7 +85,7 @@
   align-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   justify-content: space-between;
 }
 .leftMenu{
@@ -110,21 +111,54 @@
   font-weight: bold;
   font-size: larger;
 }
+
 .centerContent{
   display: flex;
   flex-direction: column;
   background-color: white;
+  text-align: justify;
   opacity: 0.7;
-  padding-left: 0.5cm;
-  margin-bottom: 1cm;
+  padding-left: 0.2cm;
+  padding-right: 0.2cm;
+  margin-right: 0;
+  margin-top: 0.3cm;
+  margin-left: 0cm;
+  margin-bottom: 2cm;
   width: 100%;
   height: 100%;
 }
 #teorie{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: flex-start;
+}
+#probRezolvate{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 #test,#probRezolvate,#probNerezolvate{
   display: none;
+}
+table.formule-derivate-integrale td, table.formule-derivate-integrale tr, table.formule-derivate-integrale{
+  border: 1px solid gray;
+  border-collapse: collapse;
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+.table-number{
+  width: 10%;
+}
+.td-title{
+  font-weight: bold;
 }
 .clasament{
   display: flex;
@@ -143,7 +177,7 @@
 .elemClasament{
   border: 2px solid #925e21;
 }
-  footer{
+  .footer{
     justify-content: center;
     position: fixed;
     float: inline-end;
@@ -199,7 +233,9 @@
   }
   @media only screen and (min-width: 320px) {
     /* For phones: */
-     /* .pagecontent{ align-content: center; flex-direction: column; } */
+    .limite-integrale{overflow: scroll;}
+    body{height: unset; overflow: unset;}
+    .katex { font-size: 15px !important; } 
     .meniu{width: 100%;}
     .elem_meniu{font-size: 10px; }
     .meniu_icon{width: 5%;}
@@ -208,7 +244,7 @@
       align-content: center;
       text-align: center;
       width: 100%;
-      height: 100%;
+      height: 1cm;
     }
     .itemLeftMenu{
       width: 25%;
@@ -225,14 +261,29 @@
       border-top: none;
       border-bottom: none;
     }
+
     .final{
     border-right: 2px solid #4f8027;
     border-left: 1px solid #4f8027;
     border-top: none;
     border-bottom: none;
     }
+    .formule-derivate-integrale{
+      width: inherit;
+    }
+    #teorie{
+      width: inherit;
+    }
+    
+    .limite-integrale{
+      width: inherit;
+    }
+    .pageContent{
+      height: 100%;
+    }
     .centerContent{
-      margin-top: 0.3cm;
+      width: inherit;
+      overflow: scroll;
     }
     .itemLeftMenu:hover{
       font-size: small;
@@ -244,6 +295,9 @@
   @media only screen and (min-width: 768px) {
     /* For tablets: */
     /* .pagecontent{flex-direction: row; align-content:space-between; } */
+    
+    body{overflow: hidden;}
+    .katex { font-size: 18px !important; } 
     .meniu{width: 100%;}
     .elem_meniu{font-size: 14px;}
     .leftMenu{
@@ -251,10 +305,10 @@
       align-content: center;
       text-align: center;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
     .pageContent{
-      flex-direction: row;
+      flex-direction: column;
     }
     .itemLeftMenu{
       width: 25%;
@@ -266,8 +320,7 @@
       font-size: smaller;
     }
     .centerContent{
-      margin-top: 0cm;
-      margin-left: 0.5cm;
+      overflow-y: scroll;
     }
     .clasament{
       display: none;
@@ -276,6 +329,12 @@
   @media only screen and (min-width: 1024px) {
     /* For laptops: */
     /* .pagecontent{flex-direction: row; } */
+    .formule-derivate-integrale{
+      width: 100%;
+    }
+    .limite-integrale{overflow: unset;}
+    body{overflow: hidden; height: 80vh;}
+    .katex { font-size: 20px !important;  } 
     .meniu{width: 100%;}
     .elem_meniu{font-size: 20px;}
     .leftMenu{
@@ -314,8 +373,7 @@
       font-size: larger;
     }
     .centerContent{
-      margin-top: 0cm;
-      margin-left: 0.5cm;
+      overflow-y: scroll;
     }
     .clasament{
       display: flex;
