@@ -4,6 +4,18 @@
   *::after {
     box-sizing: inherit;
   }
+  ::-webkit-scrollbar {
+    width: 10px;
+    /* background: rgb(166, 202, 214); */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6f76db;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #8c92f0;
+  }
   html {
     right: 0;
     left: 0;
@@ -14,6 +26,7 @@
     font-family: "Lucida Sans", sans-serif;
   }
   .pagecontent{
+    margin-bottom: 2cm;
     align-items: center;
     display: flex;
     justify-content: flex-start;
@@ -23,7 +36,7 @@
     left: 0;
     bottom: 0;
     top: 0;
-    background-image: url("Picture1.png");
+    background-image: url("../Picture1.png");
   }
   td{
     text-align: center;
@@ -56,10 +69,14 @@
     width: 70%;
     padding-left: 0.5cm;
   }
+  .elem_meniu_link{
+    display: block;
+    height: 100%;
+  }
   #zonarelaxare{
     padding-left: 0.5cm;
     text-align: left;
-    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(231, 203, 143));
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(231, 203, 143),rgba(255,0,0,0));
   }
   .meniu{
     z-index: 2;
@@ -112,6 +129,7 @@
     text-decoration: none;
   }
   .elem_meniu{
+    height: 100%;
     width: 22.7%;
     text-align: center;
     font-size: 16px;
@@ -144,7 +162,10 @@
     width: 100%;
     background-color: #82b2ce;
   }
-  
+[id*="x-elem"]
+  {
+    display: none;
+  }
   /* The popup form - hidden by default */
   .form-popup {
     right: 0;
@@ -186,13 +207,13 @@
     width: 100%;
     opacity: 0.8;
   }
-  
+  button{
+    outline: none;
+  }
   @media only screen and (min-width: 320px) {
     /* For phones: */
     .pagecontent{ align-content: center; flex-direction: column; }
-    .meniu{width: 100%;}
     .elem_meniu{font-size: 10px; }
-    .meniu_icon{width: 5%;}
     .chenare{ width: 95%;  justify-content: center; align-content: center; align-items: center;}
     #poza_copil{display: none;}
     .joc-elem{height: 80px; width: 80px;}
@@ -201,21 +222,17 @@
   @media only screen and (min-width: 768px) {
     /* For tablets: */
     .pagecontent{flex-direction: row; align-content:space-between; }
-    .meniu{width: 100%;}
     .elem_meniu{font-size: 14px;}
     #poza_copil{display: block; width: 100%;}
     .chenare{ width: 70%; justify-content: flex-start; align-content:space-between; }
-    .jocx0{ width: 100%;  margin-bottom: 2cm;}
-    .joc-elem{ height: 80px; width: 33%; font-size: 30px;}
+    .jocx0{margin-bottom: 2cm;}
+    .joc-elem{ width: 33%;}
   }
   @media only screen and (min-width: 1024px) {
     /* For laptops: */
-    .pagecontent{flex-direction: row; }
-    .meniu{width: 100%;}
     .elem_meniu{font-size: 20px;}
     .chenare{ width: 60%; }
-    #poza_copil{width: 100%; display: block;}
-    .jocx0{ width: 80%; height: 80%; margin-bottom: 1cm;}
-    .joc-elem{height: 100px; font-size: 30px;}
+    .jocx0{ width: 80%; height: 80%; }
+    .joc-elem{height: 100px;}
     
   }
