@@ -24,10 +24,54 @@ function Xsi0show(id) {
     }
   }
 }
-function displayCenterContentItem(id){
+function displayCenterContentItem(id) {
   document.getElementById('teorie').style.display = "none";
   document.getElementById('probRezolvate').style.display = "none";
   document.getElementById('probNerezolvate').style.display = "none";
   document.getElementById('test').style.display = "none";
-  document.getElementById(id).style.display = "block";
+  document.getElementById(id).style.display = "flex";
+  document.getElementById(id).style.flexDirection = "column";
+}
+function verifyAnswer(prefix) {
+  document.getElementById(prefix+'input1').textContent = '';
+  document.getElementById(prefix+'input2').textContent = '';
+  document.getElementById(prefix+'input3').textContent = '';
+  document.getElementById(prefix+'input4').textContent = '';
+  document.getElementById(prefix+'b').style.border = '1px solid gray';
+  document.getElementById(prefix+'d').style.border = '1px solid gray';
+  document.getElementById(prefix+'a').style.border = '1px solid gray';
+  document.getElementById(prefix+'c').style.border = '1px solid gray';
+  if (document.getElementById(prefix+'var1').checked) {
+    if (document.getElementById(prefix+'var1').value == 'true')
+      document.getElementById(prefix+'a').style.border = '1px solid limegreen';
+    else
+      document.getElementById(prefix+'a').style.border = '1px solid red';
+  }
+  else if (!document.getElementById(prefix+'var1').checked && document.getElementById(prefix+'var1').value == 'true')
+    document.getElementById(prefix+'input1').textContent = 'Trebuia bifat';
+  if (document.getElementById(prefix+'var2').checked) {
+    if (document.getElementById(prefix+'var2').value == 'true')
+      document.getElementById(prefix+'b').style.border = '1px solid limegreen';
+    else
+      document.getElementById(prefix+'b').style.border = '1px solid red';
+  }
+  else if (!document.getElementById(prefix+'var2').checked && document.getElementById(prefix+'var2').value == 'true')
+    document.getElementById(prefix+'input2').textContent = 'Trebuia bifat';
+  if (document.getElementById(prefix+'var3').checked) {
+    if (document.getElementById(prefix+'var3').value == 'true')
+      document.getElementById(prefix+'c').style.border = '1px solid limegreen';
+    else
+      document.getElementById(prefix+'c').style.border = '1px solid red';
+  }
+  else if (!document.getElementById(prefix+'var3').checked && document.getElementById(prefix+'var3').value == 'true')
+    document.getElementById(prefix+'input3').textContent = 'Trebuia bifat';
+  if (document.getElementById(prefix+'var4').checked) {
+    if (document.getElementById(prefix+'var4').value == 'true')
+      document.getElementById(prefix+'d').style.border = '1px solid limegreen';
+    else
+      document.getElementById(prefix+'d').style.border = '1px solid red';
+  }
+  else if (!document.getElementById(prefix+'var4').checked && document.getElementById(prefix+'var4').value == 'true')
+    document.getElementById(prefix+'input4').textContent = 'Trebuia bifat';
+
 }
