@@ -3,42 +3,101 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>MEGa</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/stil.css">
-<script src="../javascript/myscript.js"></script>
+  <title>MEGa - Pagina principală</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/stil.css">
+  <link rel="icon" href="../logo.jpg">
+  <script src="../javascript/myscript.js"></script>
 </head>
+
 <body onload="citat();">
 
-<div>
-    <table class="meniu">
-      <tr>
-        <td class="meniu_icon"><a href="index.html"><div class="elem_meniu_link"><img src="../gallery_hero_il_fullxfull.1182454995_czcy.svg" alt="emblema" id="emblema"></div> </a></td>
-        <td class="elem_meniu"><a href="algebra.html"><div class="elem_meniu_link">Algebră</div> </a></td>
-        <td class="elem_meniu"><a href="analiza.html"><div class="elem_meniu_link">Analiză</div> </a></td>
-        <td class="elem_meniu"><a href="geometrie.html"><div class="elem_meniu_link">Geometrie</div></a></td>
-        <td class="elem_meniu"><a href="trigonometrie.html"><div class="elem_meniu_link">Trigonometrie</div> </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()" ><svg height="18" width="18"><line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4"/></svg></button></td>
-      </tr>
-    </table>  
-</div>
+  <table class="meniu">
+    <tr>
+      <td class="meniu_icon"><a href="index.html">
+          <img src="../emblema.svg" alt="emblema" id="emblema">
+        </a>
+      </td>
+      <td class="elem_meniu">
+        <a href="algebra.html" class="elem_meniu_link">
+          Algebră
+        </a>
+      </td>
+      <td class="elem_meniu">
+        <a href="analiza.html" class="elem_meniu_link">
+          Analiză
+        </a>
+      </td>
+      <td class="elem_meniu">
+        <a href="geometrie.html" class="elem_meniu_link">
+          Geometrie
+        </a>
+      </td>
+      <td class="elem_meniu"><a href="trigonometrie.html" class="elem_meniu_link">
+          Trigonometrie
+        </a>
+      </td>
+      <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+            <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+            <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+            <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+          </svg></button></td>
+    </tr>
+  </table>
+  <div class="pagecontent">
+    <div class="chenare">
+      <div class="chenar">
+        <div class="content">
+          <p>Acest site este dedicat pasionaților de matematică (și celor care nu sunt pasionați, dar sunt nevoiți să
+            învețe) și oferă un mod simplu și distractiv de a învăța matematică. Dacă te numeri printre cei menționați
+            anterior, nu rata ocazia și adună cât mai multe puncte pentru a avea acces la toate exercițiile, și în
+            același
+            timp, a avea acces la zona de „relaxare” destinată utilizatorilor noștri. </p>
+        </div>
+      </div>
 
-<div class="chenar"> <div class="content"> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit accusamus vel molestiae veniam ullam beatae quis magnam recusandae optio, atque aliquam a voluptates non, ea id, obcaecati officiis commodi quasi?</p></div></div>
-<div class="form-popup" id="myForm">
-  <form class="form-container">
-    <h1>Login</h1>
-    <label><b>Email</b>
-    <input type="text" placeholder="Enter Email" name="email" required>
-    </label>
-    <label><b>Password</b>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    </label>
-    <button type="button" class="btn">Login</button>
-  </form>
-</div>
-
-<footer>
-  <p id="citat"></p>
-</footer>
+      <div class="chenar_relaxare">
+        <h2 id="zonarelaxare">Zona de relaxare</h2>
+        <h2>X și 0</h2>
+        <table class="jocx0">
+          <tr>
+            <td class="joc-elem" onclick="Xsi0show('x-elem1')"><span id="x-elem1">X</span></td>
+            <td class="joc-elem" onclick="Xsi0show('x-elem2')"><span id="x-elem2">X</span></td>
+            <td class="joc-elem" onclick="Xsi0show('x-elem3')"><span id="x-elem3">X</span></td>
+          </tr>
+          <tr>
+            <td class="joc-elem" onclick="Xsi0show('x-elem4')"><span id="x-elem4">X</span></td>
+            <td class="joc-elem" onclick="Xsi0show('x-elem5')"><span id="x-elem5">X</span></td>
+            <td class="joc-elem" onclick="Xsi0show('x-elem6')"><span id="x-elem6">X</span></td>
+          </tr>
+          <tr>
+            <td class="joc-elem" onclick="Xsi0show('x-elem7')"><span id="x-elem7">X</span></td>
+            <td class="joc-elem" onclick="Xsi0show('x-elem8')"><span id="x-elem8">X</span></td>
+            <td class="joc-elem" onclick="Xsi0show('x-elem9')"><span id="x-elem9">X</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>Login</h1>
+        <label><b>Email</b>
+          <input type="text" placeholder="Enter Email" name="email" required>
+        </label>
+        <label><b>Password</b>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </label>
+        <button type="button" class="btn">Login</button>
+        <button type="button" class="btn" onclick="window.location.href='register.html';">Register</button>
+      </form>
+    </div>
+    <div>
+      <img src="../Drawing.png" alt="fundal poza" id="poza_copil" />
+    </div>
+    <footer>
+      <p id="citat"></p>
+    </footer>
+  </div>
 </body>
+
 </html>
