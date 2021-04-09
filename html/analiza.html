@@ -19,41 +19,6 @@
 </head>
 
 <body onload="citat();">
-
-
-  <div>
-    <table class="meniu">
-      <tr>
-        <td class="meniu_icon"><a href="index.html"><div class="elem_meniu_link"><img src="images/emblema.svg" alt="emblema" id="emblema"></div> </a></td>
-        <td class="elem_meniu"><a href="algebra.html"><div class="elem_meniu_link">Algebră</div> </a></td>
-        <td class="elem_meniu ales"><a href="analiza.html"><div class="elem_meniu_link">Analiză</div> </a></td>
-        <td class="elem_meniu"><a href="geometrie.html"><div class="elem_meniu_link">Geometrie</div></a></td>
-        <td class="elem_meniu"><a href="trigonometrie.html"><div class="elem_meniu_link">Trigonometrie</div> </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()" ><svg height="18" width="18"><line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4"/></svg></button></td>
-      </tr>
-      </table>
-</div>
-  <div class="form-popup" id="myForm"><!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
-
-<head>
-  <meta charset="UTF-8">
-  <title>MEGa - Analiză</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/analizastyle.css">
-  <script src="myscript.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
-" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
-" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
-" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-
-</head>
-
-<body onload="citat();">
   <div>
     <table class="meniu">
       <tr>
@@ -221,6 +186,188 @@
               <td>$$\int \frac{x}{\sqrt{a^2-x^2}}dx=-\sqrt{a^2-x^2}+\mathscr{C}$$</td>
             </tr>
           </table>
+          <table class="formule-derivate">
+            <tr>
+              <td colspan="2"><span class="td-title">Derivate</span></td>
+            </tr>
+            <tr>
+              <td class="table-number">1</td>
+              <td>$$c'=0$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">2</td>
+              <td>$$x'=1$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">3</td>
+              <td>$$(x^n)'=n\cdot x^{n-1}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">4</td>
+              <td>$$\left(\sqrt{x}\right)'=\frac{1}{2\cdot\sqrt{x}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">5</td>
+              <td>$$\left(e^x\right)'= e^x$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">6</td>
+              <td>$$\left(a^x\right)' = a^x \cdot \ln a$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">7</td>
+              <td>$$\left(\ln x \right)'= \frac{1}{x}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">8</td>
+              <td>$$\left( \log_a x \right)'=\frac{1}{x\cdot \ln a}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">9</td>
+              <td>$$\left(\arctg{x}\right)'=\frac{1}{x^2+1}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">10</td>
+              <td>$$\left(\arcctg{x}\right)'=-\frac{1}{x^2+1}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">11</td>
+              <td>$$\left(\arcsin{x}\right)'=\frac{1}{\sqrt{1-x^2}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">12</td>
+              <td>$$\left(\arccos{x}\right)'=-\frac{1}{\sqrt{1-x^2}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">13</td>
+              <td>$$\left(\sin{x}\right)'=\cos{x}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">14</td>
+              <td>$$\left(\cos{x}\right)'=-\sin{x}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">15</td>
+              <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">16</td>
+              <td>$$\left(\ctg{x}\right)'=-\frac{1}{\sin^2{x}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">17</td>
+              <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">18</td>
+              <td>$$\left(\sqrt{x^2-a^2}\right)'=\frac{x}{\sqrt{x^2-a^2}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">19</td>
+              <td>$$\left(\sqrt{x^2+a^2}\right)'=\frac{x}{\sqrt{x^2+a^2}}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">20</td>
+              <td>$$\left(\sqrt{a^2-x^2}\right)'=-\frac{x}{\sqrt{a^2-x^2}}$$</td>
+            </tr>
+          </table>
+          <table class="formule-integrale">
+            <tr>
+              <td colspan="2"><span class="td-title">Integrale</span></td>
+            </tr>
+            <tr>
+              <td class="table-number">1</td>
+              <td>$$\int dx = x + \mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">2</td>
+              <td>$$ \int xdx = \frac{x^2}{2}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">3</td>
+              <td>$$ \int x^n dx = \frac{x^{n+1}}{n+1}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">4</td>
+              <td>$$ \int \sqrt{x}dx = \frac{2}{3}x\sqrt{x}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">5</td>
+              <td>$$\int e^x dx = e^x$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">6</td>
+              <td>$$\int a^x dx = \frac{a^x}{\ln a} + \mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">7</td>
+              <td>$$\int\frac{1}{x} dx=\ln{|x|}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">8</td>
+              <td>$$\int\frac{1}{x^2-a^2} dx=\frac{1}{2a}\ln \left|\frac{x-a}{x+a}\right| +\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">9</td>
+              <td>$$\int \frac{1}{x^2+1}dx=\left(\arctg{x}\right)+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">10</td>
+              <td>$$\int \frac{1}{x^2+a^2}dx=\frac{1}{a}\left(\arctg{\frac{x}{a}}\right)+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">11</td>
+              <td>$$\int \frac{1}{\sqrt{x^2-a^2}}dx=\ln\left|x+\sqrt{x^2-a^2}\right|+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">12</td>
+              <td>$$\int \frac{1}{\sqrt{x^2+a^2}}dx=\ln\left(x+\sqrt{x^2+a^2}\right)+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">13</td>
+              <td>$$\int \frac{1}{\sqrt{1-x^2}}dx=\arcsin{x}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">14</td>
+              <td>$$\int \frac{1}{\sqrt{a^2-x^2}}dx=\arcsin{\frac{x}{a}}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">15</td>
+              <td>$$\int \sin{x}dx=-\cos{x}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">16</td>
+              <td>$$\int \cos{x}dx=\sin{x}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">17</td>
+              <td>$$\int \tg{x}dx=-\ln\left|\cos{x}\right|+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">18</td>
+              <td>$$\int \ctg{x}dx=\ln\left|\sin{x}\right|+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">19</td>
+              <td>$$\int \frac{1}{\cos^2{x}}dx=\tg{x}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">20</td>
+              <td>$$\int \frac{1}{\sin^2{x}}dx=-\ctg{x}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">21</td>
+              <td>$$\int \frac{x}{\sqrt{x^2-a^2}}dx=\sqrt{x^2-a^2}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">22</td>
+              <td>$$\int \frac{x}{\sqrt{x^2+a^2}}dx=\sqrt{x^2+a^2}+\mathscr{C}$$</td>
+            </tr>
+            <tr>
+              <td class="table-number">23</td>
+              <td>$$\int \frac{x}{\sqrt{a^2-x^2}}dx=-\sqrt{a^2-x^2}+\mathscr{C}$$</td>
+            </tr>
+          </table>
         </div>
         <div class="limite-integrale">
           <table class="formule-derivate-integrale">
@@ -270,7 +417,7 @@
           </table>
         </div>
         <div class="limite-integrale">
-          <table class="formule-derivate-integrale">
+          <table class="formule-derivate-integrale tabel2">
             <tr>
               <td colspan="2"><span class="td-title">Operații</span></td>
               <td><span class="td-title">Formule</span></td>
@@ -328,7 +475,7 @@
         <div class="limite-integrale">
           <h2>Integrale definite</h2>
           <p>
-            
+
             $$Fie \enspace F:I \rightarrow \R \enspace o \enspace primitivă \enspace a \enspace funcției \enspace
             continue
             \enspace f:I \rightarrow \R, \enspace unde \enspace I=[a;b] $$
@@ -352,41 +499,41 @@
           </p>
           <h2>Proprietăți ale integralelor definite</h2>
           <p>
-            <h3>Fie funcțiile continue</h3>
-            $$ f:[a;b] \rightarrow \R, g:[a;b] \rightarrow \R \newline $$
-            $$
-            \begin{align*}
-            &
-            1. \enspace Proprietatea \enspace de \enspace liniaritate \enspace a \enspace integralei: \newline
-            &
-            \forall \lambda, \mu \in R, \int_{a}^{b} (\lambda \cdot f(x) ) + \mu \cdot g(x) dx = \lambda \int_{a}^{b}
-            f(x)dx + \mu \int_{a}^{b} g(x)dx. \newline
-            &
-            2. \enspace Proprietatea \enspace de \enspace aditivitate \enspace a \enspace integralei: \newline
-            &
-            \forall c \in [a;b], \int_{a}^{b} f(x)dx = \int_{a}^{c} f(x)dx + \int_{b}^{c} f(x)dx. \newline
-            &
-            3. \enspace Proprietatea de medie a integralei: \newline
-            &
-            \exist c \in (a,b) \enspace astfel \enspace încât \enspace \int_{a}^{b} f(x)fx = f(c) \cdot (b-a). \newline
-            &
-            4. \enspace Proprietatea \enspace de \enspace pozitivitate \enspace a \enspace integralei: \newline
-            &
-            dacă \enspace f \geq 0 \enspace pe \enspace [a;b], \enspace \int_{a}^{b} f(x)dx \geq 0. \newline
-            &
-            5. \enspace Proprietatea \enspace de \enspace monotonie \enspace a \enspace integralei: \newline
-            &
-            dacă f \leq g \enspace pe \enspace [a;b], \int_{a}^{b} f(x)dx \leq \int_{a}^{b} g(x)dx.
-            &
-            \end{align*}
-            $$
+          <h3>Fie funcțiile continue</h3>
+          $$ f:[a;b] \rightarrow \R, g:[a;b] \rightarrow \R \newline $$
+          $$
+          \begin{align*}
+          &
+          1. \enspace Proprietatea \enspace de \enspace liniaritate \enspace a \enspace integralei: \newline
+          &
+          \forall \lambda, \mu \in R, \int_{a}^{b} (\lambda \cdot f(x) ) + \mu \cdot g(x) dx = \lambda \int_{a}^{b}
+          f(x)dx + \mu \int_{a}^{b} g(x)dx. \newline
+          &
+          2. \enspace Proprietatea \enspace de \enspace aditivitate \enspace a \enspace integralei: \newline
+          &
+          \forall c \in [a;b], \int_{a}^{b} f(x)dx = \int_{a}^{c} f(x)dx + \int_{b}^{c} f(x)dx. \newline
+          &
+          3. \enspace Proprietatea de medie a integralei: \newline
+          &
+          \exist c \in (a,b) \enspace astfel \enspace încât \enspace \int_{a}^{b} f(x)fx = f(c) \cdot (b-a). \newline
+          &
+          4. \enspace Proprietatea \enspace de \enspace pozitivitate \enspace a \enspace integralei: \newline
+          &
+          dacă \enspace f \geq 0 \enspace pe \enspace [a;b], \enspace \int_{a}^{b} f(x)dx \geq 0. \newline
+          &
+          5. \enspace Proprietatea \enspace de \enspace monotonie \enspace a \enspace integralei: \newline
+          &
+          dacă f \leq g \enspace pe \enspace [a;b], \int_{a}^{b} f(x)dx \leq \int_{a}^{b} g(x)dx.
+          &
+          \end{align*}
+          $$
           </p>
         </div>
       </div>
       <div id="probRezolvate">
         <h2>Problema 1</h2>
         <p>
-          Calculați următoarea limită: 
+          Calculați următoarea limită:
           $$
           \begin{align*}
           &
@@ -451,39 +598,237 @@
           Calculați \enspace \lim_{x \to 3} \frac{f(x)-f(3)}{x-3}, \enspace pentru \enspace f(x)=x^3
           $$
         </p>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var1" value="true">
+                <label for="var1">$$f'(x), \enspace x=3$$</label>
+              </div>
+              <p id="input1"></p>
+            </div>
+            <div id="b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var2" value="true">
+                <label for="var2">$$f'(3)$$</label>
+              </div>
+              <p id="input2"></p>
+            </div>
+            <div id="c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var3" value="false">
+                <label for="var3">$$18$$</label>
+              </div>
+              <p id="input3"></p>
+            </div>
+            <div id="d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var4" value="true">
+                <label for="var4">$$27$$</label>
+              </div>
+              <p id="input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('')">Verifica raspuns</button>
+          </div>
+        </form>
       </div>
       <div id="test">
         <h2>Test1</h2>
-        <p>Exercițiul 1. <br />
-          Să se calculeze derivata funcției f:
+        <p>Exercițiul 1. </p>
+        <p>Să se calculeze derivata funcției f:
           $$
           f:(0,\infin) \rightarrow \R, \enspace f(x) = x \cdot ln x.
           $$
         </p>
-        <p>Exercițiul 2. <br />
-          Să se calculeze integrala următoare:
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t11a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var1" value="true">
+                <label for="t11var1">$$\ln{x}+1$$</label>
+              </div>
+              <p id="t11input1"></p>
+            </div>
+            <div id="t11b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var2" value="true">
+                <label for="t11var2">$$\ln{x}+x\cdot\frac{1}{x}$$</label>
+              </div>
+              <p id="t11input2"></p>
+            </div>
+            <div id="t11c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var3" value="false">
+                <label for="t11var3">$$\ln{x}$$</label>
+              </div>
+              <p id="t11input3"></p>
+            </div>
+            <div id="t11d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var4" value="false">
+                <label for="t11var4">$$\ln{x}\cdot x$$</label>
+              </div>
+              <p id="t11input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t11')">Verifica raspuns</button>
+          </div>
+        </form>
+        <p>Exercițiul 2. </p>
+        <p>Să se calculeze integrala următoare:
           $$
-          I = \int \frac{cos^2 x - sin^2 x}{sin^2 x \cdot cos^2 x}dx, \enspace x \in (0, \frac{\pi}{2}).
+          I = \int \frac{cos^2 x - sin^2 x}{sin^2 x \cdot cos^2 x}dx.
           $$
         </p>
-        <p>Exercițiul 3. <br />
-          Determinați F:(0, ∞) → \R, o primitivă pentru f, astfel încât F(1) = 3, unde
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t12a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var1" value="false">
+                <label for="t12var1">$$\tg{x}$$</label>
+              </div>
+              <p id="t12input1"></p>
+            </div>
+            <div id="t12b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var2" value="false">
+                <label for="t12var2">$$\tg{x}+\ctg{x}$$</label>
+              </div>
+              <p id="t12input2"></p>
+            </div>
+            <div id="t12c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var3" value="true">
+                <label for="t12var3">$$\tg{x}+\ctg{x}+\mathscr{C}$$</label>
+              </div>
+              <p id="t12input3"></p>
+            </div>
+            <div id="t12d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var4" value="true">
+                <label for="t12var4">$$\int \frac{1}{\sin^2{x}}-\int \frac{1}{\cos^2{x}}$$</label>
+              </div>
+              <p id="t12input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t12')">Verifica raspuns</button>
+          </div>
+        </form>
+        <p>Exercițiul 3. </p>
+        <p>Determinați F:(0, ∞) → R, o primitivă pentru f, astfel încât F(1) = 3, unde
           $$
           f:(0,+\infin) \rightarrow \R, f(x) = 3 - \frac{1}{x}.
           $$
         </p>
-        <p>Exercițiul 4. <br />
-          Să se calculeze derivata funcției f:
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t13a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var1" value="false">
+                <label for="t13var1">$$\int{3 - \frac{1}{x}dx}$$</label>
+              </div>
+              <p id="t13input1"></p>
+            </div>
+            <div id="t13b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var2" value="false">
+                <label for="t13var2">$$3\cdot x + \ln{|x|} + \mathscr{C}$$</label>
+              </div>
+              <p id="t13input2"></p>
+            </div>
+            <div id="t13c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var3" value="true">
+                <label for="t13var3">$$3\cdot x + \ln{|x|}$$</label>
+              </div>
+              <p id="t13input3"></p>
+            </div>
+            <div id="t13d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var4" value="true">
+                <label for="t13var4">$$3\cdot x + \ln{x}$$</label>
+              </div>
+              <p id="t13input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t13')">Verifica raspuns</button>
+          </div>
+        </form>
+        <p>Exercițiul 4. </p>
+        <p>Să se calculeze derivata funcției f:
           $$
           f:R \rightarrow \R, f(x) = 2 \cdot arctgx + 5 \cdot arcctg x.
           $$
         </p>
-        <p>Exercițiul 5. <br />
-          Calculați următoarea integrală definită:
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t14a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var1" value="true">
+                <label for="t14var1">$$\frac{2}{x^2+1}-\frac{5}{x^2+1}$$</label>
+              </div>
+              <p id="t14input1"></p>
+            </div>
+            <div id="t14b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var2" value="false">
+                <label for="t14var2">$$\frac{1}{x^2+1}-5\cdot\frac{1}{x^2+1}$$</label>
+              </div>
+              <p id="t14input2"></p>
+            </div>
+            <div id="t14c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var3" value="true">
+                <label for="t14var3">$$2\frac{1}{x^2+1}-5\frac{1}{x^2+1}$$</label>
+              </div>
+              <p id="t14input3"></p>
+            </div>
+            <div id="t14d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var4" value="true">
+                <label for="t14var4">$$-3\cdot\frac{1}{x^2+1}$$</label>
+              </div>
+              <p id="t14input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t14')">Verifica raspuns</button>
+          </div>
+        </form>
+        <p>Exercițiul 5. </p>
+        <p>Calculați următoarea integrală definită:
           $$
           \int_{-2}^{1} (x^3 - 3 \cdot x + 4)dx.
           $$
         </p>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t15a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var1" value="false">
+                <label for="t15var1">$$\frac{x^4}{4}-3\frac{x^2}{2}+4x$$</label>
+              </div>
+              <p id="t15input1"></p>
+            </div>
+            <div id="t15b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var2" value="true">
+                <label for="t15var2">$$\frac{1}{4}-3\frac{1}{2}+14$$</label>
+              </div>
+              <p id="t15input2"></p>
+            </div>
+            <div id="t15c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var3" value="true">
+                <label for="t15var3">$$13-\frac{1}{4}$$</label>
+              </div>
+              <p id="t15input3"></p>
+            </div>
+            <div id="t15d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var4" value="true">
+                <label for="t15var4">$$14-\frac{5}{4}$$</label>
+              </div>
+              <p id="t15input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t15')">Verifica raspuns</button>
+          </div>
+        </form>
       </div>
     </div>
     <div class="clasament">
@@ -540,93 +885,6 @@
   <div class="footer">
     <p id="citat"></p>
   </div>
-</body>
-
-</html>
-    <form action="/action_page.php" class="form-container">
-      <h1>Login</h1>
-      <label><b>Email</b>
-        <input type="text" placeholder="Enter Email" name="email" required>
-      </label>
-      <label><b>Password</b>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-      </label>
-      <button type="submit" class="btn">Login</button>
-    </form>
-  </div>
-
-
-  <div class="pageContent">
-    <div class="leftMenu">
-      <button class="itemLeftMenu first">Teorie</button>
-      <button class="itemLeftMenu">Probleme rezolvate</button>
-      <button class="itemLeftMenu">Probleme nerezolvate</button>
-      <button class="itemLeftMenu final">Test</button>
-    </div>
-
-    <div class="centerContent">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi quas nam tempora commodi molestiae dignissimos qui laborum consequatur ut dolorum accusantium voluptate sed, cupiditate mollitia ipsum ullam temporibus voluptatem!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus nam ab saepe. Placeat nostrum ipsa magni dolores autem, saepe harum, laborum est architecto quasi illo? Neque, laudantium quis. Dolorum!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos autem sequi doloremque ipsa. Provident, suscipit. Sed excepturi recusandae dolorem dicta nobis cupiditate animi mollitia aut illum, voluptate modi harum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis doloribus ullam non, fugit pariatur harum aperiam eveniet perspiciatis blanditiis, dolorum soluta error laboriosam ad obcaecati similique possimus ipsum tempora cum!</p>
-    </div>
-
-    <div class="clasament">
-      <table id="topClasament">
-        <tr class="elemClasament">
-          <td colspan="2" class="elemClasament">
-            <h3>Top 10 cursanți</h3>
-          </td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant1</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant2</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant3</td>
-          <td lass="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant4</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant5</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant6</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant7</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant8</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant9</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant10</td>
-          <td class="elemClasament">10</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-
-
-  <footer>
-    <p id="citat"></p>
-  </footer>
 </body>
 
 </html>
