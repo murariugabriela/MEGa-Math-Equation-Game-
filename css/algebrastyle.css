@@ -9,6 +9,7 @@
     left: 0;
     bottom: 0;
     top: 0;
+    height: 100%;
     box-sizing: border-box;
     font-family: "Lucida Sans", sans-serif;
   }
@@ -113,20 +114,18 @@
 .centerContent{
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: justify;
   background-color: white;
   opacity: 0.7;
   overflow-y: scroll;
   padding-left: 0.2cm;
+  padding-right: 0.2cm;
   margin-bottom: 2cm;
   width: 100%;
-  height: 100%;
+  height: 80vh;
 }
 #teorie{
   display: block;
-}
-.formula{
-  margin-left: 0;
 }
 .formule{
   text-align: left;
@@ -178,6 +177,15 @@
     padding: 10px;
     background-color: white;
   }
+  .form-container .btnRegister{
+    background-color: #8c92f0;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+  }
   
   /* Full-width input fields */
   .form-container input[type=text], .form-container input[type=password] {
@@ -185,6 +193,33 @@
     padding: 15px;
     border: none;
     background: #f1f1f1;
+  }
+
+  .varRasp{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* min-width: 5%; */
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  .altaProblema{
+    display: flex;
+    justify-content: flex-start;
+    
+  }
+  .butonAltaProblema{
+
+    border: none;
+    background-color: #8c92f0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .butonAltaProblema:hover{
+  background-color: #6f76db;
   }
   
   /* When the inputs get focus, do something */
@@ -208,7 +243,7 @@
   }
   @media only screen and (min-width: 320px) {
     /* For phones: */
-     /* .pagecontent{ align-content: center; flex-direction: column; } */
+    .katex { font-size: 15px !important; } 
     .meniu{width: 100%;}
     .elem_meniu{font-size: 10px; }
     .meniu_icon{width: 5%;}
@@ -241,7 +276,8 @@
     border-bottom: none;
     }
     .centerContent{
-      margin-top: 0cm;
+      margin-top: 0.3cm;
+      margin-bottom: 0;
     }
     .itemLeftMenu:hover{
       font-size: small;
@@ -277,7 +313,7 @@
     }
     .centerContent{
       margin-top: 0cm;
-      margin-left: 0.5cm;
+      margin-bottom: 2cm;
     }
     .clasament{
       display: none;
