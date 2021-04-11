@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MEGa - Test fulger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/chestionarstyle.css">
+    <script src="myscript.js"></script>
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body onload="citat(); displayTimer('1');">
+    <div>
+        <table class="meniu">
+            <tr>
+                <td class="meniu_icon"><a href="index.html">
+                        <div class="elem_meniu_link"><img src="images/emblema.svg" alt="emblema" id="emblema"></div>
+                    </a></td>
+                <td class="elem_meniu"><a href="algebra.html">
+                        <div class="elem_meniu_link">Algebră</div>
+                    </a></td>
+                <td class="elem_meniu"><a href="analiza.html">
+                        <div class="elem_meniu_link">Analiză</div>
+                    </a></td>
+                <td class="elem_meniu"><a href="geometrie.html">
+                        <div class="elem_meniu_link">Geometrie</div>
+                    </a></td>
+                <td class="elem_meniu"><a href="trigonometrie.html">
+                        <div class="elem_meniu_link">Trigonometrie</div>
+                    </a></td>
+                <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18"
+                            width="18">
+                            <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                            <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                            <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                        </svg></button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h1>Login</h1>
+            <label><b>Email</b>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            </label>
+            <label><b>Password</b>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </label>
+            <button type="button" class="btn">Login</button>
+            <button type="button" class="btn" onclick="window.location.href='register.html';">Register</button>
+        </form>
+    </div>
+    <div class="pageContent">
+        <div id="test">
+            <h2>Test fulger</h2>
+            <p>Exercițiul 1. <i><b>10p</b></i></p>
+            <div class="enunt">
+                <p>Să se calculeze derivata funcției f:
+                    $$
+                    f:(0,\infin) \rightarrow \R, \enspace f(x) = x \cdot ln x.
+                    $$
+                </p>
+                <div class="timer" id="divtimer1">
+                    <p id="timer1">
+
+                    </p>
+                    <!-- <script>
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+                        
+                        // Update the count down every 1 second
+                        var x = setInterval(function() {
+                        
+                          // Get today's date and time
+                          var now = new Date().getTime();
+                            
+                          // Find the distance between now and the count down date
+                          var distance = countDownDate - now;
+                            
+                          // Time calculations for days, hours, minutes and seconds
+                          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                            
+                          // Output the result in an element with id="demo"
+                          document.getElementById("timer1").innerHTML = seconds;
+                            
+                          // If the count down is over, write some text 
+                          if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("timer1").innerHTML = "EXPIRED";
+                          }
+                        }, 1000);
+                        </script> -->
+                </div>
+            </div>
+            <form class="raspunsuri">
+                <div class="raspunsuri-ex-1">
+                    <div id="t11a" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t11var1" value="true">
+                            <label for="t11var1">$$\ln{x}+1$$</label>
+                        </div>
+                        <p id="t11input1"></p>
+
+                    </div>
+                    <div id="t11b" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t11var2" value="true">
+                            <label for="t11var2">$$\ln{x}+x\cdot\frac{1}{x}$$</label>
+                        </div>
+                        <p id="t11input2"></p>
+                    </div>
+                    <div id="t11c" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t11var3" value="false">
+                            <label for="t11var3">$$\ln{x}$$</label>
+                        </div>
+                        <p id="t11input3"></p>
+                    </div>
+                    <div id="t11d" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t11var4" value="false">
+                            <label for="t11var4">$$\ln{x}\cdot x$$</label>
+                        </div>
+                        <p id="t11input4"></p>
+                    </div>
+
+                    <button type="button" class="send-answer" onclick="verifyAnswer('t11')">Verifica raspuns</button>
+                </div>
+            </form>
+            <p>Exercițiul 2. <i><b>13p</b></i></p>
+            <div class="enunt">
+                <p>Să se calculeze integrala următoare:
+                    $$
+                    I = \int \frac{cos^2 x - sin^2 x}{sin^2 x \cdot cos^2 x}dx.
+                    $$
+                </p>
+                <div class="timer" id="divtimer2">
+                    <p id="timer2">
+
+                    </p>
+                </div>
+            </div>
+            <form class="raspunsuri">
+                <div class="raspunsuri-ex-1">
+                    <div id="t12a" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t12var1" value="false">
+                            <label for="t12var1">$$\tg{x}$$</label>
+                        </div>
+                        <p id="t12input1"></p>
+                    </div>
+                    <div id="t12b" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t12var2" value="false">
+                            <label for="t12var2">$$\tg{x}+\ctg{x}$$</label>
+                        </div>
+                        <p id="t12input2"></p>
+                    </div>
+                    <div id="t12c" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t12var3" value="true">
+                            <label for="t12var3">$$\tg{x}+\ctg{x}+\mathscr{C}$$</label>
+                        </div>
+                        <p id="t12input3"></p>
+                    </div>
+                    <div id="t12d" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t12var4" value="true">
+                            <label for="t12var4">$$\int \frac{1}{\sin^2{x}}-\int \frac{1}{\cos^2{x}}$$</label>
+                        </div>
+                        <p id="t12input4"></p>
+                    </div>
+                    <button type="button" class="send-answer" onclick="verifyAnswer('t12')">Verifica raspuns</button>
+                </div>
+            </form>
+            <p>Exercițiul 3. <i><b>30p</b></i></p>
+            <div class="enunt">
+                <p>Determinați F:(0, ∞) → R, o primitivă pentru f, astfel încât F(1) = 3, unde
+                    $$
+                    f:(0,+\infin) \rightarrow \R, f(x) = 3 - \frac{1}{x}.
+                    $$
+                </p>
+                <div class="timer" id="divtimer3">
+                    <p id="timer3">
+
+                    </p>
+                </div>
+            </div>
+            <form class="raspunsuri">
+                <div class="raspunsuri-ex-1">
+                    <div id="t13a" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t13var1" value="false">
+                            <label for="t13var1">$$\int{3 - \frac{1}{x}dx}$$</label>
+                        </div>
+                        <p id="t13input1"></p>
+                    </div>
+                    <div id="t13b" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t13var2" value="false">
+                            <label for="t13var2">$$3\cdot x + \ln{|x|} + \mathscr{C}$$</label>
+                        </div>
+                        <p id="t13input2"></p>
+                    </div>
+                    <div id="t13c" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t13var3" value="true">
+                            <label for="t13var3">$$3\cdot x + \ln{|x|}$$</label>
+                        </div>
+                        <p id="t13input3"></p>
+                    </div>
+                    <div id="t13d" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t13var4" value="true">
+                            <label for="t13var4">$$3\cdot x + \ln{x}$$</label>
+                        </div>
+                        <p id="t13input4"></p>
+                    </div>
+                    <button type="button" class="send-answer" onclick="verifyAnswer('t13')">Verifica raspuns</button>
+                </div>
+            </form>
+            <p>Exercițiul 4. <i><b>10p</b></i></p>
+            <div class="enunt">
+                <p>Să se calculeze derivata funcției f:
+                    $$
+                    f:R \rightarrow \R, f(x) = 2 \cdot arctgx + 5 \cdot arcctg x.
+                    $$
+                </p>
+                <div class="timer" id="divtimer4">
+                    <p id="timer4">
+
+                    </p>
+                </div>
+            </div>
+            <form class="raspunsuri">
+                <div class="raspunsuri-ex-1">
+                    <div id="t14a" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t14var1" value="true">
+                            <label for="t14var1">$$\frac{2}{x^2+1}-\frac{5}{x^2+1}$$</label>
+                        </div>
+                        <p id="t14input1"></p>
+                    </div>
+                    <div id="t14b" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t14var2" value="false">
+                            <label for="t14var2">$$\frac{1}{x^2+1}-5\cdot\frac{1}{x^2+1}$$</label>
+                        </div>
+                        <p id="t14input2"></p>
+                    </div>
+                    <div id="t14c" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t14var3" value="true">
+                            <label for="t14var3">$$2\frac{1}{x^2+1}-5\frac{1}{x^2+1}$$</label>
+                        </div>
+                        <p id="t14input3"></p>
+                    </div>
+                    <div id="t14d" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t14var4" value="true">
+                            <label for="t14var4">$$-3\cdot\frac{1}{x^2+1}$$</label>
+                        </div>
+                        <p id="t14input4"></p>
+                    </div>
+                    <button type="button" class="send-answer" onclick="verifyAnswer('t14')">Verifica raspuns</button>
+                </div>
+            </form>
+            <p>Exercițiul 5. <i><b>14p</b></i></p>
+            <div class="enunt">
+                <p>Calculați următoarea integrală definită:
+                    $$
+                    \int_{-2}^{1} (x^3 - 3 \cdot x + 4)dx.
+                    $$
+                </p>
+                <div class="timer" id="divtimer5">
+                    <p id="timer5">
+
+                    </p>
+                </div>
+            </div>
+            <form class="raspunsuri">
+                <div class="raspunsuri-ex-1">
+                    <div id="t15a" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t15var1" value="false">
+                            <label for="t15var1">$$\frac{x^4}{4}-3\frac{x^2}{2}+4x$$</label>
+                        </div>
+                        <p id="t15input1"></p>
+                    </div>
+                    <div id="t15b" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t15var2" value="true">
+                            <label for="t15var2">$$\frac{1}{4}-3\frac{1}{2}+14$$</label>
+                        </div>
+                        <p id="t15input2"></p>
+                    </div>
+                    <div id="t15c" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t15var3" value="true">
+                            <label for="t15var3">$$13-\frac{1}{4}$$</label>
+                        </div>
+                        <p id="t15input3"></p>
+                    </div>
+                    <div id="t15d" class="var">
+                        <div class="checkbox">
+                            <input type="checkbox" id="t15var4" value="true">
+                            <label for="t15var4">$$14-\frac{5}{4}$$</label>
+                        </div>
+                        <p id="t15input4"></p>
+                    </div>
+                    <button type="button" class="send-answer" onclick="verifyAnswer('t15')">Verifica raspuns</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p id="citat"></p>
+    </div>
+</body>
+
+</html>
