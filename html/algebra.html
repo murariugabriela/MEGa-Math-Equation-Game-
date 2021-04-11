@@ -422,19 +422,39 @@
             1 + 2 = \enspace ?
           $$
         </p>
-          <div class="varRasp">
-            <form action="/action_page.php">
-                <input type="checkbox" id="1" name="var1">
-                <label for="1">VarRasp1</label><br>
-                <input type="checkbox" id="2" name="var2">
-                <label for="2">VarRasp2</label><br>
-                <input type="checkbox" id="3" name="var3">
-                <label for="3">VarRasp3</label><br>
-                <input type="checkbox" id="4" name="var4">
-                <label for="4">VarRasp4</label><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var1" value="false">
+                <label for="var1">$$1$$</label>
+              </div>
+              <p id="input1"></p>
+            </div>
+            <div id="b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var2" value="true">
+                <label for="var2">$$2+1$$</label>
+              </div>
+              <p id="input2"></p>
+            </div>
+            <div id="c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var3" value="true">
+                <label for="var3">$$3$$</label>
+              </div>
+              <p id="input3"></p>
+            </div>
+            <div id="d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="var4" value="true">
+                <label for="var4">$$-(-3)$$</label>
+              </div>
+              <p id="input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('')">Verifică raspuns</button>
+          </div>
+        </form>
         <div class="altaProblema">
             <button type="submit" class="butonAltaProblema">Generează altă problemă</button>
         </div>
@@ -442,22 +462,42 @@
       <div id="test">
         <h2>Test1</h2>
         <p>
-          Exercițiul 1. <br>
+          Exercițiul 1. <br />
           Se consideră o progresie aritmetică cu a2 = 7 și a3 = 1. Determinați rația acestei progresii.
         </p>
-        <div class="varRasp">
-            <form action="/action_page.php">
-                <input type="checkbox" id="5" name="var1">
-                <label for="1">VarRasp1</label><br>
-                <input type="checkbox" id="6" name="var2">
-                <label for="2">VarRasp2</label><br>
-                <input type="checkbox" id="7" name="var3">
-                <label for="3">VarRasp3</label><br>
-                <input type="checkbox" id="8" name="var4">
-                <label for="4">VarRasp4</label><br><br>
-                <input type="submit" value="Submit">
-            </form>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t11a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var1" value="false">
+                <label for="t11var1">$$3$$</label>
+              </div>
+              <p id="t11input1"></p>
+            </div>
+            <div id="t11b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var2" value="true">
+                <label for="t11var2">$$-6$$</label>
+              </div>
+              <p id="t11input2"></p>
+            </div>
+            <div id="t11c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var3" value="false">
+                <label for="t11var3">$$6$$</label>
+              </div>
+              <p id="t11input3"></p>
+            </div>
+            <div id="t11d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t11var4" value="true">
+                <label for="t11var4">$$-\sqrt{36}$$</label>
+              </div>
+              <p id="t11input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t11')">Verifica raspuns</button>
           </div>
+        </form>
         <p>
           Exercițiul 2. <br/>
           Care sunt rădăcinile următoarei ecuații de gradul 2?
@@ -465,19 +505,39 @@
           x^2 + 4 \cdot x + 3 = 0.
           $$
         </p>
-        <div class="varRasp">
-            <form action="/action_page.php">
-                <input type="checkbox" id="9" name="var1">
-                <label for="1">VarRasp1</label><br>
-                <input type="checkbox" id="10" name="var2">
-                <label for="2">VarRasp2</label><br>
-                <input type="checkbox" id="11" name="var3">
-                <label for="3">VarRasp3</label><br>
-                <input type="checkbox" id="12" name="var4">
-                <label for="4">VarRasp4</label><br><br>
-                <input type="submit" value="Submit">
-            </form>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t12a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var1" value="false">
+                <label for="t12var1">$$\{-3, 1\}$$</label>
+              </div>
+              <p id="t12input1"></p>
+            </div>
+            <div id="t12b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var2" value="true">
+                <label for="t12var2">$$\{-3, -1\}$$</label>
+              </div>
+              <p id="t12input2"></p>
+            </div>
+            <div id="t12c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var3" value="true">
+                <label for="t12var3">$$\{-1, -3\}$$</label>
+              </div>
+              <p id="t12input3"></p>
+            </div>
+            <div id="t12d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t12var4" value="false">
+                <label for="t12var4">$$\{4, 9\}$$</label>
+              </div>
+              <p id="t12input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t12')">Verifica raspuns</button>
           </div>
+        </form>
         <p>
           Exercițiul 3. <br/>
           Care este rezultatul următoarei expresii?
@@ -485,19 +545,39 @@
           E = \frac{\sqrt{2} + \sqrt{5}}{\sqrt{6} + 5 \cdot \sqrt{3}}.
           $$
         </p>
-        <div class="varRasp">
-            <form action="/action_page.php">
-                <input type="checkbox" id="13" name="var1">
-                <label for="1">VarRasp1</label><br>
-                <input type="checkbox" id="14" name="var2">
-                <label for="2">VarRasp2</label><br>
-                <input type="checkbox" id="15" name="var3">
-                <label for="3">VarRasp3</label><br>
-                <input type="checkbox" id="16" name="var4">
-                <label for="4">VarRasp4</label><br><br>
-                <input type="submit" value="Submit">
-            </form>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t13a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var1" value="false">
+                <label for="t13var1">$$\sqrt{3}$$</label>
+              </div>
+              <p id="t13input1"></p>
+            </div>
+            <div id="t13b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var2" value="true">
+                <label for="t13var2">$$\frac{\sqrt{3}}{3}$$</label>
+              </div>
+              <p id="t13input2"></p>
+            </div>
+            <div id="t13c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var3" value="false">
+                <label for="t13var3">$$3$$</label>
+              </div>
+              <p id="t13input3"></p>
+            </div>
+            <div id="t13d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t13var4" value="false">
+                <label for="t13var4">$$\frac{3}{\sqrt{3}}$$</label>
+              </div>
+              <p id="t13input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t13')">Verifica raspuns</button>
           </div>
+        </form>
         <p>
           Exercițiul 4. <br/>
           Calculați:
@@ -505,19 +585,39 @@
           \sqrt{14 - 6 \cdot \sqrt{5}}
           $$
         </p>
-        <div class="varRasp">
-            <form action="/action_page.php">
-                <input type="checkbox" id="17" name="var1">
-                <label for="1">VarRasp1</label><br>
-                <input type="checkbox" id="18" name="var2">
-                <label for="2">VarRasp2</label><br>
-                <input type="checkbox" id="19" name="var3">
-                <label for="3">VarRasp3</label><br>
-                <input type="checkbox" id="20" name="var4">
-                <label for="4">VarRasp4</label><br><br>
-                <input type="submit" value="Submit">
-            </form>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t14a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var1" value="true">
+                <label for="t14var1">$$3-\sqrt{5}$$</label>
+              </div>
+              <p id="t14input1"></p>
+            </div>
+            <div id="t14b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var2" value="false">
+                <label for="t14var2">$$\sqrt{5}-3$$</label>
+              </div>
+              <p id="t14input2"></p>
+            </div>
+            <div id="t14c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var3" value="true">
+                <label for="t14var3">$$-\sqrt{5}+3$$</label>
+              </div>
+              <p id="t14input3"></p>
+            </div>
+            <div id="t14d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t14var4" value="false">
+                <label for="t14var4">$$4\sqrt{2}$$</label>
+              </div>
+              <p id="t14input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t14')">Verifica raspuns</button>
           </div>
+        </form>
         <p>
           Exercițiul 5. <br/>
           Cărui interval aparține x din următoarea expresie?
@@ -525,19 +625,39 @@
           2^x \leq 0,25
           $$
         </p>
-        <div class="varRasp">
-            <form action="/action_page.php">
-                <input type="checkbox" id="21" name="var1">
-                <label for="1">VarRasp1</label><br>
-                <input type="checkbox" id="22" name="var2">
-                <label for="2">VarRasp2</label><br>
-                <input type="checkbox" id="23" name="var3">
-                <label for="3">VarRasp3</label><br>
-                <input type="checkbox" id="24" name="var4">
-                <label for="4">VarRasp4</label><br><br>
-                <input type="submit" value="Submit">
-            </form>
+        <form class="raspunsuri">
+          <div class="raspunsuri-ex-1">
+            <div id="t15a" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var1" value="false">
+                <label for="t15var1">$$(-\infin,+\infin)$$</label>
+              </div>
+              <p id="t15input1"></p>
+            </div>
+            <div id="t15b" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var2" value="false">
+                <label for="t15var2">$$(4,2]$$</label>
+              </div>
+              <p id="t15input2"></p>
+            </div>
+            <div id="t15c" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var3" value="false">
+                <label for="t15var3">$$(2,\infin)$$</label>
+              </div>
+              <p id="t15input3"></p>
+            </div>
+            <div id="t15d" class="var">
+              <div class="checkbox">
+                <input type="checkbox" id="t15var4" value="true">
+                <label for="t15var4">$$(-\infin, -2]$$</label>
+              </div>
+              <p id="t15input4"></p>
+            </div>
+            <button type="button" class="send-answer" onclick="verifyAnswer('t15')">Verifica raspuns</button>
           </div>
+        </form>
       </div>
     </div>
 
