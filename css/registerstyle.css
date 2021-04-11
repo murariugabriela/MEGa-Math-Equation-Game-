@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", sans-serif;
+}
+body{
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin-bottom: 1cm;
+    overflow: hidden;
+    background-image: url("../images/Picture1.png");
+}
+
+/* Add padding to containers */
+.container {
+    margin: auto;
+    padding: 0.3cm;
+    margin-bottom: 0.5cm;
+    background-color: white;
+}
+hr{
+    margin: 0;
+    padding: 0;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: #76e07a;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: #383d86;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+h1{
+    padding: 0.05cm;
+}
+.formular-inregistrare{
+    /* height: 100vh;
+    overflow-y: scroll; */
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 1cm;
+}
+@media only screen and (min-width: 320px) {
+    /* For phones: */
+    .container {
+        width: 100%;
+      }
+      .signin {
+        margin-top: 0;
+        margin-bottom: 1cm;
+        height: 50%;
+    }
+}
+  @media only screen and (min-width: 768px) {
+    /* For tablets: */
+    .container {
+        width: 100%;
+      }
+      .signin {
+        margin-top: 0;
+        margin-bottom: 1cm;
+        height: 50%;
+    }
+ }
+  @media only screen and (min-width: 1024px) {
+    /* For laptops: */
+    .container {
+        width: 50%;
+      }
+      .signin {
+        margin-top: 0;
+        margin-bottom: 1cm;
+        height: 50%;
+    }
+  
+  }
+
+
+  
