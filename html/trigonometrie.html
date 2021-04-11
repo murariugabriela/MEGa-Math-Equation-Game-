@@ -15,6 +15,26 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
 " integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.css"
+    integrity="sha384-JwmmMju6Z7M9jiY4RXeJLoNb3aown2QCC/cI7JPgmOLsn3n33pdwAj0Ml/CMMd1W" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.js"
+    integrity="sha384-atIluo+2Hixq8HCazSQWa1JjeC5L0CQeWAx74Q+EbqgAW4UixbrBQF4+1jvBX01b"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () { // this need jquery
+      renderMathInElement(document.body, {
+        // ...options...
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true }
+        ]
+      });
+    });
+  </script>
 
 </head>
 
@@ -24,15 +44,29 @@
   <div>
     <table class="meniu">
       <tr>
-        <td class="meniu_icon"><a href="index.html"><div class="elem_meniu_link"><img src="images/emblema.svg" alt="emblema" id="emblema"></div> </a></td>
-        <td class="elem_meniu"><a href="algebra.html"><div class="elem_meniu_link">Algebră</div> </a></td>
-        <td class="elem_meniu"><a href="analiza.html"><div class="elem_meniu_link">Analiză</div> </a></td>
-        <td class="elem_meniu"><a href="geometrie.html"><div class="elem_meniu_link">Geometrie</div></a></td>
-        <td class="elem_meniu ales"><a href="trigonometrie.html"><div class="elem_meniu_link">Trigonometrie</div> </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()" ><svg height="18" width="18"><line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4"/><line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4"/></svg></button></td>
+        <td class="meniu_icon"><a href="index.html">
+            <div class="elem_meniu_link"><img src="images/emblema.svg" alt="emblema" id="emblema"></div>
+          </a></td>
+        <td class="elem_meniu"><a href="algebra.html">
+            <div class="elem_meniu_link">Algebră</div>
+          </a></td>
+        <td class="elem_meniu"><a href="analiza.html">
+            <div class="elem_meniu_link">Analiză</div>
+          </a></td>
+        <td class="elem_meniu"><a href="geometrie.html">
+            <div class="elem_meniu_link">Geometrie</div>
+          </a></td>
+        <td class="elem_meniu ales"><a href="trigonometrie.html">
+            <div class="elem_meniu_link">Trigonometrie</div>
+          </a></td>
+        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+              <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+              <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+              <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+            </svg></button></td>
       </tr>
-      </table>
-</div>
+    </table>
+  </div>
   <div class="form-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
       <h1>Login</h1>
@@ -57,63 +91,342 @@
 
     <div class="centerContent">
       <div id="teorie">
-        <p>Teorie</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi quas nam tempora commodi molestiae
-          dignissimos qui laborum consequatur ut dolorum accusantium voluptate sed, cupiditate mollitia ipsum ullam
-          temporibus voluptatem!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus nam ab saepe. Placeat nostrum ipsa magni
-          dolores autem, saepe harum, laborum est architecto quasi illo? Neque, laudantium quis. Dolorum!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos autem sequi doloremque ipsa.
-          Provident, suscipit. Sed excepturi recusandae dolorem dicta nobis cupiditate animi mollitia aut illum,
-          voluptate modi harum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis doloribus ullam non, fugit pariatur harum
-          aperiam eveniet perspiciatis blanditiis, dolorum soluta error laboriosam ad obcaecati similique possimus ipsum
-          tempora cum!</p>
-      </div>
-      <div id="probRezolvate">
-        <p>probRezolvate</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi quas nam tempora commodi molestiae
-          dignissimos qui laborum consequatur ut dolorum accusantium voluptate sed, cupiditate mollitia ipsum ullam
-          temporibus voluptatem!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus nam ab saepe. Placeat nostrum ipsa magni
-          dolores autem, saepe harum, laborum est architecto quasi illo? Neque, laudantium quis. Dolorum!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos autem sequi doloremque ipsa.
-          Provident, suscipit. Sed excepturi recusandae dolorem dicta nobis cupiditate animi mollitia aut illum,
-          voluptate modi harum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis doloribus ullam non, fugit pariatur harum
-          aperiam eveniet perspiciatis blanditiis, dolorum soluta error laboriosam ad obcaecati similique possimus ipsum
-          tempora cum!</p>
-      </div>
-      <div id="probNerezolvate">
-        <p>probNerezolvate</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi quas nam tempora commodi molestiae
-          dignissimos qui laborum consequatur ut dolorum accusantium voluptate sed, cupiditate mollitia ipsum ullam
-          temporibus voluptatem!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus nam ab saepe. Placeat nostrum ipsa magni
-          dolores autem, saepe harum, laborum est architecto quasi illo? Neque, laudantium quis. Dolorum!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos autem sequi doloremque ipsa.
-          Provident, suscipit. Sed excepturi recusandae dolorem dicta nobis cupiditate animi mollitia aut illum,
-          voluptate modi harum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis doloribus ullam non, fugit pariatur harum
-          aperiam eveniet perspiciatis blanditiis, dolorum soluta error laboriosam ad obcaecati similique possimus ipsum
-          tempora cum!</p>
-      </div>
-      <div id="test">
-        <p>Test</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi quas nam tempora commodi molestiae
-          dignissimos qui laborum consequatur ut dolorum accusantium voluptate sed, cupiditate mollitia ipsum ullam
-          temporibus voluptatem!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus nam ab saepe. Placeat nostrum ipsa magni
-          dolores autem, saepe harum, laborum est architecto quasi illo? Neque, laudantium quis. Dolorum!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos autem sequi doloremque ipsa.
-          Provident, suscipit. Sed excepturi recusandae dolorem dicta nobis cupiditate animi mollitia aut illum,
-          voluptate modi harum.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis doloribus ullam non, fugit pariatur harum
-          aperiam eveniet perspiciatis blanditiis, dolorum soluta error laboriosam ad obcaecati similique possimus ipsum
-          tempora cum!</p>
-      </div>
-    </div>
+        <h2>Teorie</h2>
+        <div class="trigo">
 
+          <table class="formule-trigonometrie ">
+
+            <tr>
+              <td><span class="td-title">Identități de bază</span></td>
+              <td><span class="td-title">Formule cu două unghiuri</span></td>
+              <td><span class="td-title">Formule cu trei unghiuri</span></td>
+              <td><span class="td-title">Formule pentru reducerea gradului</span></td>
+            </tr>
+            <tr>
+              <td>$$tan\alpha=\dfrac{sin\alpha}{cos\alpha}$$</td>
+              <td>$$sin(2\alpha)=2*cos\alpha*sin\alpha$$</td>
+              <td>$$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$</td>
+              <td>$$sin^2\alpha=\dfrac{1-cos(2\alpha)}{2}$$</td>
+
+            </tr>
+            <tr>
+              <td>$$cot\alpha=\dfrac{cos\alpha}{sin\alpha}$$</td>
+              <td>$$sin(2\alpha)=\dfrac{2*tan\alpha}{1+tan^2\alpha}$$</td>
+              <td>$$cos(3\alpha)=4*cos^3\alpha-3*cos\alpha$$</td>
+              <td>$$cos^2\alpha=\dfrac{1cos(2\alpha)}{2}$$</td>
+
+            </tr>
+            <tr>
+              <td>$$sin^2\alpha+cos^2\alpha=1$$</td>
+              <td>$$cos(2\alpha)=cos^2\alpha-sin^2\alpha$$</td>
+              <td>$$tan(3\alpha)=\dfrac{3*tan\alpha-tan^3\alpha}{1-3*tan^2\alpha}$$</td>
+              <td>$$tan^2\alpha=\dfrac{1-cos(2\alpha)}{1+cos(2\alpha)}$$</td>
+
+            </tr>
+            <tr>
+              <td>$$1+tan^2\alpha=\dfrac{1}{cos^2\alpha}$$</td>
+              <td>$$cos(2\alpha)=\dfrac{1-tan^2\alpha}{1+tan^2\alpha}$$</td>
+              <td>$$cot(3\alpha)=\dfrac{cot^3\alpha-3cot\alpha}{3*cot^2\alpha-1}$$</td>
+              <td>$$cot^2\alpha=\dfrac{1+cos(2\alpha)}{1-cos(2\alpha)}$$</td>
+
+            </tr>
+            <tr>
+              <td>$$1+cot^2\alpha=\dfrac{1}{sin^2\alpha}$$</td>
+              <td>$$tan(2\alpha)=\dfrac{2*tan\alpha}{1-tan^2\alpha}$$</td>
+              <td></td>
+              <td>$$(sin\alpha-cos\alpha)^2=1-sin(2\alpha)$$</td>
+
+            </tr>
+            <tr>
+              <td>$$tan\alpha*cot\alpha=1$$</td>
+              <td>$$cot(2\alpha)=\dfrac{cot^2\alpha-1}{2*cot\alpha}$$</td>
+              <td></td>
+              <td>$$(sin\alpha+cos\alpha)^2=1+sin(2\alpha)$$</td>
+
+            </tr>
+          </table>
+        </div>
+
+        <div class="trigo tabel-formule">
+
+          <table class="formule-trigonometrie">
+
+            <tr>
+              <td><span class="td-title">Identități de bază</span></td>
+              <td><span class="td-title">Formule cu două unghiuri</span></td>
+
+            </tr>
+            <tr>
+              <td>$$tan\alpha=\dfrac{sin\alpha}{cos\alpha}$$</td>
+              <td>$$sin(2\alpha)=2*cos\alpha*sin\alpha$$</td>
+
+
+            </tr>
+            <tr>
+              <td>$$cot\alpha=\dfrac{cos\alpha}{sin\alpha}$$</td>
+              <td>$$sin(2\alpha)=\dfrac{2*tan\alpha}{1+tan^2\alpha}$$</td>
+
+
+            </tr>
+            <tr>
+              <td>$$sin^2\alpha+cos^2\alpha=1$$</td>
+              <td>$$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2$$</td>
+
+
+            </tr>
+            <tr>
+              <td>$$1+tan^2\alpha=\dfrac{1}{cos^2\alpha}$$</td>
+              <td>$$cos(2\alpha)=\dfrac{1-tan^2\alpha}{1+tan^2\alpha}$$</td>
+
+
+            </tr>
+            <tr>
+              <td>$$1+cot^2\alpha=\dfrac{1}{sin^2\alpha}$$</td>
+              <td>$$tan(2\alpha)=\dfrac{2*tan\alpha}{1-tan^2\alpha}$$</td>
+
+
+            </tr>
+            <tr>
+              <td>$$tan\alpha*cot\alpha=1$$</td>
+              <td>$$cot(2\alpha)=\dfrac{cot^2\alpha-1}{2*cot\alpha}$$</td>
+
+
+            </tr>
+          </table>
+        </div>
+        <div class="trigo tabel-formule">
+
+          <table class="formule-trigonometrie">
+
+            <tr>
+
+              <td><span class="td-title">Formule cu trei unghiuri</span></td>
+              <td><span class="td-title">Formule pentru reducerea gradului</span></td>
+            </tr>
+            <tr>
+
+              <td>$$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$</td>
+              <td>$$sin^2\alpha=\dfrac{1-cos(2\alpha)}{2}$$</td>
+
+            </tr>
+            <tr>
+
+              <td>$$cos(3\alpha)=4*cos^3\alpha-3*cos\alpha$$</td>
+              <td>$$cos^2\alpha=\dfrac{1cos(2\alpha)}{2}$$</td>
+
+            </tr>
+            <tr>
+
+              <td>$$tan(3\alpha)=\dfrac{3*tan\alpha-tan^3\alpha}{1-3*tan^2\alpha}$$</td>
+              <td>$$tan^2\alpha=\dfrac{1-cos(2\alpha)}{1+cos(2\alpha)}$$</td>
+
+            </tr>
+            <tr>
+
+              <td>$$cot^2\alpha=\dfrac{1+cos(2\alpha)}{1-cos(2\alpha)}$$</td>
+              <td>$$(sin\alpha-cos\alpha)^2=1-sin(2\alpha)$$</td>
+
+            </tr>
+            <tr>
+
+              <td></td>
+              <td>$$(sin\alpha+cos\alpha)^2=1+sin(2\alpha)$$</td>
+
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div id="probRezolvate">
+        <h2>Probleme rezolvate</h2>
+        <h4>Problema 1.</h4>
+        <div class="identareformule">
+          <p>
+            $$
+            \begin{align}
+            \text{ Daca }sin\alpha=\frac{3}{4} \text{ si } \alpha \in \begin{pmatrix}
+            0, \dfrac{\pi}{2}
+            \end{pmatrix} \text{atunci sa se calculeze} (sin(2\alpha)+cos(2\alpha)) \text{.}
+            \end{align}
+            $$
+
+          </p>
+        </div>
+
+        <h5>Formule:</h5>
+        <p>
+          $$sin(2\alpha)=2*cos\alpha*sin\alpha$$
+          $$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2\alpha-1=1-2sin^2\alpha$$
+        </p>
+        <h5>Rezolvare:</h5>
+        <p>$$sin^2\alpha+cos^2\alpha=1=>cos^2\alpha=1-sin^2\alpha$$</p>
+        <p>$$cos^2\alpha=1-(\dfrac{3}{4})^2=1-\dfrac{9}{16}=\dfrac{7}{16}$$</p>
+        <p>$$cos\alpha=\sqrt{\dfrac{7}{16}}=\dfrac{\sqrt{7}}{4}$$</p>
+        <p>
+          $$cos\alpha=\dfrac{\sqrt{7}}{4}$$
+          $$sin\alpha=\dfrac{3}{4}$$
+          $$sin(2\alpha)=2sin\alpha*cos\alpha=3*\dfrac{\sqrt{7}}{8}$$
+          $$cos(2\alpha)=1-2*sin^2\alpha=1-2*\dfrac{9}{16}=\dfrac{1}{8}$$
+          $$sin(2\alpha)+cos(2\alpha)=\dfrac{3*\sqrt{7}+1}{8}$$
+        </p>
+        <h4>Problema 2.</h4>
+        <p>$$
+          \begin{align}
+          \text{Se stie ca }
+          cos\alpha=\dfrac{4}{5}
+          \alpha\in \begin{pmatrix}
+          0, \dfrac{\pi}{2} \\
+          \end{pmatrix}
+          \text{ , sa se calculeze }
+          \dfrac{sin(3\alpha}{cos(2\alpha)} \text{.}
+          \end{align}
+          $$</p>
+
+        <h5>Formule:</h5>
+        <p>
+          $$sin^2\alpha+cos^2\alpha=1$$
+          $$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2\alpha-1=1-2sin^2\alpha$$
+          $$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$
+        </p>
+        <h5>Rezolvare:</h5>
+        <p>
+          $$sin^(\alpha)=1-cos^2\alpha=1-\dfrac{16}{25}=\dfrac{9}{25}$$
+          $$sin\alpha=\sqrt{\dfrac{9}{25}}=\dfrac{3}{5}$$
+          $$cos(2\alpha)=2*cos^2\alpha-1=2*\dfrac{16}{25}-1=\dfrac{7}{25}$$
+          $$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha=3*\dfrac{3}{5}-4*\dfrac{108}{125}$$
+          $$sin(3\alpha)=\dfrac{117}{125}$$
+          $$\dfrac{sin(3\alpha}{cos(2\alpha)}=\dfrac{117}{125}*\dfrac{25}{7}$$
+          $$\dfrac{sin(3\alpha}{cos(2\alpha)}=\dfrac{117}{35}$$
+
+        </p>
+      </div>
+
+      <div id="probNerezolvate">
+        <h2>Probleme nerezolvate</h2>
+        <h4>Problema 1.</h4>
+        <div class="identareformule">
+          <p>
+            $$
+            \begin{align}
+            \text{ Sa se calculeze }
+            sin\dfrac{\pi}{12}\text{.}
+            \end{align}
+            $$
+          </p>
+        </div>
+        <div class="answerVar">
+          <form>
+
+            <div class="right">
+              <input type="checkbox" id="1" name="$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{2}$$">
+              <label for="1">$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{2}$$</label>
+            </div>
+
+
+            <div class="right">
+              <input type="checkbox" id="2" name="$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2+\sqrt{3}}}{2}$$">
+              <label for="2">$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2+\sqrt{3}}}{2}$$</label>
+            </div>
+
+            <div class="right">
+              <input type="checkbox" id="3" name="$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{3}$$">
+              <label for="3">$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{3}$$</label>
+            </div>
+
+          </form>
+        </div>
+
+        <h4>Problema 2.</h4>
+        <div class="identareformule">
+          <p>
+            $$
+            \begin{align}
+            \text{ Sa se determine }tan\alpha \text{ cu } \alpha \in \begin{pmatrix}
+            0, \dfrac{\pi}{2}
+            \end{pmatrix} \text{ si } sin\alpha=\dfrac{1}{4} \text{.}
+            \end{align}
+            $$
+          </p>
+        </div>
+        <div class="answerVar">
+          <form action="#">
+            <div class="right">
+              <input type="checkbox" id="4" name="$$tan\alpha=\dfrac{\sqrt{15}}{15}$$">
+              <label for="4">$$tan\alpha=\dfrac{\sqrt{15}}{15}$$</label>
+            </div>
+            <div class="right">
+              <input type="checkbox" id="5" name="$$tan\alpha=\dfrac{1}{4}$$">
+              <label for="5">$$tan\alpha=\dfrac{1}{4}$$</label>
+            </div>
+            <div class="right">
+              <input type="checkbox" id="6" name="$$tan\alpha=\dfrac{1}{3}$$">
+              <label for="6">$$tan\alpha=\dfrac{1}{3}$$</label>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div id="test">
+        <h2>Test</h2>
+        <h4>Problema 1.</h4>
+        <div class="identareformule">
+          <p> $$
+            \begin{align}
+            \text{Sa se determine } cot\alpha \text{ daca } \alpha \in \begin{pmatrix}
+            \dfrac{\pi}{2},\pi
+            \end{pmatrix} \text{ si } cos\alpha=-\dfrac{1}{3} \text{.}
+            \end{align}
+            $$ </p>
+        </div>
+        <div class="answerVar">
+          <form action="#">
+            <div class="right">
+              <input type="checkbox" id="7">
+              <label for="7">$$-\dfrac{1}{\sqrt{2}}$$</label>
+            </div>
+            <div class="right">
+              <input type="checkbox" id="8">
+              <label for="8">$$-\dfrac{\sqrt{2}}{4}$$</label>
+            </div>
+            <div class="right">
+              <input type="checkbox" id="9">
+              <label for="9">$$\dfrac{\sqrt{2}}{3}$$</label>
+            </div>
+          </form>
+        </div>
+        <h4>Problema 2.</h4>
+        <div class="identareformule">
+          <p>$$
+            \begin{align}
+            \text{Sa se calculeze } E=2*sin\alpha+1 \text{ daca } sin\alpha=\dfrac{3}{4} si \alpha \in \begin{pmatrix}
+            \dfrac{\pi}{2},\pi
+            \end{pmatrix} \text{.}
+            \end{align}
+            $$</p>
+        </div>
+        <div class="answerVar">
+          <form action="#">
+            <div class="right">
+              <input type="checkbox" id="10">
+              <label for="10">$$\dfrac{-3\sqrt{17}+16}{16}$$</label>
+            </div>
+            <div class="right">
+              <input type="checkbox" id="11">
+              <label for="11">0</label>
+            </div>
+            <div class="right">
+              <input type="checkbox" id="12">
+              <label for="12">1</label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+    </div>
     <div class="clasament">
       <table id="topClasament">
         <tr class="elemClasament">
@@ -131,7 +444,7 @@
         </tr>
         <tr class="elemClasament">
           <td class="elemClasament">Cursant3</td>
-          <td lass="elemClasament">10</td>
+          <td class="elemClasament">10</td>
         </tr>
         <tr class="elemClasament">
           <td class="elemClasament">Cursant4</td>
@@ -164,9 +477,10 @@
       </table>
     </div>
 
+
+
+
   </div>
-
-
 
   <footer>
     <p id="citat"></p>
