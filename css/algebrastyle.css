@@ -195,17 +195,31 @@
     background: #f1f1f1;
   }
 
-  .varRasp{
+  .checkbox {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    /* min-width: 5%; */
-    margin: 0 auto;
-    opacity: 0.9;
+    /* height: 40px; */
+  }
+
+  
+  .raspunsuri-ex-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .var {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px gray;
+    width: 200px;
   }
   .altaProblema{
     display: flex;
     justify-content: flex-start;
+    padding-top: 1cm;
     
   }
   .butonAltaProblema{
@@ -243,6 +257,9 @@
   }
   @media only screen and (min-width: 320px) {
     /* For phones: */
+    .raspunsuri-ex-1 {
+      flex-direction: column;
+    }
     .katex { font-size: 15px !important; } 
     .meniu{width: 100%;}
     .elem_meniu{font-size: 10px; }
@@ -275,6 +292,9 @@
     border-top: none;
     border-bottom: none;
     }
+    .send-answer {
+      width: 200px;
+    }
     .centerContent{
       margin-top: 0.3cm;
       margin-bottom: 0;
@@ -285,12 +305,21 @@
     .clasament{
       display: none;
     }
+    .altaProblema{
+      padding-top: 1cm;
+      padding-bottom: 1cm;
+      justify-content: center;
+    }
   }
+
   @media only screen and (min-width: 768px) {
     /* For tablets: */
     /* .pagecontent{flex-direction: row; align-content:space-between; } */
     .meniu{width: 100%;}
     .elem_meniu{font-size: 14px;}
+    .raspunsuri-ex-1 {
+      flex-direction: row;
+    }
     .leftMenu{
       flex-direction: row;
       align-content: center;
@@ -317,6 +346,9 @@
     }
     .clasament{
       display: none;
+    }
+    .send-answer {
+      height: 90px;
     }
   }
   @media only screen and (min-width: 1024px) {
