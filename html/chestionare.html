@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <title>MEGa - Test fulger</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/chestionarstyle.css">
-    <script src="myscript.js"></script>
-    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="../css/chestionarstyle.css">
+    <script src="../javascript/myscript.js"></script>
+    <link rel="icon" href="../logo.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
 " integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
@@ -23,7 +23,7 @@
         <table class="meniu">
             <tr>
                 <td class="meniu_icon"><a href="index.html">
-                        <div class="elem_meniu_link"><img src="images/emblema.svg" alt="emblema" id="emblema"></div>
+                        <div class="elem_meniu_link"><img src="../emblema.svg" alt="emblema" id="emblema"></div>
                     </a></td>
                 <td class="elem_meniu"><a href="algebra.html">
                         <div class="elem_meniu_link">Algebră</div>
@@ -71,37 +71,7 @@
                 </p>
                 <div class="timer" id="divtimer1">
                     <p id="timer1">
-
                     </p>
-                    <!-- <script>
-                        // Set the date we're counting down to
-                        var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
-                        
-                        // Update the count down every 1 second
-                        var x = setInterval(function() {
-                        
-                          // Get today's date and time
-                          var now = new Date().getTime();
-                            
-                          // Find the distance between now and the count down date
-                          var distance = countDownDate - now;
-                            
-                          // Time calculations for days, hours, minutes and seconds
-                          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                            
-                          // Output the result in an element with id="demo"
-                          document.getElementById("timer1").innerHTML = seconds;
-                            
-                          // If the count down is over, write some text 
-                          if (distance < 0) {
-                            clearInterval(x);
-                            document.getElementById("timer1").innerHTML = "EXPIRED";
-                          }
-                        }, 1000);
-                        </script> -->
                 </div>
             </div>
             <form class="raspunsuri">
@@ -187,9 +157,9 @@
             </form>
             <p>Exercițiul 3. <i><b>30p</b></i></p>
             <div class="enunt">
-                <p>Determinați F:(0, ∞) → R, o primitivă pentru f, astfel încât F(1) = 3, unde
+                <p id="ex4">Determinați F:(0, ∞) → R, primitivă pentru f a.î. F(1) = 3, unde
                     $$
-                    f:(0,+\infin) \rightarrow \R, f(x) = 3 - \frac{1}{x}.
+                    f:(0,+\infin) \rightarrow \R\newline f(x) = 3 - \frac{1}{x}.
                     $$
                 </p>
                 <div class="timer" id="divtimer3">
@@ -235,7 +205,7 @@
             <div class="enunt">
                 <p>Să se calculeze derivata funcției f:
                     $$
-                    f:R \rightarrow \R, f(x) = 2 \cdot arctgx + 5 \cdot arcctg x.
+                    f:R \rightarrow \R\newline f(x) = 2 \cdot arctgx + 5 \cdot arcctg x.
                     $$
                 </p>
                 <div class="timer" id="divtimer4">
