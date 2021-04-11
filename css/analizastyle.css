@@ -320,6 +320,7 @@ h2 {
   cursor: pointer;
   width: 100%;
   opacity: 0.8;
+  margin-top: 5px;
 }
 
 button {
@@ -336,6 +337,7 @@ button {
   }
   .limite-integrale {
     overflow: scroll;
+    width: inherit;
   }
   body {
     height: unset;
@@ -391,9 +393,6 @@ button {
     display: contents;
   }
   #teorie {
-    width: inherit;
-  }
-  .limite-integrale {
     width: inherit;
   }
   .pageContent {
@@ -534,7 +533,7 @@ button {
   }
   .centerContent {
     overflow-y: scroll;
-    height: 75vh;
+    /* height: 75vh; */
   }
   .clasament {
     display: flex;
