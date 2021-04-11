@@ -243,8 +243,8 @@
                     semestrului.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="images/diagrama.svg" alt="Schema aplicatie" id="diagrama" />
-                    <figcaption id="caption-diagrama">Diagrama aplicației MEGa</figcaption>
+                    <img src="images/diagrama.svg" alt="Schema aplicatie" class="diagrama" />
+                    <figcaption class="caption-diagrama">Diagrama aplicației MEGa</figcaption>
                 </figure>
                 <h3 id="overall">2.2 Funcționalitățile produsului</h3>
                 <p>
@@ -362,8 +362,422 @@
                 </p>
                 <h3 id="software-interface">3.3 Interfețe software</h3>
                 <p>
-                    Aplicația va comunica direct cu o bază de date PostgreSQL pentru a 
+                    Aplicația va comunica direct cu o bază de date PostgreSQL pentru a introduce și
+                    a extrage informațiile clienților. De asemenea, prin utilizarea conceptelor de
+                    *<u>programare orientată-obiect</u>, obicetele vor interacționa prin intermediul *<u>metodelor</u>.
                 </p>
+                <h3 id="communications-interface">3.4 Interfețe de comunicare</h3>
+                <p>
+                    Funcția de înregistrare va consta în completarea unui formular și trimiterea unui email pentru
+                    validare utilizatorului, folosind protocolul *<u>SMTP</u>. Parolele utilizatorilor vor fi encodate
+                    printr-un algoritm de encriptare.
+                </p>
+            </section>
+            <section typeof="sa:MaterialsAndMethods">
+                <h2 id="system-features">4. Caracteristici ale sistemului</h2>
+                <h3 id="first-feature">4.1 Generarea exercițiilor și testelor</h3>
+                <h4 id="first-feature-1">4.1.1 Descriere și gradul de prioritate</h4>
+                <p>
+                    Fiecare utilizator primește o serie de exerciții inițiale, fiecare cu un anumit punctaj asociat, iar
+                    prin rezolvarea lor și acumularea unui anumit punctaj, vor fi generate noi exerciții și teste.
+                </p>
+                <p>
+                    Generarea de exerciții noi are o prioritate mare pe site deoarece stimulează utilizatorii să-și
+                    verifice
+                    cunoștințele acumulate.
+                </p>
+                <h4 id="first-feature-2">4.1.2 Stimul/Răspuns</h4>
+                <p>
+                    Utilizatorul răspunde înterbărilor prin bifarea răspunsurilor considerate corecte, iar sistemul
+                    verifică
+                    în baza de date corespunzătoare variantele de răspuns.
+                </p>
+                <h4 id="first-feature-3">4.1.3 Cerințe funcționale</h4>
+                <p>
+                    Sistemul semnalează răspunsurile greșite și pe cele corecte dar nebifate de utilizator.
+                </p>
+                <h3 id="second-feature">4.2 Generarea clasamentelor</h3>
+                <h4 id="second-feature-1">4.2.1 Descriere și gradul de prioritate</h4>
+                <p>
+                    Fiecare pagină corespunzătoare unei ramure matematice dispune de un clasament al celor mai buni 10
+                    utilizatori.
+                </p>
+                <p>
+                    Dispunerea clasamentelor în timp real are o prioritate medie pe site deoarece stimulează
+                    competitivitatea utilizatorilor prin
+                    dorința de a ocupa un loc cât mai bun în top.
+                </p>
+                <h4 id="second-feature-2">4.2.2 Stimul/Răspuns</h4>
+                <p>
+                    Utilizatorul acumulează punctaje de la diferite exerciții rezolvate, iar după fiecare test sau
+                    exercițiu rezolvat clasamentul este actualizat.
+                </p>
+                <h4 id="second-feature-3">4.2.3 Cerințe funcționale</h4>
+                <p>
+                    Sistemul generează clasamentul în timp real.
+                </p>
+                <h3 id="third-feature">4.3 Generarea chestionarelor</h3>
+                <h4 id="third-feature-1">4.3.1 Descriere și gradul de prioritate</h2>
+                    <p>
+                        Pe pagina principală, zona de relaxare dispune de un buton ce are ca scop generarea unui
+                        chestionar
+                        temporizat, de tip grilă. Chestionarul temporizat este ca un test fulger.
+                    </p>
+                    <p>
+                        Chestionarul temporizat are un grad de importanță mare deoarece stimulează gandirea rapidă a
+                        utilizatorului
+                        prin temporizarea fiecărui exercițiu.
+                    </p>
+                    <h4 id="third-feature-2">4.3.2 Stimul/Răspuns</h4>
+                    <p>
+                        Utilizatorul are un anumit timp alocat fiecărui exercițiu și răspunde prin bifarea variantelor
+                        considerate
+                        corecte, iar sistemul verifică în baza de date corectitudinea exerițiului, iar în funcție de
+                        timpul
+                        de răspuns al utilizatorului, îi calculează punctajul.
+                    </p>
+                    <h4 id="third-feature-3">4.3.2 Cerințe funcționale</h4>
+                    <p>
+                        Sistemul cronometrează toate exercițiile și la finalul fiecăruia calculează punctajul acumulat
+                        în funcție
+                        de timpul de răspuns, iar la finalul chestionarului, semnalează
+                        răspunsurile greșite și pe cele corecte dar nebifate.
+                    </p>
+                    <h3 id="forth-feature">4.4 Joc X și 0</h3>
+                    <h4 id="fourth-feature-1">4.4.1 Descriere și gradul de prioritate</h4>
+                    <p>
+                        Zona de relaxare a paginii principale conține un joc X și 0 disponibil pe mai multe dificultăți:
+                        ușor, mediu
+                        și greu. Jocul momentan se desfășoară între jucător și calculator.
+                    </p>
+                    <p>
+                        Jocul X și 0 are o prioritate medie pe site-ul nostru deoarece conferă un mod de relaxare pentru
+                        utilizatori.
+                    </p>
+                    <h4 id="fourth-feature-2">4.4.2 Stimul/Răspuns</h4>
+                    <p>
+                        Utilizatorul are întotdeauna dreptul de a muta primul, urmând ca sistemul sa calculeze
+                        următoarea
+                        mutare.
+                    </p>
+                    <h4 id="fourth-feature-3">4.4.3 Cerințe funcționale</h4>
+                    <p>
+                        Sistemul calculează mutarea calculatorului în funcție de dificultatea aleasă de utilizator.
+                        Jocul se încheie atunci
+                        când unul dintre cei doi ajunge la 3 piese succesive pe verticală, orizontală sau diagonală, sau
+                        atunci când tabla ajunge
+                        la maximul capacității.
+                    </p>
+                    <h3 id="fifth-feature">4.5 Formular de înregistrare</h3>
+                    <h4 id="fifth-feature-1">4.5.1 Descriere și gradul de prioritate</h4>
+                    <p>
+                        Utilizatorul are opțiunea de a se înregistra pe site pentru a putea dispune de toate
+                        funcționalitățile
+                        acestuia. Acesta trebuie să completeze un formular și să aștepte confirmarea creării contului pe
+                        email.
+                    </p>
+                    <p>
+                        Gradul de prioritate al acestei funcțiuni este înalt, deoarece odată logat utilizatorul poate să
+                        beneficieze
+                        de toate funcționalitățile aplicației.
+                    </p>
+                    <h4 id="fifth-feature-2">4.5.2 Stimul/Răspuns</h4>
+                    <p>
+                        Utilizatorul trebuie să completeze formularul de înregistrare, după care să acceseze link-ul de
+                        confirmare
+                        primit prin email.
+                    </p>
+                    <h4 id="fifth-feature-3">4.5.3 Cerințe funcționale</h4>
+                    <p>
+                        Sistemul primește datele introduse de utilizator, validează email-ul primit, după care, dacă
+                        acesta nu
+                        există deja în baza de date, trimite un link de confirmare utilizatorului pe adresa de email
+                        introdusă.
+                        Odată accesat link-ul, utilizatorul este salvat în baza de date.
+                    </p>
+            </section>
+            <section typeof="sa:MaterialsAndMethods">
+                <h2>5. Alte cerințe nefuncționale</h2>
+                <h3 id="Performance">5.1 Cerințe de performanță</h3>
+                <p>
+                    Aplicația are ca scop verificarea răspunsurilor utilizatorilor într-un timp cât mai scurt, generarea
+                    clasamentului
+                    în timp real, calcularea mutărilor calculatorului în jocul de X și 0 cât mai rapid și strategic.
+                </p>
+                <h3 id="Safety">5.2 Cerințe de siguranță</h3>
+                <p>
+                    Nici o pierdere sau deteriorare a datelor nu poate avea loc folosind acest site deoarece totul este
+                    generat de sistem.
+                </p>
+                <h3 id="Security">5.3 Cerințe de securitate</h3>
+                <p>
+                    Parolele utilizatorilor vor fi stocate în baza de date encriptate, astfel prevenind furturile de
+                    date. Singurele informații
+                    afișate despre utilizatori pe site vor fi username-ul și punctajul corespunzător, pentru a putea
+                    realiza clasamentul.
+                </p>
+                <h3>5.4 Calitatea atributelor software</h3>
+                <p>
+                    Mentenanța site-ului va fi efectuată de către admini, actualizând datele stocate în bazele de date.
+                    Corectitudinea rezultatelor exercițiilor va fi verificată înaintea stocării acestora în baza de
+                    date.
+                    Interfața este prietenoasă, astfel fiind ușor de utilizat.
+                </p>
+                <h3>5.5 Reguli de afacere</h3>
+                <p>
+                    Singurele persoane care pot actualiza funcționalitățile site-ului sunt autorii și posibilii
+                    contribuitori,
+                    aleși de autori.
+                </p>
+            </section>
+            <section typeof="sa:MaterialsAndMethods">
+                <h2>Alte cerințe</h2>
+                <ul>
+                    <li>
+                        Baza de date utilizată pentru stocarea datelor utilizatorilor și verificarea unicității
+                        adreselor de email
+                        nou returnate de formularul de înregistrare.
+                    </li>
+                    <li>
+                        Baza de date utilizată pentru stocarea exercițiilor propuse spre rezolvare, cât și a
+                        raspunsurilor corecte
+                        ale acestora.
+                    </li>
+                    <li>
+                        Un algoritm ce are ca scop calcularea mutărilor calculatorului în funcție de dificultatea aleasă
+                        de utilizator
+                        și mutările acestuia.
+                    </li>
+                </ul>
+                <h2>Anexa A: Glosar</h2>
+                <div class="definitii">
+                    <ul>
+                        <li>
+                            SMTP = Simple Mail Transfer Protocol, este un protocol simplu, care este folosit la
+                            transmiterea mesajelor în format electronic într-o rețea de calculatoare
+                        </li>
+                        <li>
+                            programare orientată-obiect = este o paradigmă de programare, axată pe ideea încapsulării,
+                            adică grupării datelor și codului care operează asupra lor, într-o singură structură
+                        </li>
+                        <li>
+                            metode = funcțiile membre ale obiectelor
+                        </li>
+                    </ul>
+                </div>
+                <h2>Anexa B: Modele de analiză</h2>
+                <figure typeof="sa:image">
+                    <img src="images/diagrama_users.svg" alt="Diagrama utilizatori" class="diagrama" />
+                    <figcaption class="caption-diagrama">Diagrama bazei de date a utilizatorilor</figcaption>
+                </figure>
+            </section>
+            <section typeof="sa:ReferenceList">
+                <h2>Bibliografie</h2>
+                <ol>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle" resource="https://flexboxfroggy.com/#ro">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">FlexBox Froggy</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://flexboxfroggy.com/#ro">https://flexboxfroggy.com/#ro</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://www.w3schools.com/css/css_rwd_intro.asp">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">What is responsive web design?</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://www.w3schools.com/css/css_rwd_intro.asp">https://www.w3schools.com/css/css_rwd_intro.asp</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://uxdesign.cc/importance-of-colors-on-your-website-and-logo-b5468e9f0a10">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Importance of colors on your website</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://uxdesign.cc/importance-of-colors-on-your-website-and-logo-b5468e9f0a10">https://uxdesign.cc/importance-of-colors-on-your-website-and-logo-b5468e9f0a10</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">A complete guide to FlexBox</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://www.w3schools.com/css/css3_gradients.asp">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">CSS Gradients</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://www.w3schools.com/css/css3_gradients.asp">https://www.w3schools.com/css/css3_gradients.asp</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://katex.org/docs/supported.html">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">KaTeX supported functions</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://katex.org/docs/supported.html">https://katex.org/docs/supported.html</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://www.mateinfo.ro/teorie-formule-matematica/teorie-complexa-liceu/formule-matematica-liceu/266-analiza-matematica-cls-a-xii-a/file">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Formule teorie Analiză</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://www.mateinfo.ro/teorie-formule-matematica/teorie-complexa-liceu/formule-matematica-liceu/266-analiza-matematica-cls-a-xii-a/file">Formule
+                                        integrale și derivate</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://sites.google.com/site/videomeditatii/clase-liceale-9-12/clasa-a-11-a-materii-de-studiu/programa-scolara-pentru-matematica-clasa-a-xi-a/limite-remarcabile-folosite-de-regula-in-cazurile-limitelor-de-nedeterminare">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Formule teorie Analiză</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://sites.google.com/site/videomeditatii/clase-liceale-9-12/clasa-a-11-a-materii-de-studiu/programa-scolara-pentru-matematica-clasa-a-xi-a/limite-remarcabile-folosite-de-regula-in-cazurile-limitelor-de-nedeterminare">Limite
+                                        remarcabile</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://vectordesign.zibbet.com/pi-math-symbol-graphics-design-svg-dxf-eps-png-cdr-ai-pdf-vector-art-clipart-instant-download-digital-cut-print-file-decal-cricut-silhouette">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Emblemă site</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://vectordesign.zibbet.com/pi-math-symbol-graphics-design-svg-dxf-eps-png-cdr-ai-pdf-vector-art-clipart-instant-download-digital-cut-print-file-decal-cricut-silhouette">Emblemă
+                                        site PNG</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle" resource="https://convertio.co/png-svg/">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">PNG to SVG</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://convertio.co/png-svg/">Convertor PNG to SVG</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://www.freecodecamp.org/news/multiple-choice-quiz-template/?fbclid=IwAR1almZqc3lnfrlpL_gTEqbB1gTlbOWAA_O8o4MY0JWtnO0G5-DHbllvHxM">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Grile format</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://www.freecodecamp.org/news/multiple-choice-quiz-template/?fbclid=IwAR1almZqc3lnfrlpL_gTEqbB1gTlbOWAA_O8o4MY0JWtnO0G5-DHbllvHxM">Ghid
+                                        format checkbox
+                                    </a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Scholarly HTML ghid</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html">Informații
+                                        scholarly HTML </a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle" resource="https://schema.org/Person">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Scholarly HTML Person</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://schema.org/Person">Informații tipul Person </a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://w3c.github.io/scholarly-html/#structure">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Scholarly CSS template</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://w3c.github.io/scholarly-html/#structure">CSS Scholarly HTML</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://profs.info.uaic.ro/~vcosmin/proiectetw">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Enunț</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://profs.info.uaic.ro/~vcosmin/proiectetw">MEGa - Math Equation Game
+                                        Enunț</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://github.com/rick4470/IEEE-SRS-Tempate">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Template document Scholarly HTML</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://github.com/rick4470/IEEE-SRS-Tempate">IEEE-SRS-Tempate</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                        resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html#calendar">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Enunț proiect</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html#calendar">Enunț
+                                        proiect general </a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                </ol>
             </section>
         </article>
     </div>
