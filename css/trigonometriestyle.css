@@ -4,6 +4,7 @@
   *::after {
     box-sizing: inherit;
   }
+ 
   html {
     right: 0;
     left: 0;
@@ -19,6 +20,8 @@
     bottom: 0;
     top: 0;
     background-image: url("../images/Picture1.png");
+  height:80vh;
+  overflow: hidden; 
   }
   td{
     text-align: center;
@@ -86,6 +89,7 @@
   width: 100%;
   height: 100%;
   justify-content: space-between;
+ 
 }
 .leftMenu{
   display: flex;
@@ -118,13 +122,45 @@
   padding-left: 0.5cm;
   margin-bottom: 1cm;
   width: 100%;
-  height: 100%;
+  height: 75vh;
+  overflow-y: scroll; 
+  
+  
 }
 #teorie{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: flex-start;
+}
+#probRezolvate{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+  
+  
 }
 #test,#probRezolvate,#probNerezolvate{
   display: none;
+}
+table.formule-trigonometrie td, table.formule-trigonometrie tr, table.formule-trigonometrie{
+  border: 1px solid gray;
+  border-collapse: collapse;
+  text-align: center;
+}
+h2{
+  text-align: left;
+}
+.table-number{
+  width: 10%;
+}
+.td-title{
+  font-weight: bold;
 }
 .clasament{
   display: flex;
@@ -201,7 +237,9 @@
     /* For phones: */
      /* .pagecontent{ align-content: center; flex-direction: column; } */
     .meniu{width: 100%;}
+    body{height: unset; overflow: unset;}
     .elem_meniu{font-size: 10px; }
+    .katex { font-size: 15px !important; }
     .meniu_icon{width: 5%;}
     .leftMenu{
       flex-direction: row;
@@ -231,8 +269,13 @@
     border-top: none;
     border-bottom: none;
     }
+    .formule-trigonometrie{
+      width: inherit;
+    }
     .centerContent{
       margin-top: 0.3cm;
+      height: inherit;
+      margin-bottom: 1.5cm;
     }
     .itemLeftMenu:hover{
       font-size: small;
@@ -240,11 +283,24 @@
     .clasament{
       display: none;
     }
+    
+    .trigo{
+      display: none;
+    }
+    .tabel-formule{
+      display: block;
+      
+    }
+    .table-number{
+      width: 5%;
+    }
   }
   @media only screen and (min-width: 768px) {
     /* For tablets: */
     /* .pagecontent{flex-direction: row; align-content:space-between; } */
     .meniu{width: 100%;}
+    body{overflow: hidden;}
+    .katex { font-size: 18px !important; } 
     .elem_meniu{font-size: 14px;}
     .leftMenu{
       flex-direction: row;
@@ -254,7 +310,7 @@
       height: 100%;
     }
     .pageContent{
-      flex-direction: row;
+      flex-direction: column;
     }
     .itemLeftMenu{
       width: 25%;
@@ -267,7 +323,18 @@
     }
     .centerContent{
       margin-top: 0cm;
-      margin-left: 0.5cm;
+      margin-left: 0cm;
+      overflow-y: scroll;
+      height:80vh;
+    }
+    .trigo{
+      display: none;
+    }
+    .tabel-formule{
+      display: block;
+    }
+    .formule-trigonometrie{
+      margin-bottom: 2cm;
     }
     .clasament{
       display: none;
@@ -277,6 +344,9 @@
     /* For laptops: */
     /* .pagecontent{flex-direction: row; } */
     .meniu{width: 100%;}
+    .katex{
+      font-size:16px !important;
+    }
     .elem_meniu{font-size: 20px;}
     .leftMenu{
       flex-direction: column;
@@ -288,6 +358,7 @@
     }
     .pageContent{
       flex-direction: row;
+      
     }
     .itemLeftMenu{
       width: 100%;
@@ -315,9 +386,41 @@
     }
     .centerContent{
       margin-top: 0cm;
-      margin-left: 0.5cm;
+      margin-left: 0.1cm;
+      overflow-y: scroll;
+      height:80vh;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center
     }
     .clasament{
       display: flex;
+    }
+    .trigo{overflow:inherit;
+      display: block;
+   }
+    .identareformule{
+      
+      text-align-last:left;
+    }
+    .answerVar{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+      opacity:0.9;
+    }
+    .tabel-formule{
+      display: none;
+    }
+    .tabel-formule2{
+      display:block;
+    }
+    .right{
+      display: flex;
+      justify-content: left;
+     
     }
   }
