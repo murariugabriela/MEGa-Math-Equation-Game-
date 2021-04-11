@@ -46,7 +46,7 @@
     </table>
   </div>
   <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
+    <form class="form-container">
       <h1>Login</h1>
       <label><b>Email</b>
         <input type="text" placeholder="Enter Email" name="email" required>
@@ -54,7 +54,8 @@
       <label><b>Password</b>
         <input type="password" placeholder="Enter Password" name="psw" required>
       </label>
-      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn">Login</button>
+      <button type="button" class="btn" onclick="window.location.href='register.html';">Register</button>
     </form>
   </div>
   <div class="pageContent">
@@ -416,7 +417,7 @@
             </tr>
           </table>
         </div>
-        <div class="limite-integrale">
+        <div>
           <table class="formule-derivate-integrale tabel2">
             <tr>
               <td colspan="2"><span class="td-title">Operații</span></td>
@@ -593,7 +594,7 @@
         </p>
       </div>
       <div id="probNerezolvate">
-        <h2>Problema 1</h2>
+        <h2>Problema 1 <i><b>20p</b></i></h2>
         <p>
           $$
           Calculați \enspace \lim_{x \to 3} \frac{f(x)-f(3)}{x-3}, \enspace pentru \enspace f(x)=x^3
@@ -635,7 +636,7 @@
       </div>
       <div id="test">
         <h2>Test1</h2>
-        <p>Exercițiul 1. </p>
+        <p>Exercițiul 1. <i><b>15p</b></i></p>
         <p>Să se calculeze derivata funcției f:
           $$
           f:(0,\infin) \rightarrow \R, \enspace f(x) = x \cdot ln x.
@@ -674,7 +675,7 @@
             <button type="button" class="send-answer" onclick="verifyAnswer('t11')">Verifica raspuns</button>
           </div>
         </form>
-        <p>Exercițiul 2. </p>
+        <p>Exercițiul 2. <i><b>12p</b></i></p>
         <p>Să se calculeze integrala următoare:
           $$
           I = \int \frac{cos^2 x - sin^2 x}{sin^2 x \cdot cos^2 x}dx.
@@ -713,7 +714,7 @@
             <button type="button" class="send-answer" onclick="verifyAnswer('t12')">Verifica raspuns</button>
           </div>
         </form>
-        <p>Exercițiul 3. </p>
+        <p>Exercițiul 3. <i><b>20p</b></i></p>
         <p>Determinați F:(0, ∞) → R, o primitivă pentru f, astfel încât F(1) = 3, unde
           $$
           f:(0,+\infin) \rightarrow \R, f(x) = 3 - \frac{1}{x}.
@@ -752,7 +753,7 @@
             <button type="button" class="send-answer" onclick="verifyAnswer('t13')">Verifica raspuns</button>
           </div>
         </form>
-        <p>Exercițiul 4. </p>
+        <p>Exercițiul 4. <i><b>14p</b></i></p>
         <p>Să se calculeze derivata funcției f:
           $$
           f:R \rightarrow \R, f(x) = 2 \cdot arctgx + 5 \cdot arcctg x.
@@ -791,7 +792,7 @@
             <button type="button" class="send-answer" onclick="verifyAnswer('t14')">Verifica raspuns</button>
           </div>
         </form>
-        <p>Exercițiul 5. </p>
+        <p>Exercițiul 5. <i><b>12p</b></i></p>
         <p>Calculați următoarea integrală definită:
           $$
           \int_{-2}^{1} (x^3 - 3 \cdot x + 4)dx.
