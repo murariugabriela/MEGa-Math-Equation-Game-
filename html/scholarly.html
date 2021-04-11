@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="style/scholarlystyle.css">
 </head>
 
-<body prefix="schema:http://schema.org/" prefix="sa:https://ns.science.ai/" itemscope
-    itemtype="http://schema.org/WebPage">
-    <div id="articlecontent" prefix="sa:https://ns.science.ai/" itemscope itemtype="http://schema.org/WebPage">
+<body prefix="schema: http://schema.org/# sa: https://ns.science.ai/" itemscope itemtype="http://schema.org/WebPage">
+    <div id="articlecontent" itemscope itemtype="http://schema.org/WebPage">
         <article resource="#" typeof="schema:ScholarlyArticle">
             <header>
                 <h1 id="title">MEGa - Math Equation Game</h1>
@@ -246,7 +245,7 @@
                     <img src="images/diagrama.svg" alt="Schema aplicatie" class="diagrama" />
                     <figcaption class="caption-diagrama">Diagrama aplicației MEGa</figcaption>
                 </figure>
-                <h3 id="overall">2.2 Funcționalitățile produsului</h3>
+                <h3>2.2 Funcționalitățile produsului</h3>
                 <p>
                     Aplicația dispune de următoarele funcționalități: crearea unui cont,
                     logarea în aplicație cu un cont existent, dispunerea suportului teoretic,
@@ -256,7 +255,7 @@
                     aplicația pune la dispoziția utilizatorului o zonă de relaxare
                     disponibilă pe pagina principală.
                 </p>
-                <h3 id="users classes">2.3 Clase de utilizatori și caracteristici</h3>
+                <h3>2.3 Clase de utilizatori și caracteristici</h3>
                 <p>
                     Utilizatorii aplicației se împart în două categorii: utilizatori
                     obișnuiți și utilizatori de tip admin, reprezentați de autorii
@@ -294,7 +293,8 @@
                         </p>
                     </li>
                 </ol>
-                Site-ul este adaptat pentru rezoluții pornind de la lățimea de 320px.
+                <p>
+                    Site-ul este adaptat pentru rezoluții pornind de la lățimea de 320px.
                 </p>
                 <h3 id="Constraints">2.5 Design și constrângeri de implementare</h3>
                 <p>
@@ -308,7 +308,7 @@
                     Documentația utilizatorului privind exercițiile poate fi
                     regăsită în secțiunea teoretică a fiecărei categorii.
                 </p>
-                <h3 id="Assumptions Dependencies">2.7 Ipoteze și dependențe</h3>
+                <h3>2.7 Ipoteze și dependențe</h3>
                 <p>
                     Modul de funcționalitate al aplicației web poate fi alterat în cazul
                     în care browser-ul de pe care este accesată nu suportă HTML5, CSS,
@@ -417,84 +417,84 @@
                     Sistemul generează clasamentul în timp real.
                 </p>
                 <h3 id="third-feature">4.3 Generarea chestionarelor</h3>
-                <h4 id="third-feature-1">4.3.1 Descriere și gradul de prioritate</h2>
-                    <p>
-                        Pe pagina principală, zona de relaxare dispune de un buton ce are ca scop generarea unui
-                        chestionar
-                        temporizat, de tip grilă. Chestionarul temporizat este ca un test fulger.
-                    </p>
-                    <p>
-                        Chestionarul temporizat are un grad de importanță mare deoarece stimulează gandirea rapidă a
-                        utilizatorului
-                        prin temporizarea fiecărui exercițiu.
-                    </p>
-                    <h4 id="third-feature-2">4.3.2 Stimul/Răspuns</h4>
-                    <p>
-                        Utilizatorul are un anumit timp alocat fiecărui exercițiu și răspunde prin bifarea variantelor
-                        considerate
-                        corecte, iar sistemul verifică în baza de date corectitudinea exerițiului, iar în funcție de
-                        timpul
-                        de răspuns al utilizatorului, îi calculează punctajul.
-                    </p>
-                    <h4 id="third-feature-3">4.3.2 Cerințe funcționale</h4>
-                    <p>
-                        Sistemul cronometrează toate exercițiile și la finalul fiecăruia calculează punctajul acumulat
-                        în funcție
-                        de timpul de răspuns, iar la finalul chestionarului, semnalează
-                        răspunsurile greșite și pe cele corecte dar nebifate.
-                    </p>
-                    <h3 id="forth-feature">4.4 Joc X și 0</h3>
-                    <h4 id="fourth-feature-1">4.4.1 Descriere și gradul de prioritate</h4>
-                    <p>
-                        Zona de relaxare a paginii principale conține un joc X și 0 disponibil pe mai multe dificultăți:
-                        ușor, mediu
-                        și greu. Jocul momentan se desfășoară între jucător și calculator.
-                    </p>
-                    <p>
-                        Jocul X și 0 are o prioritate medie pe site-ul nostru deoarece conferă un mod de relaxare pentru
-                        utilizatori.
-                    </p>
-                    <h4 id="fourth-feature-2">4.4.2 Stimul/Răspuns</h4>
-                    <p>
-                        Utilizatorul are întotdeauna dreptul de a muta primul, urmând ca sistemul sa calculeze
-                        următoarea
-                        mutare.
-                    </p>
-                    <h4 id="fourth-feature-3">4.4.3 Cerințe funcționale</h4>
-                    <p>
-                        Sistemul calculează mutarea calculatorului în funcție de dificultatea aleasă de utilizator.
-                        Jocul se încheie atunci
-                        când unul dintre cei doi ajunge la 3 piese succesive pe verticală, orizontală sau diagonală, sau
-                        atunci când tabla ajunge
-                        la maximul capacității.
-                    </p>
-                    <h3 id="fifth-feature">4.5 Formular de înregistrare</h3>
-                    <h4 id="fifth-feature-1">4.5.1 Descriere și gradul de prioritate</h4>
-                    <p>
-                        Utilizatorul are opțiunea de a se înregistra pe site pentru a putea dispune de toate
-                        funcționalitățile
-                        acestuia. Acesta trebuie să completeze un formular și să aștepte confirmarea creării contului pe
-                        email.
-                    </p>
-                    <p>
-                        Gradul de prioritate al acestei funcțiuni este înalt, deoarece odată logat utilizatorul poate să
-                        beneficieze
-                        de toate funcționalitățile aplicației.
-                    </p>
-                    <h4 id="fifth-feature-2">4.5.2 Stimul/Răspuns</h4>
-                    <p>
-                        Utilizatorul trebuie să completeze formularul de înregistrare, după care să acceseze link-ul de
-                        confirmare
-                        primit prin email.
-                    </p>
-                    <h4 id="fifth-feature-3">4.5.3 Cerințe funcționale</h4>
-                    <p>
-                        Sistemul primește datele introduse de utilizator, validează email-ul primit, după care, dacă
-                        acesta nu
-                        există deja în baza de date, trimite un link de confirmare utilizatorului pe adresa de email
-                        introdusă.
-                        Odată accesat link-ul, utilizatorul este salvat în baza de date.
-                    </p>
+                <h4 id="third-feature-1">4.3.1 Descriere și gradul de prioritate</h4>
+                <p>
+                    Pe pagina principală, zona de relaxare dispune de un buton ce are ca scop generarea unui
+                    chestionar
+                    temporizat, de tip grilă. Chestionarul temporizat este ca un test fulger.
+                </p>
+                <p>
+                    Chestionarul temporizat are un grad de importanță mare deoarece stimulează gandirea rapidă a
+                    utilizatorului
+                    prin temporizarea fiecărui exercițiu.
+                </p>
+                <h4 id="third-feature-2">4.3.2 Stimul/Răspuns</h4>
+                <p>
+                    Utilizatorul are un anumit timp alocat fiecărui exercițiu și răspunde prin bifarea variantelor
+                    considerate
+                    corecte, iar sistemul verifică în baza de date corectitudinea exerițiului, iar în funcție de
+                    timpul
+                    de răspuns al utilizatorului, îi calculează punctajul.
+                </p>
+                <h4 id="third-feature-3">4.3.2 Cerințe funcționale</h4>
+                <p>
+                    Sistemul cronometrează toate exercițiile și la finalul fiecăruia calculează punctajul acumulat
+                    în funcție
+                    de timpul de răspuns, iar la finalul chestionarului, semnalează
+                    răspunsurile greșite și pe cele corecte dar nebifate.
+                </p>
+                <h3 id="forth-feature">4.4 Joc X și 0</h3>
+                <h4 id="fourth-feature-1">4.4.1 Descriere și gradul de prioritate</h4>
+                <p>
+                    Zona de relaxare a paginii principale conține un joc X și 0 disponibil pe mai multe dificultăți:
+                    ușor, mediu
+                    și greu. Jocul momentan se desfășoară între jucător și calculator.
+                </p>
+                <p>
+                    Jocul X și 0 are o prioritate medie pe site-ul nostru deoarece conferă un mod de relaxare pentru
+                    utilizatori.
+                </p>
+                <h4 id="fourth-feature-2">4.4.2 Stimul/Răspuns</h4>
+                <p>
+                    Utilizatorul are întotdeauna dreptul de a muta primul, urmând ca sistemul sa calculeze
+                    următoarea
+                    mutare.
+                </p>
+                <h4 id="fourth-feature-3">4.4.3 Cerințe funcționale</h4>
+                <p>
+                    Sistemul calculează mutarea calculatorului în funcție de dificultatea aleasă de utilizator.
+                    Jocul se încheie atunci
+                    când unul dintre cei doi ajunge la 3 piese succesive pe verticală, orizontală sau diagonală, sau
+                    atunci când tabla ajunge
+                    la maximul capacității.
+                </p>
+                <h3 id="fifth-feature">4.5 Formular de înregistrare</h3>
+                <h4 id="fifth-feature-1">4.5.1 Descriere și gradul de prioritate</h4>
+                <p>
+                    Utilizatorul are opțiunea de a se înregistra pe site pentru a putea dispune de toate
+                    funcționalitățile
+                    acestuia. Acesta trebuie să completeze un formular și să aștepte confirmarea creării contului pe
+                    email.
+                </p>
+                <p>
+                    Gradul de prioritate al acestei funcțiuni este înalt, deoarece odată logat utilizatorul poate să
+                    beneficieze
+                    de toate funcționalitățile aplicației.
+                </p>
+                <h4 id="fifth-feature-2">4.5.2 Stimul/Răspuns</h4>
+                <p>
+                    Utilizatorul trebuie să completeze formularul de înregistrare, după care să acceseze link-ul de
+                    confirmare
+                    primit prin email.
+                </p>
+                <h4 id="fifth-feature-3">4.5.3 Cerințe funcționale</h4>
+                <p>
+                    Sistemul primește datele introduse de utilizator, validează email-ul primit, după care, dacă
+                    acesta nu
+                    există deja în baza de date, trimite un link de confirmare utilizatorului pe adresa de email
+                    introdusă.
+                    Odată accesat link-ul, utilizatorul este salvat în baza de date.
+                </p>
             </section>
             <section typeof="sa:MaterialsAndMethods">
                 <h2>5. Alte cerințe nefuncționale</h2>
@@ -574,7 +574,7 @@
             <section typeof="sa:ReferenceList">
                 <h2>Bibliografie</h2>
                 <ol>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle" resource="https://flexboxfroggy.com/#ro">
+                    <li typeof="schema:ScholarlyArticle" resource="https://flexboxfroggy.com/#ro">
                         <span typeof="schema:Thing">
                             <span property="schema:name">FlexBox Froggy</span>
                             <span property="schema:url">
@@ -584,8 +584,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
-                        resource="https://www.w3schools.com/css/css_rwd_intro.asp">
+                    <li typeof="schema:ScholarlyArticle" resource="https://www.w3schools.com/css/css_rwd_intro.asp">
                         <span typeof="schema:Thing">
                             <span property="schema:name">What is responsive web design?</span>
                             <span property="schema:url">
@@ -596,7 +595,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://uxdesign.cc/importance-of-colors-on-your-website-and-logo-b5468e9f0a10">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Importance of colors on your website</span>
@@ -608,7 +607,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
                         <span typeof="schema:Thing">
                             <span property="schema:name">A complete guide to FlexBox</span>
@@ -620,8 +619,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
-                        resource="https://www.w3schools.com/css/css3_gradients.asp">
+                    <li typeof="schema:ScholarlyArticle" resource="https://www.w3schools.com/css/css3_gradients.asp">
                         <span typeof="schema:Thing">
                             <span property="schema:name">CSS Gradients</span>
                             <span property="schema:url">
@@ -632,8 +630,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
-                        resource="https://katex.org/docs/supported.html">
+                    <li typeof="schema:ScholarlyArticle" resource="https://katex.org/docs/supported.html">
                         <span typeof="schema:Thing">
                             <span property="schema:name">KaTeX supported functions</span>
                             <span property="schema:url">
@@ -644,7 +641,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://www.mateinfo.ro/teorie-formule-matematica/teorie-complexa-liceu/formule-matematica-liceu/266-analiza-matematica-cls-a-xii-a/file">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Formule teorie Analiză</span>
@@ -657,7 +654,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://sites.google.com/site/videomeditatii/clase-liceale-9-12/clasa-a-11-a-materii-de-studiu/programa-scolara-pentru-matematica-clasa-a-xi-a/limite-remarcabile-folosite-de-regula-in-cazurile-limitelor-de-nedeterminare">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Formule teorie Analiză</span>
@@ -670,7 +667,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://vectordesign.zibbet.com/pi-math-symbol-graphics-design-svg-dxf-eps-png-cdr-ai-pdf-vector-art-clipart-instant-download-digital-cut-print-file-decal-cricut-silhouette">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Emblemă site</span>
@@ -683,7 +680,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle" resource="https://convertio.co/png-svg/">
+                    <li typeof="schema:ScholarlyArticle" resource="https://convertio.co/png-svg/">
                         <span typeof="schema:Thing">
                             <span property="schema:name">PNG to SVG</span>
                             <span property="schema:url">
@@ -693,7 +690,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://www.freecodecamp.org/news/multiple-choice-quiz-template/?fbclid=IwAR1almZqc3lnfrlpL_gTEqbB1gTlbOWAA_O8o4MY0JWtnO0G5-DHbllvHxM">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Grile format</span>
@@ -707,7 +704,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Scholarly HTML ghid</span>
@@ -720,7 +717,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle" resource="https://schema.org/Person">
+                    <li typeof="schema:ScholarlyArticle" resource="https://schema.org/Person">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Scholarly HTML Person</span>
                             <span property="schema:url">
@@ -730,8 +727,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
-                        resource="https://w3c.github.io/scholarly-html/#structure">
+                    <li typeof="schema:ScholarlyArticle" resource="https://w3c.github.io/scholarly-html/#structure">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Scholarly CSS template</span>
                             <span property="schema:url">
@@ -741,8 +737,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
-                        resource="https://profs.info.uaic.ro/~vcosmin/proiectetw">
+                    <li typeof="schema:ScholarlyArticle" resource="https://profs.info.uaic.ro/~vcosmin/proiectetw">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Enunț</span>
                             <span property="schema:url">
@@ -753,8 +748,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
-                        resource="https://github.com/rick4470/IEEE-SRS-Tempate">
+                    <li typeof="schema:ScholarlyArticle" resource="https://github.com/rick4470/IEEE-SRS-Tempate">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Template document Scholarly HTML</span>
                             <span property="schema:url">
@@ -764,7 +758,7 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html#calendar">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Enunț proiect</span>
@@ -777,32 +771,269 @@
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsvgsilh.com%2Fimage%2F160753.html&psig=AOvVaw3yG09V0SKetVgK44qRgOl1&ust=1618231800805000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICPuq6d9u8CFQAAAAAdAAAAABAD">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Imagine test fulger</span>
                             <span property="schema:url">
                                 <cite typeof="citation">
                                     <a
-                                        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsvgsilh.com%2Fimage%2F160753.html&psig=AOvVaw3yG09V0SKetVgK44qRgOl1&ust=1618231800805000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICPuq6d9u8CFQAAAAAdAAAAABAD">Emblema test fulger</a>
+                                        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsvgsilh.com%2Fimage%2F160753.html&psig=AOvVaw3yG09V0SKetVgK44qRgOl1&ust=1618231800805000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICPuq6d9u8CFQAAAAAdAAAAABAD">Emblema
+                                        test fulger</a>
                                 </cite>
                             </span>
                         </span>
                     </li>
-                    <li id="ref-something" typeof="schema:ScholarlyArticle"
+                    <li typeof="schema:ScholarlyArticle"
                         resource="https://www.w3schools.com/jsref/met_win_setinterval.asp">
                         <span typeof="schema:Thing">
                             <span property="schema:name">Setare interval JavaScript</span>
                             <span property="schema:url">
                                 <cite typeof="citation">
-                                    <a
-                                        href="https://www.w3schools.com/jsref/met_win_setinterval.asp">Interval repetare funcție JS</a>
+                                    <a href="https://www.w3schools.com/jsref/met_win_setinterval.asp">Interval repetare
+                                        funcție JS</a>
                                 </cite>
                             </span>
                         </span>
                     </li>
-                    
+                    <li typeof="schema:ScholarlyArticle" resource="https://www.w3schools.com">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Tutoriale HTML, CSS, JS</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://www.w3schools.com">W3Schools</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li typeof="schema:ScholarlyArticle" resource="https://jigsaw.w3.org/css-validator/">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Validare fișiere CSS</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+                    <li typeof="schema:ScholarlyArticle" resource="https://validator.w3.org/">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Validare fișiere HTML</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://validator.w3.org/">HTML Validator</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+
                 </ol>
+                <h2>Contribuțiile autorilor</h2>
+                <ul id="contributii">
+                    <li>
+                        index.html
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        algebra.html
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        analiza.html & chestionare.html
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        geometrie.html & trigonometrie.html
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Bordeianu-Cocea</span>
+                                    <span property="schema:givenName">Adelina</span>
+                                    <span property="schema:additionalName">Mihaela</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        register.html
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        scholarly.html
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Bordeianu-Cocea</span>
+                                    <span property="schema:givenName">Adelina</span>
+                                    <span property="schema:additionalName">Mihaela</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        template-ul celor 4 categorii
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        stil.css & registerstyle.css
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        algebrastyle.css
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        analizastyle.css & chestionarstyle.css
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        geometriestyle.css & trigonometriestyle.css
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Bordeianu-Cocea</span>
+                                    <span property="schema:givenName">Adelina</span>
+                                    <span property="schema:additionalName">Mihaela</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        scholarlystyle.css
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Doboș</span>
+                                    <span property="schema:givenName">Alexandru</span>
+                                    <span property="schema:additionalName">Cristian</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Bordeianu-Cocea</span>
+                                    <span property="schema:givenName">Adelina</span>
+                                    <span property="schema:additionalName">Mihaela</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        myscript.js
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Murariu</span>
+                                    <span property="schema:givenName">Gabriela</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
         </article>
     </div>
