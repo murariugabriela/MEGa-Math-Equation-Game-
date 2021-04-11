@@ -1,0 +1,317 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    background-image: url("../images/Picture1.png");
+}
+
+td {
+    text-align: center;
+}
+
+.meniu {
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #8c92f0;
+}
+
+#citat {
+    padding: 0.1cm;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(2, 37, 37);
+}
+
+.meniu_icon {
+    width: 5%;
+}
+
+.cerc_meniu {
+    width: 100%;
+    height: 1.5cm;
+    background-color: #8c92f0;
+    border: #8c92f0;
+}
+
+.cerc_meniu:hover {
+    background-color: #6f76db;
+    border: #6f76db;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.pageContent {
+    overflow: scroll;
+}
+
+.elem_meniu {
+    width: 22.7%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.meniu_icon:hover {
+    background-color: #6f76db;
+}
+
+.elem_meniu:hover {
+    background-color: #6f76db;
+}
+
+.ales:hover {
+    background-color: #6f76db;
+}
+
+#emblema {
+    width: 1.5cm;
+    height: 1.5cm;
+}
+.enunt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+}
+.timer{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: green;
+    border-radius: 50%;
+}
+.pageContent {
+    background: white;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2cm;
+    align-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* background: rgb(166, 202, 214); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6f76db;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8c92f0;
+}
+
+.raspunsuri-ex-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[id*="input"] {
+    font-size: 12px;
+    text-align: center;
+    color: #e09f54;
+    margin-top: 0;
+}
+
+.test {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 0.5cm;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* height: 40px; */
+}
+
+.var {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px gray;
+    width: 200px;
+}
+
+.footer {
+    justify-content: center;
+    position: fixed;
+    float: inline-end;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #82b2ce;
+}
+
+/* The popup form - hidden by default */
+
+.form-popup {
+    right: 0;
+    top: 2cm;
+    display: none;
+    position: absolute;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+
+.form-container .btn {
+    background-color: #76e07a;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+button {
+    outline: none;
+}
+
+@media only screen and (min-width: 320px) {
+    /* For phones: */
+    #ex4{
+        width: fit-content;
+    }
+    #test{
+        font-size: 14px;
+        width: 100%;
+    }
+    .send-answer {
+        width: 200px;
+        height: 50px;
+    }
+    body {
+        height: 80vh;
+        overflow: hidden;
+        font-size: 16px;
+    }
+    .katex {
+        font-size: 15px !important;
+    }
+    .meniu {
+        width: 100%;
+    }
+    .elem_meniu {
+        font-size: 10px;
+    }
+    .meniu_icon {
+        width: 5%;
+    }
+    .pageContent{
+        height: 75vh;
+        overflow-y: scroll;
+        margin-bottom: 2cm;
+    }
+    .raspunsuri-ex-1{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For tablets: */
+    #test{
+        font-size: 18px;
+        width: 100%;
+    }
+    .raspunsuri-ex-1{
+        flex-direction: row;
+    }
+    .send-answer {
+        height: 90px;
+    }
+    body {
+        height: 90%;
+        overflow: hidden;
+    }
+    .katex {
+        font-size: 18px !important;
+    }
+    .meniu {
+        width: 100%;
+    }
+    .elem_meniu {
+        font-size: 14px;
+    }
+    .pageContent {
+        height: 100%;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For laptops: */
+    body {
+        overflow: hidden;
+        height: 80vh;
+    }
+    .katex {
+        font-size: 19px !important;
+    }
+    .meniu {
+        width: 100%;
+    }
+    .elem_meniu {
+        font-size: 20px;
+    }
+}
