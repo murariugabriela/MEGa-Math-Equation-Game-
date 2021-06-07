@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MEGa - Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adminPage.css">
+    <script src="../javascript/myscript.js"></script>
+    <script src="../javascript/verificaExercitiu.js"></script>
+    <script src="../javascript/login.js"></script>
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body onload="citat(); verificaAdmin();">
+    <!-- <div> -->
+    <table class="meniu">
+        <tr>
+            <td class="meniu_icon">
+                <a href="index.html">
+                    <div class="elem_meniu_link"><img src="../images/emblema.svg" alt="emblema" id="emblema"></div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="algebra.html">
+                    <div class="elem_meniu_link">Algebră</div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="analiza.html">
+                    <div class="elem_meniu_link">Analiză</div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="geometrie.html">
+                    <div class="elem_meniu_link">Geometrie</div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="trigonometrie.html">
+                    <div class="elem_meniu_link">Trigonometrie</div>
+                </a>
+            </td>
+            <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+                        <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                        <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                        <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                    </svg></button></td>
+        </tr>
+    </table>
+    <div class="form-popup" id="myForm">
+        <form method="POST" action="../php/logare_utilizator.php" class="form-container" id="formLogin">
+            <div id="inputForLogin">
+                <h1>Login</h1>
+                <label><b>Email</b>
+               <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            </label>
+                <label><b>Password</b>
+               <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            </label>
+            </div>
+            <p id="currentUser"></p>
+            <button type="submit" class="btn" id="butonLogin" value="Login">Login</button>
+            <button type="button" class="btn" id="butonLogout" value="Logout" onclick="logout();">Logout</button>
+            <button type="button" class="btn" id="registerButton" onclick="window.location.href='register.html';">Register</button>
+            <button type="button" class="btn" id="butonPaginaAdmin" onclick="window.location.href='adminPage.html';">Verifică exercițiu</button>
+            <button type="button" class="btn" onclick="window.location.href='adaugareExercitiu.html';">Adaugă exercițiu </button>
+            <p id="loggedIn"> </p>
+        </form>
+    </div>
+    <div class="pageContent">
+        <div class="centerContent">
+            <div class="listaExercitii">
+                <div id="admin">
+                    <h2>Lista cu exerciții neverificate:</h2>
+                    <?php 
+        require_once ("../php/selectareExercitiiNeverificate.php");
+        selectareExercitiu();
+        ?>
+                </div>
+                <h2 id="nonAdmin">Nu ai permisiunea de a verifica exerciții.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="citat"></p>
+    </div>
+</body>
+
+</html>
