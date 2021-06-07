@@ -1,11 +1,18 @@
-
-  *,
-  *::before,
-  *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
-  }
- 
-  html {
+}
+
+math,
+math[mode="inline"] {
+    display: inline;
+    font-family: CMSY10, CMEX10, Symbol, Times;
+    font-style: normal;
+    font-size: 20px;
+}
+
+html {
     right: 0;
     left: 0;
     bottom: 0;
@@ -13,173 +20,245 @@
     box-sizing: border-box;
     height: 100%;
     font-family: "Lucida Sans", sans-serif;
-  }
-  body{
+}
+
+#csvLink {
+    text-decoration: underline;
+}
+
+#csvLink:hover {
+    color: rgb(163, 74, 10);
+}
+
+.var {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px gray;
+    width: 200px;
+}
+
+.raspunsuri-ex-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#butonLogout {
+    display: none;
+}
+
+body {
     right: 0;
     left: 0;
     bottom: 0;
     top: 0;
     background-image: url("../images/Picture1.png");
-  height:80vh;
-  overflow: hidden; 
-  }
-  td{
+    height: 80vh;
+    overflow: hidden;
+}
+
+td {
     text-align: center;
-  }
-  .meniu{
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* background: rgb(166, 202, 214); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6f76db;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8c92f0;
+}
+
+.meniu {
     z-index: 2;
     position: fixed;
     right: 0;
     top: 0;
     width: 100%;
     background-color: #8c92f0;
-  }
-  #citat{
+}
+
+#citat {
     padding: 0.1cm;
     text-align: center;
     font-size: 12px;
-    color:rgb(2, 37, 37);
-  }
-  .meniu_icon{
+    color: rgb(2, 37, 37);
+}
+
+.meniu_icon {
     width: 5%;
-  }
-  .cerc_meniu{
+}
+
+.cerc_meniu {
     width: 100%;
     height: 1.5cm;
-    background-color:  #8c92f0;
+    background-color: #8c92f0;
     border: #8c92f0;
-  }
-  .cerc_meniu:hover{
-    background-color:  #6f76db;
-    border:  #6f76db;
-  }
-  a{
+}
+
+.cerc_meniu:hover {
+    background-color: #6f76db;
+    border: #6f76db;
+}
+
+a {
     color: white;
     text-decoration: none;
-  }
-  .elem_meniu{
+}
+
+.elem_meniu {
     width: 22.7%;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-  }
-  .ales{
-       color: white;
-       background-color: #383d86;
-  }
-  .meniu_icon:hover{
+}
+
+.ales {
+    color: white;
+    background-color: #383d86;
+}
+
+.meniu_icon:hover {
     background-color: #6f76db;
-  }
-  .elem_meniu:hover{
-      background-color: #6f76db;
-  }
-  .ales:hover{
+}
+
+.elem_meniu:hover {
     background-color: #6f76db;
-  }
-  #emblema{
+}
+
+.ales:hover {
+    background-color: #6f76db;
+}
+
+#emblema {
     width: 1.5cm;
     height: 1.5cm;
-  }
-.pageContent{
-  display: flex;
-  flex-direction: column;
-  margin-top: 2cm;
-  align-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
- 
 }
-.leftMenu{
-  display: flex;
-  text-align: center;
-  justify-content: space-evenly;
-  background-color: #8fe44a;
-  opacity: 0.7;
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2cm;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
 }
-.itemLeftMenu{
-  height: 25%;
-  background-color: #8fe44a;
-  color: #38571f;
-  font-size: large;
-  border-bottom: 3px solid #4f8027;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+
+.leftMenu {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: #8fe44a;
+    opacity: 0.7;
 }
-.itemLeftMenu:hover{
-  background-color: #72b839;
-  color: white;
-  font-weight: bold;
-  font-size: larger;
+
+.itemLeftMenu {
+    height: 25%;
+    background-color: #8fe44a;
+    color: #38571f;
+    font-size: large;
+    border-bottom: 3px solid #4f8027;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
-.centerContent{
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  opacity: 0.7;
-  padding-left: 0.5cm;
-  margin-bottom: 1cm;
-  width: 100%;
-  height: 75vh;
-  overflow-y: scroll; 
-  
-  
+
+.itemLeftMenu:hover {
+    background-color: #72b839;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
 }
-#teorie{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: stretch;
-  align-items: flex-start;
+
+.centerContent {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0.7;
+    padding-left: 0.5cm;
+    margin-bottom: 1cm;
+    width: 100%;
+    height: 75vh;
+    overflow-y: scroll;
 }
-#probRezolvate{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; 
-  justify-content: space-around;
-  align-content: flex-start;
-  align-items: flex-start;
-  
-  
+
+#teorie {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: flex-start;
 }
-#test,#probRezolvate,#probNerezolvate{
-  display: none;
+
+#probRezolvate {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
 }
-table.formule-trigonometrie td, table.formule-trigonometrie tr, table.formule-trigonometrie{
-  border: 1px solid gray;
-  border-collapse: collapse;
-  text-align: center;
+
+#probNerezolvate {
+    display: block;
 }
-h2{
-  text-align: left;
+
+#test,
+#probRezolvate,
+#teorie {
+    display: none;
 }
-.table-number{
-  width: 10%;
+
+table.formule-trigonometrie td,
+table.formule-trigonometrie tr,
+table.formule-trigonometrie {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    text-align: center;
 }
-.td-title{
-  font-weight: bold;
+
+h2 {
+    text-align: left;
 }
-.clasament{
-  display: flex;
-  justify-content: flex-end;
-  width: 15%;
-  height: calc(100vh - 130px);
-  opacity: 0.7;
+
+.table-number {
+    width: 10%;
 }
-#topClasament{
-  background-color: #e09f54;
-  text-align: center;
-  height: 100%;
-  border-collapse: collapse;
-  border: 2px solid  #925e21;
+
+.td-title {
+    font-weight: bold;
 }
-.elemClasament{
-  border: 2px solid #925e21;
+
+.clasament {
+    display: flex;
+    justify-content: flex-end;
+    width: 15%;
+    height: calc(100vh - 130px);
+    opacity: 0.7;
 }
-  footer{
+
+#topClasament {
+    background-color: #e09f54;
+    text-align: center;
+    height: 100%;
+    border-collapse: collapse;
+    border: 2px solid #925e21;
+}
+
+.elemClasament {
+    border: 2px solid #925e21;
+}
+
+footer {
     justify-content: center;
     position: fixed;
     float: inline-end;
@@ -187,41 +266,74 @@ h2{
     bottom: 0;
     width: 100%;
     background-color: #82b2ce;
-  }
-  
-  /* The popup form - hidden by default */
-  .form-popup {
+}
+
+
+/* The popup form - hidden by default */
+
+.form-popup {
     right: 0;
     top: 2cm;
     display: none;
     position: absolute;
     border: 3px solid #f1f1f1;
     z-index: 9;
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
+}
+
+
+/* Add styles to the form container */
+
+.form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
+}
+
+
+/* Full-width input fields */
+
+.form-container input[type=text],
+.form-container input[type=password] {
     width: 100%;
     padding: 15px;
     border: none;
     background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+}
+
+
+/* When the inputs get focus, do something */
+
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
+}
+
+.altaProblema {
+    display: flex;
+    align-items: center;
+    padding-top: 1cm;
+    width: inherit;
+}
+
+.butonAltaProblema {
+    border: none;
+    background-color: #8c92f0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.butonAltaProblema:hover {
+    background-color: #6f76db;
+}
+
+
+/* Set a style for the submit/login button */
+
+.form-container .btn {
     background-color: #76e07a;
     color: white;
     padding: 16px 20px;
@@ -229,198 +341,265 @@ h2{
     cursor: pointer;
     width: 100%;
     opacity: 0.8;
-  }
-  button{
+    margin-top: 5px;
+}
+
+button {
     outline: none;
-  }
-  @media only screen and (min-width: 320px) {
+}
+
+@media only screen and (min-width: 320px) {
     /* For phones: */
-     /* .pagecontent{ align-content: center; flex-direction: column; } */
-    .meniu{width: 100%;}
-    body{height: unset; overflow: unset;}
-    .elem_meniu{font-size: 10px; }
-    .katex { font-size: 15px !important; }
-    .meniu_icon{width: 5%;}
-    .leftMenu{
-      flex-direction: row;
-      align-content: center;
-      text-align: center;
-      width: 100%;
-      height: 100%;
+    /* .pagecontent{ align-content: center; flex-direction: column; } */
+    .raspunsuri-ex-1 {
+        flex-direction: column;
     }
-    .itemLeftMenu{
-      width: 25%;
-      height: 35px;
-      border-right: 1px solid #4f8027;
-      border-left: 1px solid #4f8027;
-      border-top: none;
-      border-bottom: none;
-      font-size: smaller;
+    .pageContent {
+        flex-direction: column;
     }
-    .first{
-      border-left: 2px solid #4f8027;
-      border-right: 1px solid #4f8027;
-      border-top: none;
-      border-bottom: none;
+    body {
+        height: unset;
+        overflow: unset;
     }
-    .final{
-    border-right: 2px solid #4f8027;
-    border-left: 1px solid #4f8027;
-    border-top: none;
-    border-bottom: none;
+    .send-answer {
+        width: 200px;
     }
-    .formule-trigonometrie{
-      width: inherit;
+    .katex {
+        font-size: 15px !important;
     }
-    .centerContent{
-      margin-top: 0.3cm;
-      height: inherit;
-      margin-bottom: 1.5cm;
+    .altaProblema {
+        padding-top: 1cm;
+        padding-bottom: 1cm;
+        justify-content: center;
     }
-    .itemLeftMenu:hover{
-      font-size: small;
+    .meniu {
+        width: 100%;
     }
-    .clasament{
-      display: none;
+    body {
+        height: unset;
+        overflow: unset;
     }
-    
-    .trigo{
-      display: none;
+    .elem_meniu {
+        font-size: 10px;
     }
-    .tabel-formule{
-      display: block;
-      
+    .meniu_icon {
+        width: 5%;
     }
-    .table-number{
-      width: 5%;
+    .leftMenu {
+        flex-direction: row;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
     }
-  }
-  @media only screen and (min-width: 768px) {
+    .itemLeftMenu {
+        width: 25%;
+        height: 35px;
+        border-right: 1px solid #4f8027;
+        border-left: 1px solid #4f8027;
+        border-top: none;
+        border-bottom: none;
+        font-size: smaller;
+    }
+    .first {
+        border-left: 2px solid #4f8027;
+        border-right: 1px solid #4f8027;
+        border-top: none;
+        border-bottom: none;
+    }
+    .final {
+        border-right: 2px solid #4f8027;
+        border-left: 1px solid #4f8027;
+        border-top: none;
+        border-bottom: none;
+    }
+    .formule-trigonometrie {
+        width: inherit;
+    }
+    .centerContent {
+        margin-top: 0.3cm;
+        height: inherit;
+        margin-bottom: 1.5cm;
+    }
+    .itemLeftMenu:hover {
+        font-size: small;
+    }
+    .clasament {
+        display: none;
+    }
+    .trigo {
+        display: none;
+    }
+    .tabel-formule {
+        display: block;
+    }
+    .table-number {
+        width: 5%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
     /* For tablets: */
     /* .pagecontent{flex-direction: row; align-content:space-between; } */
-    .meniu{width: 100%;}
-    body{overflow: hidden;}
-    .katex { font-size: 18px !important; } 
-    .elem_meniu{font-size: 14px;}
-    .leftMenu{
-      flex-direction: row;
-      align-content: center;
-      text-align: center;
-      width: 100%;
-      height: 100%;
+    .itemLeftMenu {
+        width: 25%;
+        height: 35px;
+        border-right: 1px solid #4f8027;
+        border-left: 1px solid #4f8027;
+        border-top: none;
+        border-bottom: none;
+        font-size: smaller;
     }
-    .pageContent{
-      flex-direction: column;
+    .raspunsuri-ex-1 {
+        flex-direction: row;
     }
-    .itemLeftMenu{
-      width: 25%;
-      height: 35px;
-      border-right: 1px solid #4f8027;
-      border-left: 1px solid #4f8027;
-      border-top: none;
-      border-bottom: none;
-      font-size: smaller;
+    body {
+        height: 90%;
+        overflow: hidden;
     }
-    .centerContent{
-      margin-top: 0cm;
-      margin-left: 0cm;
-      overflow-y: scroll;
-      height:80vh;
+    .katex {
+        font-size: 18px !important;
     }
-    .trigo{
-      display: none;
+    .meniu {
+        width: 100%;
     }
-    .tabel-formule{
-      display: block;
+    .send-answer {
+        height: 90px;
     }
-    .formule-trigonometrie{
-      margin-bottom: 2cm;
+    body {
+        overflow: hidden;
     }
-    .clasament{
-      display: none;
+    .elem_meniu {
+        font-size: 14px;
     }
-  }
-  @media only screen and (min-width: 1024px) {
+    .leftMenu {
+        flex-direction: row;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+    .pageContent {
+        height: 100%;
+        flex-direction: column;
+    }
+    .itemLeftMenu {
+        width: 25%;
+        height: 35px;
+        border-right: 1px solid #4f8027;
+        border-left: 1px solid #4f8027;
+        border-top: none;
+        border-bottom: none;
+        font-size: smaller;
+    }
+    .centerContent {
+        margin-top: 0cm;
+        margin-left: 0cm;
+        overflow-y: scroll;
+        height: 80vh;
+    }
+    .trigo {
+        display: none;
+    }
+    .tabel-formule {
+        display: block;
+    }
+    .formule-trigonometrie {
+        margin-bottom: 2cm;
+    }
+    .clasament {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
     /* For laptops: */
     /* .pagecontent{flex-direction: row; } */
-    .meniu{width: 100%;}
-    .katex{
-      font-size:16px !important;
+    body {
+        overflow: hidden;
+        height: 80vh;
     }
-    .elem_meniu{font-size: 20px;}
-    .leftMenu{
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-      text-align: center;
-      width: 15%;
-      height: calc(100vh - 130px);
+    .meniu {
+        width: 100%;
     }
-    .pageContent{
-      flex-direction: row;
-      
+    .katex {
+        font-size: 19px !important;
     }
-    .itemLeftMenu{
-      width: 100%;
-      height: 100%;
-      border-right: none;
-      border-left: none;
-      border-top: 1px solid #4f8027;
-      border-bottom: 1px solid #4f8027;
-      font-size: large;
+    .elem_meniu {
+        font-size: 20px;
     }
-    .first{
-      border-left: none;
-      border-right: none;
-      border-top: 2px solid #4f8027;
-      border-bottom: 1px solid #4f8027;
+    .leftMenu {
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        width: 15%;
+        height: calc(100vh - 130px);
     }
-    .final{
-    border-right: none;
-    border-left: none;
-    border-top: 1px solid #4f8027;;
-    border-bottom: 2px solid #4f8027;
+    .pageContent {
+        flex-direction: row;
     }
-    .itemLeftMenu:hover{
-      font-size: larger;
+    .itemLeftMenu {
+        width: 100%;
+        height: 100%;
+        border-right: none;
+        border-left: none;
+        border-top: 1px solid #4f8027;
+        border-bottom: 1px solid #4f8027;
+        font-size: large;
     }
-    .centerContent{
-      margin-top: 0cm;
-      margin-left: 0.1cm;
-      overflow-y: scroll;
-      height:80vh;
+    .first {
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #4f8027;
+        border-bottom: 1px solid #4f8027;
+    }
+    .final {
+        border-right: none;
+        border-left: none;
+        border-top: 1px solid #4f8027;
+        ;
+        border-bottom: 2px solid #4f8027;
+    }
+    .itemLeftMenu:hover {
+        font-size: larger;
+    }
+    .centerContent {
+        margin-top: 0cm;
+        margin-left: 0.1cm;
+        overflow-y: scroll;
+        height: 80vh;
     }
     .container {
-      display: flex;
-      align-items: center;
-      justify-content: center
+        display: flex;
+        align-items: center;
+        justify-content: center
     }
-    .clasament{
-      display: flex;
+    .clasament {
+        display: flex;
     }
-    .trigo{overflow:inherit;
-      display: block;
-   }
-    .identareformule{
-      
-      text-align-last:left;
+    .trigo {
+        overflow: inherit;
+        display: block;
     }
-    .answerVar{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      margin: auto;
-      opacity:0.9;
+    .identareformule {
+        text-align-last: left;
     }
-    .tabel-formule{
-      display: none;
+    .answerVar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        opacity: 0.9;
     }
-    .tabel-formule2{
-      display:block;
+    .tabel-formule {
+        display: none;
     }
-    .right{
-      display: flex;
-      justify-content: left;
-     
+    .tabel-formule2 {
+        display: block;
     }
-  }
+    .right {
+        display: flex;
+        justify-content: left;
+    }
+}
