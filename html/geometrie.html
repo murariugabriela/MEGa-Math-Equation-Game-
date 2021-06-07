@@ -2,352 +2,251 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
 
 <head>
-  <meta charset="UTF-8">
-  <title>MEGa - Geometrie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/geometriestyle.css">
-  <script src="../javascript/myscript.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+    <meta charset="UTF-8">
+    <title>MEGa - Geometrie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/geometriestyle.css">
+    <script src="../javascript/myscript.js"></script>
+    <script src="../javascript/login.js"></script>
+    <script src="../javascript/clasament.js"></script>
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
 " integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
 " integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
-" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.css"
-    integrity="sha384-JwmmMju6Z7M9jiY4RXeJLoNb3aown2QCC/cI7JPgmOLsn3n33pdwAj0Ml/CMMd1W" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.js"
-    integrity="sha384-atIluo+2Hixq8HCazSQWa1JjeC5L0CQeWAx74Q+EbqgAW4UixbrBQF4+1jvBX01b"
-    crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
-    crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function () { // this need jquery
-      renderMathInElement(document.body, {
-        // ...options...
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false },
-          { left: "\\[", right: "\\]", display: true }
-        ]
-      });
-    });
-  </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 </head>
 
 <body onload="citat();">
 
 
-  <div>
-    <table class="meniu">
-      <tr>
-        <td class="meniu_icon"><a href="index.html">
-            <div class="elem_meniu_link"><img src="../emblema.svg" alt="emblema" id="emblema"></div>
-          </a></td>
-        <td class="elem_meniu"><a href="algebra.html">
-            <div class="elem_meniu_link">Algebră</div>
-          </a></td>
-        <td class="elem_meniu"><a href="analiza.html">
-            <div class="elem_meniu_link">Analiză</div>
-          </a></td>
-        <td class="elem_meniu ales"><a href="geometrie.html">
-            <div class="elem_meniu_link">Geometrie</div>
-          </a></td>
-        <td class="elem_meniu"><a href="trigonometrie.html">
-            <div class="elem_meniu_link">Trigonometrie</div>
-          </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+    <div>
+        <table class="meniu">
+            <tr>
+                <td class="meniu_icon">
+                    <a href="index.html">
+                        <div class="elem_meniu_link"><img src="../images/emblema.svg" alt="emblema" id="emblema"></div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="algebra.html">
+                        <div class="elem_meniu_link">Algebră</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="analiza.html">
+                        <div class="elem_meniu_link">Analiză</div>
+                    </a>
+                </td>
+                <td class="elem_meniu ales">
+                    <a href="geometrie.html">
+                        <div class="elem_meniu_link">Geometrie</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="trigonometrie.html">
+                        <div class="elem_meniu_link">Trigonometrie</div>
+                    </a>
+                </td>
+                <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
               <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
             </svg></button></td>
-      </tr>
-    </table>
-  </div>
-  <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <h1>Login</h1>
-      <label><b>Email</b>
-        <input type="text" placeholder="Enter Email" name="email" required>
-      </label>
-      <label><b>Password</b>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-      </label>
-      <button type="submit" class="btn">Login</button>
-    </form>
-  </div>
-
-  <div class="pageContent">
-    <div class="leftMenu">
-      <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
-      <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
+            </tr>
+        </table>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form method="POST" action="../php/logare_utilizator.php" class="form-container" id="formLogin">
+            <div id="inputForLogin">
+                <h1>Login</h1>
+                <label><b>Email</b>
+               <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            </label>
+                <label><b>Password</b>
+               <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            </label>
+            </div>
+            <p id="currentUser"></p>
+            <button type="submit" class="btn" id="butonLogin" value="Login">Login</button>
+            <button type="button" class="btn" id="butonLogout" value="Logout" onclick="logout();">Logout</button>
+            <button type="button" class="btn" id="registerButton" onclick="window.location.href='register.html';">Register</button>
+            <button type="button" class="btn" id="butonPaginaAdmin" onclick="window.location.href='adminPage.html';">Verifică exercițiu</button>
+            <button type="button" class="btn" onclick="window.location.href='adaugareExercitiu.html';">Adaugă exercițiu </button>
+            <p id="loggedIn"> </p>
+        </form>
     </div>
 
-    <div class="centerContent">
-      <div class="math-left-align">
-        <div id="teorie">
-
-          <h2>Teorie</h2>
-          <h4>Geometrie plana</h4>
-          <div class="container">
-            <div class="image">
-              <img src="images/trapez.jpg" alt="trapez" style="vertical-align:bottom">
-            </div>
-
-            <p>Perimetrul= suma tuturor laturilor, adica:
-              P=AB + BC + CD + DA.
-              $$Aria \enspace trapezului = \dfrac{(baza\enspace mare + baza \enspace mica)*inaltimea}{2}$$, adica
-              $$A_{trapez}=\dfrac{(B + b)*h}{2}$$, iar in cazul nostru
-              $$A_{ABCD}=\frac{(DC + AB)*AM}{2}$$</p>
-            <p>$$DC=B (baza \enspace mare)$$
-              $$AB=b (baza \enspace mica)$$
-              $$AM=h (inaltimea)$$</p>
-
-          </div>
-          <div class="container">
-            <div class="image">
-              <img src="images/patrat.jpg" alt="patrat" style="vertical-align:bottom">
-            </div>
-            <div class="text">
-              <p>Patratul este un dreptunghi care are toate laturile egale (congruente), sau lungimea egala cu latimea.
-              </p>
-              <p>Perimetrul= suma tuturor laturilor, adica:
-                $$P=AB+BC+CD+DA$$ sau $$P=4*L$$, unde L este latura patratului (AB=BC=CD=DA=L).</p>
-              <p>$$Aria\enspace patratului=latura * latura=latura^2$$</p>
-              <p>In cazul nostru, $$A_{ABCD}=AB^2$$</p>
-            </div>
-          </div>
-          <div class="container">
-            <div class="image">
-              <img src="images/dr1.jpg" alt="dreptunghi" style="vertical-align:bottom">
-            </div>
-            <div class="text">
-              <p>Dreptunghiul are lungime(L=AB) si latime (l=BC).
-                Perimetrul= suma tuturor laturilor, adica:
-                $$P=AB+BC+CD+DA$$ sau $$P=2*(L+l)$$</p>
-              <p>$$Aria \enspace dreptunghiului = lungimea*latimea$$
-                $$A_{dreptunghi}=L*l$$. In cazul nostru, $$A_{ABCD}=AB*BC$$.</p>
-            </div>
-          </div>
+    <div class="pageContent">
+        <div class="leftMenu">
+            <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
+            <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
         </div>
 
-        <div id="probRezolvate">
-          <h2>Probleme rezolvate</h2>
-          <h4>Problema 1.</h4>
-          <p>Calculați perimetrul și aria unui dreptunghi având lungimea de 8 cm și lățimea de 4 cm.</p>
+        <div class="centerContent">
+            <div class="math-left-align">
+                <div id="teorie">
+
+                    <h2>Teorie</h2>
+                    <h4>Geometrie plana</h4>
+                    <div class="container">
+                        <div class="image">
+                            <img src="../images/trapez.jpg" alt="trapez" style="vertical-align:bottom">
+                        </div>
+
+                        <p>Perimetrul= suma tuturor laturilor, adica: P=AB + BC + CD + DA. $$Aria \enspace trapezului = \dfrac{(baza\enspace mare + baza \enspace mica)*inaltimea}{2}$$, adica $$A_{trapez}=\dfrac{(B + b)*h}{2}$$, iar in cazul nostru $$A_{ABCD}=\frac{(DC
+                            + AB)*AM}{2}$$</p>
+                        <p>$$DC=B (baza \enspace mare)$$ $$AB=b (baza \enspace mica)$$ $$AM=h (inaltimea)$$</p>
+
+                    </div>
+                    <div class="container">
+                        <div class="image">
+                            <img src="../images/patrat.jpg" alt="patrat" style="vertical-align:bottom">
+                        </div>
+                        <div class="text">
+                            <p>Patratul este un dreptunghi care are toate laturile egale (congruente), sau lungimea egala cu latimea.
+                            </p>
+                            <p>Perimetrul= suma tuturor laturilor, adica: $$P=AB+BC+CD+DA$$ sau $$P=4*L$$, unde L este latura patratului (AB=BC=CD=DA=L).</p>
+                            <p>$$Aria\enspace patratului=latura * latura=latura^2$$</p>
+                            <p>In cazul nostru, $$A_{ABCD}=AB^2$$</p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="image">
+                            <img src="../images/dr1.jpg" alt="dreptunghi" style="vertical-align:bottom">
+                        </div>
+                        <div class="text">
+                            <p>Dreptunghiul are lungime(L=AB) si latime (l=BC). Perimetrul= suma tuturor laturilor, adica: $$P=AB+BC+CD+DA$$ sau $$P=2*(L+l)$$</p>
+                            <p>$$Aria \enspace dreptunghiului = lungimea*latimea$$ $$A_{dreptunghi}=L*l$$. In cazul nostru, $$A_{ABCD}=AB*BC$$.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="probRezolvate">
+                    <h2>Probleme rezolvate</h2>
+                    <h4>Problema 1.</h4>
+                    <p>Calculați perimetrul și aria unui dreptunghi având lungimea de 8 cm și lățimea de 4 cm.</p>
 
 
 
-          <h5>Formule:</h5>
-          <p>
-            $$CD || AB$$
-            $$AD || BC$$
-            $$AB=CD$$
-            $$BC=AD$$
-          </p>
-          <h5>Rezolvare:</h5>
-          <p>$$AB=8$$ $$BC=4 $$</p>
+                    <h5>Formule:</h5>
+                    <p>
+                        $$CD || AB$$ $$AD || BC$$ $$AB=CD$$ $$BC=AD$$
+                    </p>
+                    <h5>Rezolvare:</h5>
+                    <p>$$AB=8$$ $$BC=4 $$</p>
 
-          <p>$$P=2·AB+2·BC=2·8+2·4=16+8=24 $$</p>
+                    <p>$$P=2·AB+2·BC=2·8+2·4=16+8=24 $$</p>
 
-          <p>$$A=AB·BC=8·4=32$$</p>
+                    <p>$$A=AB·BC=8·4=32$$</p>
 
 
 
-          <h4>Problema 2.</h4>
-          <p>Fie un trapez isoscel ABCD, unde BC=9 cm si AD=4 cm. Perimetrul trapezului este 33cm. Calculati AB.</p>
-          
-          <h5>Formule:</h5>
+                    <h4>Problema 2.</h4>
+                    <p>Fie un trapez isoscel ABCD, unde BC=9 cm si AD=4 cm. Perimetrul trapezului este 33cm. Calculati AB.</p>
 
-          <p>
-            $$m(A)+m(D)=180&#176;$$
-            $$m(B)+m(C)=180&#176;$$
-            $$MN || AB$$
-            $$MN || CD$$
-            $$MN=\frac{AB+CD}{2}$$
-            $$2p=AB+BC+CD+DA$$
-            $$S=\frac{(B+b)*h}{2}=lm*h$$
-          </p>
-          <p>$$lm=lungimea \enspace liniei\enspace mijlocii$$</p>
-          
-          <h5>Rezolvare:</h5>
-          <img src="images/problema2.png" alt="trapez isoscel" style="vertical-align:bottom">
+                    <h5>Formule:</h5>
 
-          <p>ABCD trapez isoscel => $$AB=DC=x$$</p>
-          <p>$$P=33=>AB+BC+CD+AD=33$$</p>
-          <p>$$4+9+2x=33=>2x=20=> x=10$$</p>
-          <p>$$AB=10CM$$</p>
-          
+                    <p>
+                        $$m(A)+m(D)=180&#176;$$ $$m(B)+m(C)=180&#176;$$ $$MN || AB$$ $$MN || CD$$ $$MN=\frac{AB+CD}{2}$$ $$2p=AB+BC+CD+DA$$ $$S=\frac{(B+b)*h}{2}=lm*h$$
+                    </p>
+                    <p>$$lm=lungimea \enspace liniei\enspace mijlocii$$</p>
 
-        
+                    <h5>Rezolvare:</h5>
+                    <img src="../images/problema2.png" alt="trapez isoscel" style="vertical-align:bottom">
 
+                    <p>ABCD trapez isoscel => $$AB=DC=x$$</p>
+                    <p>$$P=33=>AB+BC+CD+AD=33$$</p>
+                    <p>$$4+9+2x=33=>2x=20=> x=10$$</p>
+                    <p>$$AB=10CM$$</p>
+
+
+
+
+                </div>
+
+                <div id="probNerezolvate">
+                    <p>
+                        <?php 
+                    require_once ("../php/selectEx.php");
+                    selectareExercitiu("geometrie");
+                    ?>
+                    </p>
+                    <div class="altaProblema">
+                        <button onclick="location.reload()" class="butonAltaProblema">Generează altă problemă</button>
+                    </div>
+                </div>
+                <div id="test">
+                    <?php 
+            require_once ("../php/selectTest.php");
+            selectareTest("geometrie");
+            ?>
+                    <div class="altaProblema">
+                        <button onclick="testFunction()" class="butonAltaProblema">Calculează punctaj test</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="probNerezolvate">
-          <h2>Probleme nerezolvate</h2>
-          <h4>Problema 1.</h4>
-          <p> Fie un dreptunghi ABCD cu L=10 si l=6. Calculati aria.</p>
-          <div class="answerVar">
-            <form action="checkbox">
-              <input type="checkbox" id="1" name="16">
-              <label for="1">16</label><br>
-              <input type="checkbox" id="2" name="60">
-              <label for="2">60</label><br>
-            </form>
-          </div>
-          <h4>Problema 2.</h4>
-          <p>Într-un pătrat suma lungimilor diagonalelor este de 16&#8730;2 cm. Să se calculeze raportul dintre aria și
-            perimetrul pătratului.</p>
-          <div class="answerVar">
-            <form action="checkbox">
-              <input type="checkbox" id="3" name="450">
-              <label for="1">450</label><br>
-              <input type="checkbox" id="4" name="34">
-              <label for="2">34</label><br>
-              <input type="checkbox" id="5" name="250">
-              <label for="3">250</label><br>
-            </form>
-          </div>
-          <h4>Problema 3.</h4>
-          <p>Fie ABCD un patrat cu latura AB=10. Punctul E se afla in interiorul patratului astfel incat &#9651;AEB sa
-            fie echilateral. Sa se afle lungimea lui EC.</p>
-          <div class="answerVar">
-            <form action="checkbox">
-              <input type="checkbox" id="6" name="5cm">
-              <label for="1">5cm</label><br>
-              <input type="checkbox" id="7" name="12cm">
-              <label for="2">12cm</label><br>
-              <input type="checkbox" id="8" name="7cm">
-              <label for="3">7cm</label><br>
-            </form>
-          </div>
+        <div class="clasament">
+            <table id="topClasament">
+                <tr class="elemClasament">
+                    <td colspan="2" class="elemClasament">
+                        <h3><a href="../php/download.php" id="csvLink">Top 10 cursanți</a></h3>
+                    </td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament1"></td>
+                    <td class="elemClasament" id="puncteClasament1"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament2"></td>
+                    <td class="elemClasament" id="puncteClasament2"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament3"></td>
+                    <td class="elemClasament" id="puncteClasament3"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament4"></td>
+                    <td class="elemClasament" id="puncteClasament4"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament5"></td>
+                    <td class="elemClasament" id="puncteClasament5"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament6"></td>
+                    <td class="elemClasament" id="puncteClasament6"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament7"></td>
+                    <td class="elemClasament" id="puncteClasament7"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament8"></td>
+                    <td class="elemClasament" id="puncteClasament8"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament9"></td>
+                    <td class="elemClasament" id="puncteClasament9"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament10"></td>
+                    <td class="elemClasament" id="puncteClasament10"></td>
+                </tr>
+            </table>
         </div>
-        <div id="test">
-          <h2>Test</h2>
-          <h4>Problema 1.</h4>
-          <p> Fie un dreptunghi ABCD cu AD=20 si diagonala BD=40.</p>
-          <p>a) Aratati ca AB=20&#8730;3</p>
-          <div class="answerVar">
-            <form action="checkbox">
-              <input type="checkbox" id="9" name="Adevarat">
-              <label for="1">Adevarat</label><br>
-
-              <input type="checkbox" id="10" name="Fals">
-              <label for="2">Fals</label><br>
-            </form>
-          </div>
-          <p>b) Verificati daca unghiul dintre diagonalele dreptunghiului ABCD are masura de 60&#176;</p>
-          <div class="answerVar">
-            <form action="checkbox">
-              <input type="checkbox" id="11" name="Adevarat">
-              <label for="1">Adevarat</label><br>
-
-              <input type="checkbox" id="12" name="Fals">
-              <label for="2">Fals</label><br>
-            </form>
-          </div>
-          <p>c) Aratati ca aria este mai mica decat 700. Se considera faptul ca 1,73&lt;&#8730;3&lt;1,74. </p>
-              <div class="answerVar">
-                <form action="checkbox">
-                  <input type="checkbox" id="13" name="Adevarat">
-                  <label for="1">Adevarat</label><br>
-
-                  <input type="checkbox" id="14" name="Fals">
-                  <label for="2">Fals</label><br>
-                </form>
-              </div>
-          
-          <h4>Problema 2.</h4>
-          <p>Într-un pătrat suma lungimilor diagonalelor este de 16&#8730;2 cm. Să se calculeze aria pătratului.</p>
-          <div class="answerVar">
-            <form action="checkbox">
-              <input type="checkbox" id="15" name="256">
-              <label for="1">256</label><br>
-
-              <input type="checkbox" id="16" name="16">
-              <label for="2">16</label><br>
-              <input type="checkbox" id="17" name="32">
-              <label for="3">32</label><br>
-            </form>
-          </div>
-          <h4>Problema 3.</h4>
-          <p>Fie ABCD un trapez cu baza mare de 10 cm, baza mica de 6 cm si inaltimea egala cu 4. Sa se calculeze aria
-            trapezului.</p>
-          <div class="answerVar">
-            <form action="checkbox">
-              <input type="checkbox" id="18" name="64">
-              <label for="1">64</label><br>
-
-              <input type="checkbox" id="19" name="128">
-              <label for="2">128</label><br>
-              <input type="checkbox" id="20" name="32">
-              <label for="3">32</label><br>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="clasament">
-      <table id="topClasament">
-        <tr class="elemClasament">
-          <td colspan="2" class="elemClasament">
-            <h3>Top 10 cursanți</h3>
-          </td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Bordeianu Adelina</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant2</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant3</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant4</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant5</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant6</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant7</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant8</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant9</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant10</td>
-          <td class="elemClasament">10</td>
-        </tr>
-      </table>
-    </div>
-  </div>
 
 
-
-  <footer>
-    <p id="citat"></p>
-  </footer>
+    <footer>
+        <p id="citat"></p>
+    </footer>
 </body>
 
 </html>
