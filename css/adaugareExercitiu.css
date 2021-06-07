@@ -1,0 +1,407 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    background-image: url("../images/Picture1.png");
+}
+
+td {
+    text-align: center;
+}
+
+.meniu {
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 5%;
+    width: 100%;
+    background-color: #8c92f0;
+}
+
+#citat {
+    padding: 0.1cm;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(2, 37, 37);
+}
+
+.meniu_icon {
+    width: 5%;
+}
+
+.cerc_meniu {
+    width: 100%;
+    height: 1.5cm;
+    background-color: #8c92f0;
+    border: #8c92f0;
+}
+
+.cerc_meniu:hover {
+    background-color: #6f76db;
+    border: #6f76db;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.pageContent {
+    overflow: scroll;
+    height: 100vh;
+}
+
+.elem_meniu {
+    width: 22.7%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.meniu_icon:hover {
+    background-color: #6f76db;
+}
+
+.elem_meniu:hover {
+    background-color: #6f76db;
+}
+
+.ales:hover {
+    background-color: #6f76db;
+}
+
+#emblema {
+    width: 1.5cm;
+    height: 1.5cm;
+}
+
+#butoane {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 73vw;
+}
+
+#butoane1,
+#butoane2,
+#butoane3,
+#butoane4 {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#butoaneTelefon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 73vw;
+}
+
+#butoane1Telefon,
+#butoane2Telefon,
+#butoane3Telefon,
+#butoane4Telefon {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.enuntContent {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+#textEnunt {
+    display: flex;
+    width: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#katexSymbols {
+    font-size: 20px;
+    border: 1px solid black;
+    padding-top: 0px;
+    height: 30vh;
+    width: 100px;
+    top: 0px;
+}
+
+.operatori {
+    width: 40px;
+    height: 65px;
+}
+
+#varianteRaspuns {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.variante {
+    display: flex;
+    justify-content: space-around;
+}
+
+#enunt {
+    height: 30vh;
+    width: 70vw;
+}
+
+textarea {
+    font-size: 20px;
+    resize: none;
+}
+
+.trimiteExercitiul {
+    display: flex;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    justify-content: center;
+    align-content: center;
+}
+
+.butonTrimiteExercitiul {
+    border: none;
+    background-color: #8c92f0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.butonTrimiteExercitiul:hover {
+    background-color: #6f76db;
+}
+
+.pageContent {
+    background: white;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2cm;
+    align-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* background: rgb(166, 202, 214); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6f76db;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8c92f0;
+}
+
+.footer {
+    justify-content: center;
+    position: fixed;
+    float: inline-end;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #82b2ce;
+}
+
+
+/* The popup form - hidden by default */
+
+.form-popup {
+    right: 0;
+    top: 2cm;
+    display: none;
+    position: absolute;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+
+/* Full-width input fields */
+
+.form-container input[type=text],
+.form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #f1f1f1;
+}
+
+
+/* When the inputs get focus, do something */
+
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+/* Set a style for the submit/login button */
+
+.form-container .btn {
+    background-color: #76e07a;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+button {
+    outline: none;
+}
+
+@media only screen and (min-width: 320px) {
+    /* For phones: */
+    body {
+        height: 90vh;
+        overflow: hidden;
+        font-size: 16px;
+    }
+    .katex {
+        font-size: 15px !important;
+    }
+    .meniu {
+        width: 100%;
+    }
+    .elem_meniu {
+        font-size: 10px;
+    }
+    .meniu_icon {
+        width: 5%;
+    }
+    .pageContent {
+        height: 90%;
+        overflow-y: scroll;
+    }
+    #katexSymbols {
+        font-size: 20px;
+        height: 10vh;
+        width: 70vw;
+    }
+    #textEnunt {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #varianteRaspuns {
+        flex-direction: column;
+    }
+    #forLaptop {
+        display: none;
+    }
+    #forPhone {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For tablets: */
+    body {
+        height: 90vh;
+        overflow: hidden;
+    }
+    .katex {
+        font-size: 18px !important;
+    }
+    .meniu {
+        width: 100%;
+    }
+    .elem_meniu {
+        font-size: 14px;
+    }
+    .pageContent {
+        height: 90%;
+        flex-direction: column;
+    }
+    #varianteRaspuns {
+        flex-direction: column;
+    }
+    #forLaptop {
+        display: block;
+    }
+    #forPhone {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For laptops: */
+    body {
+        overflow: hidden;
+        height: 100vh;
+    }
+    .katex {
+        font-size: 19px !important;
+    }
+    .meniu {
+        width: 100%;
+    }
+    .elem_meniu {
+        font-size: 20px;
+    }
+    #katexSymbols {
+        font-size: 20px;
+        height: 30vh;
+        width: 100px;
+    }
+    #textEnunt {
+        flex-direction: row;
+    }
+    #varianteRaspuns {
+        flex-direction: row;
+    }
+    /* aici nu mai trebuie fiindca ramane de la tableta */
+}
