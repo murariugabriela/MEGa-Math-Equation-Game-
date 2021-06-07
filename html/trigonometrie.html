@@ -2,489 +2,360 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
 
 <head>
-  <meta charset="UTF-8">
-  <title>MEGa - Trigonometrie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/trigonometriestyle.css">
-  <script src="../javascript/myscript.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+    <meta charset="UTF-8">
+    <title>MEGa - Trigonometrie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/trigonometriestyle.css">
+    <script src="../javascript/myscript.js"></script>
+    <script src="../javascript/login.js"></script>
+    <script src="../javascript/clasament.js"></script>
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
 " integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
 " integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
-" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.css"
-    integrity="sha384-JwmmMju6Z7M9jiY4RXeJLoNb3aown2QCC/cI7JPgmOLsn3n33pdwAj0Ml/CMMd1W" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.js"
-    integrity="sha384-atIluo+2Hixq8HCazSQWa1JjeC5L0CQeWAx74Q+EbqgAW4UixbrBQF4+1jvBX01b"
-    crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
-    crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function () { // this need jquery
-      renderMathInElement(document.body, {
-        // ...options...
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false },
-          { left: "\\[", right: "\\]", display: true }
-        ]
-      });
-    });
-  </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
 </head>
 
 <body onload="citat();">
 
 
-  <div>
-    <table class="meniu">
-      <tr>
-        <td class="meniu_icon"><a href="index.html">
-            <div class="elem_meniu_link"><img src="../emblema.svg" alt="emblema" id="emblema"></div>
-          </a></td>
-        <td class="elem_meniu"><a href="algebra.html">
-            <div class="elem_meniu_link">Algebră</div>
-          </a></td>
-        <td class="elem_meniu"><a href="analiza.html">
-            <div class="elem_meniu_link">Analiză</div>
-          </a></td>
-        <td class="elem_meniu"><a href="geometrie.html">
-            <div class="elem_meniu_link">Geometrie</div>
-          </a></td>
-        <td class="elem_meniu ales"><a href="trigonometrie.html">
-            <div class="elem_meniu_link">Trigonometrie</div>
-          </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+    <div>
+        <table class="meniu">
+            <tr>
+                <td class="meniu_icon">
+                    <a href="index.html">
+                        <div class="elem_meniu_link"><img src="../images/emblema.svg" alt="emblema" id="emblema"></div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="algebra.html">
+                        <div class="elem_meniu_link">Algebră</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="analiza.html">
+                        <div class="elem_meniu_link">Analiză</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="geometrie.html">
+                        <div class="elem_meniu_link">Geometrie</div>
+                    </a>
+                </td>
+                <td class="elem_meniu ales">
+                    <a href="trigonometrie.html">
+                        <div class="elem_meniu_link">Trigonometrie</div>
+                    </a>
+                </td>
+                <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
               <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
             </svg></button></td>
-      </tr>
-    </table>
-  </div>
-  <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <h1>Login</h1>
-      <label><b>Email</b>
-        <input type="text" placeholder="Enter Email" name="email" required>
-      </label>
-      <label><b>Password</b>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-      </label>
-      <button type="submit" class="btn">Login</button>
-    </form>
-  </div>
-
-
-  <div class="pageContent">
-    <div class="leftMenu">
-      <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
-      <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
+            </tr>
+        </table>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form method="POST" action="../php/logare_utilizator.php" class="form-container" id="formLogin">
+            <div id="inputForLogin">
+                <h1>Login</h1>
+                <label><b>Email</b>
+               <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            </label>
+                <label><b>Password</b>
+               <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            </label>
+            </div>
+            <p id="currentUser"></p>
+            <button type="submit" class="btn" id="butonLogin" value="Login">Login</button>
+            <button type="button" class="btn" id="butonLogout" value="Logout" onclick="logout();">Logout</button>
+            <button type="button" class="btn" id="registerButton" onclick="window.location.href='register.html';">Register</button>
+            <button type="button" class="btn" id="butonPaginaAdmin" onclick="window.location.href='adminPage.html';">Verifică exercițiu</button>
+            <button type="button" class="btn" onclick="window.location.href='adaugareExercitiu.html';">Adaugă exercițiu </button>
+            <p id="loggedIn"> </p>
+        </form>
     </div>
 
-    <div class="centerContent">
-      <div id="teorie">
-        <h2>Teorie</h2>
-        <div class="trigo">
 
-          <table class="formule-trigonometrie ">
-
-            <tr>
-              <td><span class="td-title">Identități de bază</span></td>
-              <td><span class="td-title">Formule cu două unghiuri</span></td>
-              <td><span class="td-title">Formule cu trei unghiuri</span></td>
-              <td><span class="td-title">Formule pentru reducerea gradului</span></td>
-            </tr>
-            <tr>
-              <td>$$tan\alpha=\dfrac{sin\alpha}{cos\alpha}$$</td>
-              <td>$$sin(2\alpha)=2*cos\alpha*sin\alpha$$</td>
-              <td>$$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$</td>
-              <td>$$sin^2\alpha=\dfrac{1-cos(2\alpha)}{2}$$</td>
-
-            </tr>
-            <tr>
-              <td>$$cot\alpha=\dfrac{cos\alpha}{sin\alpha}$$</td>
-              <td>$$sin(2\alpha)=\dfrac{2*tan\alpha}{1+tan^2\alpha}$$</td>
-              <td>$$cos(3\alpha)=4*cos^3\alpha-3*cos\alpha$$</td>
-              <td>$$cos^2\alpha=\dfrac{1cos(2\alpha)}{2}$$</td>
-
-            </tr>
-            <tr>
-              <td>$$sin^2\alpha+cos^2\alpha=1$$</td>
-              <td>$$cos(2\alpha)=cos^2\alpha-sin^2\alpha$$</td>
-              <td>$$tan(3\alpha)=\dfrac{3*tan\alpha-tan^3\alpha}{1-3*tan^2\alpha}$$</td>
-              <td>$$tan^2\alpha=\dfrac{1-cos(2\alpha)}{1+cos(2\alpha)}$$</td>
-
-            </tr>
-            <tr>
-              <td>$$1+tan^2\alpha=\dfrac{1}{cos^2\alpha}$$</td>
-              <td>$$cos(2\alpha)=\dfrac{1-tan^2\alpha}{1+tan^2\alpha}$$</td>
-              <td>$$cot(3\alpha)=\dfrac{cot^3\alpha-3cot\alpha}{3*cot^2\alpha-1}$$</td>
-              <td>$$cot^2\alpha=\dfrac{1+cos(2\alpha)}{1-cos(2\alpha)}$$</td>
-
-            </tr>
-            <tr>
-              <td>$$1+cot^2\alpha=\dfrac{1}{sin^2\alpha}$$</td>
-              <td>$$tan(2\alpha)=\dfrac{2*tan\alpha}{1-tan^2\alpha}$$</td>
-              <td></td>
-              <td>$$(sin\alpha-cos\alpha)^2=1-sin(2\alpha)$$</td>
-
-            </tr>
-            <tr>
-              <td>$$tan\alpha*cot\alpha=1$$</td>
-              <td>$$cot(2\alpha)=\dfrac{cot^2\alpha-1}{2*cot\alpha}$$</td>
-              <td></td>
-              <td>$$(sin\alpha+cos\alpha)^2=1+sin(2\alpha)$$</td>
-
-            </tr>
-          </table>
+    <div class="pageContent">
+        <div class="leftMenu">
+            <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
+            <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
         </div>
 
-        <div class="trigo tabel-formule">
+        <div class="centerContent">
+            <div id="teorie">
+                <h2>Teorie</h2>
+                <div class="trigo">
 
-          <table class="formule-trigonometrie">
+                    <table class="formule-trigonometrie ">
 
-            <tr>
-              <td><span class="td-title">Identități de bază</span></td>
-              <td><span class="td-title">Formule cu două unghiuri</span></td>
+                        <tr>
+                            <td><span class="td-title">Identități de bază</span></td>
+                            <td><span class="td-title">Formule cu două unghiuri</span></td>
+                            <td><span class="td-title">Formule cu trei unghiuri</span></td>
+                            <td><span class="td-title">Formule pentru reducerea gradului</span></td>
+                        </tr>
+                        <tr>
+                            <td>$$tan\alpha=\dfrac{sin\alpha}{cos\alpha}$$</td>
+                            <td>$$sin(2\alpha)=2*cos\alpha*sin\alpha$$</td>
+                            <td>$$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$</td>
+                            <td>$$sin^2\alpha=\dfrac{1-cos(2\alpha)}{2}$$</td>
 
-            </tr>
-            <tr>
-              <td>$$tan\alpha=\dfrac{sin\alpha}{cos\alpha}$$</td>
-              <td>$$sin(2\alpha)=2*cos\alpha*sin\alpha$$</td>
+                        </tr>
+                        <tr>
+                            <td>$$cot\alpha=\dfrac{cos\alpha}{sin\alpha}$$</td>
+                            <td>$$sin(2\alpha)=\dfrac{2*tan\alpha}{1+tan^2\alpha}$$</td>
+                            <td>$$cos(3\alpha)=4*cos^3\alpha-3*cos\alpha$$</td>
+                            <td>$$cos^2\alpha=\dfrac{1cos(2\alpha)}{2}$$</td>
+
+                        </tr>
+                        <tr>
+                            <td>$$sin^2\alpha+cos^2\alpha=1$$</td>
+                            <td>$$cos(2\alpha)=cos^2\alpha-sin^2\alpha$$</td>
+                            <td>$$tan(3\alpha)=\dfrac{3*tan\alpha-tan^3\alpha}{1-3*tan^2\alpha}$$</td>
+                            <td>$$tan^2\alpha=\dfrac{1-cos(2\alpha)}{1+cos(2\alpha)}$$</td>
+
+                        </tr>
+                        <tr>
+                            <td>$$1+tan^2\alpha=\dfrac{1}{cos^2\alpha}$$</td>
+                            <td>$$cos(2\alpha)=\dfrac{1-tan^2\alpha}{1+tan^2\alpha}$$</td>
+                            <td>$$cot(3\alpha)=\dfrac{cot^3\alpha-3cot\alpha}{3*cot^2\alpha-1}$$</td>
+                            <td>$$cot^2\alpha=\dfrac{1+cos(2\alpha)}{1-cos(2\alpha)}$$</td>
+
+                        </tr>
+                        <tr>
+                            <td>$$1+cot^2\alpha=\dfrac{1}{sin^2\alpha}$$</td>
+                            <td>$$tan(2\alpha)=\dfrac{2*tan\alpha}{1-tan^2\alpha}$$</td>
+                            <td></td>
+                            <td>$$(sin\alpha-cos\alpha)^2=1-sin(2\alpha)$$</td>
+
+                        </tr>
+                        <tr>
+                            <td>$$tan\alpha*cot\alpha=1$$</td>
+                            <td>$$cot(2\alpha)=\dfrac{cot^2\alpha-1}{2*cot\alpha}$$</td>
+                            <td></td>
+                            <td>$$(sin\alpha+cos\alpha)^2=1+sin(2\alpha)$$</td>
+
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="trigo tabel-formule">
+
+                    <table class="formule-trigonometrie">
+
+                        <tr>
+                            <td><span class="td-title">Identități de bază</span></td>
+                            <td><span class="td-title">Formule cu două unghiuri</span></td>
+
+                        </tr>
+                        <tr>
+                            <td>$$tan\alpha=\dfrac{sin\alpha}{cos\alpha}$$</td>
+                            <td>$$sin(2\alpha)=2*cos\alpha*sin\alpha$$</td>
 
 
-            </tr>
-            <tr>
-              <td>$$cot\alpha=\dfrac{cos\alpha}{sin\alpha}$$</td>
-              <td>$$sin(2\alpha)=\dfrac{2*tan\alpha}{1+tan^2\alpha}$$</td>
+                        </tr>
+                        <tr>
+                            <td>$$cot\alpha=\dfrac{cos\alpha}{sin\alpha}$$</td>
+                            <td>$$sin(2\alpha)=\dfrac{2*tan\alpha}{1+tan^2\alpha}$$</td>
 
 
-            </tr>
-            <tr>
-              <td>$$sin^2\alpha+cos^2\alpha=1$$</td>
-              <td>$$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2$$</td>
+                        </tr>
+                        <tr>
+                            <td>$$sin^2\alpha+cos^2\alpha=1$$</td>
+                            <td>$$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2$$</td>
 
 
-            </tr>
-            <tr>
-              <td>$$1+tan^2\alpha=\dfrac{1}{cos^2\alpha}$$</td>
-              <td>$$cos(2\alpha)=\dfrac{1-tan^2\alpha}{1+tan^2\alpha}$$</td>
+                        </tr>
+                        <tr>
+                            <td>$$1+tan^2\alpha=\dfrac{1}{cos^2\alpha}$$</td>
+                            <td>$$cos(2\alpha)=\dfrac{1-tan^2\alpha}{1+tan^2\alpha}$$</td>
 
 
-            </tr>
-            <tr>
-              <td>$$1+cot^2\alpha=\dfrac{1}{sin^2\alpha}$$</td>
-              <td>$$tan(2\alpha)=\dfrac{2*tan\alpha}{1-tan^2\alpha}$$</td>
+                        </tr>
+                        <tr>
+                            <td>$$1+cot^2\alpha=\dfrac{1}{sin^2\alpha}$$</td>
+                            <td>$$tan(2\alpha)=\dfrac{2*tan\alpha}{1-tan^2\alpha}$$</td>
 
 
-            </tr>
-            <tr>
-              <td>$$tan\alpha*cot\alpha=1$$</td>
-              <td>$$cot(2\alpha)=\dfrac{cot^2\alpha-1}{2*cot\alpha}$$</td>
+                        </tr>
+                        <tr>
+                            <td>$$tan\alpha*cot\alpha=1$$</td>
+                            <td>$$cot(2\alpha)=\dfrac{cot^2\alpha-1}{2*cot\alpha}$$</td>
 
 
-            </tr>
-          </table>
-        </div>
-        <div class="trigo tabel-formule">
+                        </tr>
+                    </table>
+                </div>
+                <div class="trigo tabel-formule">
 
-          <table class="formule-trigonometrie">
+                    <table class="formule-trigonometrie">
 
-            <tr>
+                        <tr>
 
-              <td><span class="td-title">Formule cu trei unghiuri</span></td>
-              <td><span class="td-title">Formule pentru reducerea gradului</span></td>
-            </tr>
-            <tr>
+                            <td><span class="td-title">Formule cu trei unghiuri</span></td>
+                            <td><span class="td-title">Formule pentru reducerea gradului</span></td>
+                        </tr>
+                        <tr>
 
-              <td>$$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$</td>
-              <td>$$sin^2\alpha=\dfrac{1-cos(2\alpha)}{2}$$</td>
+                            <td>$$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$</td>
+                            <td>$$sin^2\alpha=\dfrac{1-cos(2\alpha)}{2}$$</td>
 
-            </tr>
-            <tr>
+                        </tr>
+                        <tr>
 
-              <td>$$cos(3\alpha)=4*cos^3\alpha-3*cos\alpha$$</td>
-              <td>$$cos^2\alpha=\dfrac{1cos(2\alpha)}{2}$$</td>
+                            <td>$$cos(3\alpha)=4*cos^3\alpha-3*cos\alpha$$</td>
+                            <td>$$cos^2\alpha=\dfrac{1cos(2\alpha)}{2}$$</td>
 
-            </tr>
-            <tr>
+                        </tr>
+                        <tr>
 
-              <td>$$tan(3\alpha)=\dfrac{3*tan\alpha-tan^3\alpha}{1-3*tan^2\alpha}$$</td>
-              <td>$$tan^2\alpha=\dfrac{1-cos(2\alpha)}{1+cos(2\alpha)}$$</td>
+                            <td>$$tan(3\alpha)=\dfrac{3*tan\alpha-tan^3\alpha}{1-3*tan^2\alpha}$$</td>
+                            <td>$$tan^2\alpha=\dfrac{1-cos(2\alpha)}{1+cos(2\alpha)}$$</td>
 
-            </tr>
-            <tr>
+                        </tr>
+                        <tr>
 
-              <td>$$cot^2\alpha=\dfrac{1+cos(2\alpha)}{1-cos(2\alpha)}$$</td>
-              <td>$$(sin\alpha-cos\alpha)^2=1-sin(2\alpha)$$</td>
+                            <td>$$cot^2\alpha=\dfrac{1+cos(2\alpha)}{1-cos(2\alpha)}$$</td>
+                            <td>$$(sin\alpha-cos\alpha)^2=1-sin(2\alpha)$$</td>
 
-            </tr>
-            <tr>
+                        </tr>
+                        <tr>
 
-              <td></td>
-              <td>$$(sin\alpha+cos\alpha)^2=1+sin(2\alpha)$$</td>
+                            <td></td>
+                            <td>$$(sin\alpha+cos\alpha)^2=1+sin(2\alpha)$$</td>
 
-            </tr>
-          </table>
-        </div>
+                        </tr>
+                    </table>
+                </div>
 
-      </div>
+            </div>
 
-      <div id="probRezolvate">
-        <h2>Probleme rezolvate</h2>
-        <h4>Problema 1.</h4>
-        <div class="identareformule">
-          <p>
-            $$
-            \begin{align}
-            \text{ Daca }sin\alpha=\frac{3}{4} \text{ si } \alpha \in \begin{pmatrix}
-            0, \dfrac{\pi}{2}
-            \end{pmatrix} \text{atunci sa se calculeze} (sin(2\alpha)+cos(2\alpha)) \text{.}
-            \end{align}
-            $$
+            <div id="probRezolvate">
+                <h2>Probleme rezolvate</h2>
+                <h4>Problema 1.</h4>
+                <div class="identareformule">
+                    <p>
+                        $$ \begin{align} \text{ Daca }sin\alpha=\frac{3}{4} \text{ si } \alpha \in \begin{pmatrix} 0, \dfrac{\pi}{2} \end{pmatrix} \text{atunci sa se calculeze} (sin(2\alpha)+cos(2\alpha)) \text{.} \end{align} $$
 
-          </p>
-        </div>
+                    </p>
+                </div>
 
-        <h5>Formule:</h5>
-        <p>
-          $$sin(2\alpha)=2*cos\alpha*sin\alpha$$
-          $$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2\alpha-1=1-2sin^2\alpha$$
-        </p>
-        <h5>Rezolvare:</h5>
-        <p>$$sin^2\alpha+cos^2\alpha=1=>cos^2\alpha=1-sin^2\alpha$$</p>
-        <p>$$cos^2\alpha=1-(\dfrac{3}{4})^2=1-\dfrac{9}{16}=\dfrac{7}{16}$$</p>
-        <p>$$cos\alpha=\sqrt{\dfrac{7}{16}}=\dfrac{\sqrt{7}}{4}$$</p>
-        <p>
-          $$cos\alpha=\dfrac{\sqrt{7}}{4}$$
-          $$sin\alpha=\dfrac{3}{4}$$
-          $$sin(2\alpha)=2sin\alpha*cos\alpha=3*\dfrac{\sqrt{7}}{8}$$
-          $$cos(2\alpha)=1-2*sin^2\alpha=1-2*\dfrac{9}{16}=\dfrac{1}{8}$$
-          $$sin(2\alpha)+cos(2\alpha)=\dfrac{3*\sqrt{7}+1}{8}$$
-        </p>
-        <h4>Problema 2.</h4>
-        <p>$$
-          \begin{align}
-          \text{Se stie ca }
-          cos\alpha=\dfrac{4}{5}
-          \alpha\in \begin{pmatrix}
-          0, \dfrac{\pi}{2} \\
-          \end{pmatrix}
-          \text{ , sa se calculeze }
-          \dfrac{sin(3\alpha}{cos(2\alpha)} \text{.}
-          \end{align}
-          $$</p>
+                <h5>Formule:</h5>
+                <p>
+                    $$sin(2\alpha)=2*cos\alpha*sin\alpha$$ $$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2\alpha-1=1-2sin^2\alpha$$
+                </p>
+                <h5>Rezolvare:</h5>
+                <p>$$sin^2\alpha+cos^2\alpha=1=>cos^2\alpha=1-sin^2\alpha$$</p>
+                <p>$$cos^2\alpha=1-(\dfrac{3}{4})^2=1-\dfrac{9}{16}=\dfrac{7}{16}$$</p>
+                <p>$$cos\alpha=\sqrt{\dfrac{7}{16}}=\dfrac{\sqrt{7}}{4}$$</p>
+                <p>
+                    $$cos\alpha=\dfrac{\sqrt{7}}{4}$$ $$sin\alpha=\dfrac{3}{4}$$ $$sin(2\alpha)=2sin\alpha*cos\alpha=3*\dfrac{\sqrt{7}}{8}$$ $$cos(2\alpha)=1-2*sin^2\alpha=1-2*\dfrac{9}{16}=\dfrac{1}{8}$$ $$sin(2\alpha)+cos(2\alpha)=\dfrac{3*\sqrt{7}+1}{8}$$
+                </p>
+                <h4>Problema 2.</h4>
+                <p>$$ \begin{align} \text{Se stie ca } cos\alpha=\dfrac{4}{5} \alpha\in \begin{pmatrix} 0, \dfrac{\pi}{2} \\ \end{pmatrix} \text{ , sa se calculeze } \dfrac{sin(3\alpha}{cos(2\alpha)} \text{.} \end{align} $$
+                </p>
 
-        <h5>Formule:</h5>
-        <p>
-          $$sin^2\alpha+cos^2\alpha=1$$
-          $$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2\alpha-1=1-2sin^2\alpha$$
-          $$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$
-        </p>
-        <h5>Rezolvare:</h5>
-        <p>
-          $$sin^(\alpha)=1-cos^2\alpha=1-\dfrac{16}{25}=\dfrac{9}{25}$$
-          $$sin\alpha=\sqrt{\dfrac{9}{25}}=\dfrac{3}{5}$$
-          $$cos(2\alpha)=2*cos^2\alpha-1=2*\dfrac{16}{25}-1=\dfrac{7}{25}$$
-          $$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha=3*\dfrac{3}{5}-4*\dfrac{108}{125}$$
-          $$sin(3\alpha)=\dfrac{117}{125}$$
-          $$\dfrac{sin(3\alpha}{cos(2\alpha)}=\dfrac{117}{125}*\dfrac{25}{7}$$
-          $$\dfrac{sin(3\alpha}{cos(2\alpha)}=\dfrac{117}{35}$$
+                <h5>Formule:</h5>
+                <p>
+                    $$sin^2\alpha+cos^2\alpha=1$$ $$cos(2\alpha)=cos^2\alpha-sin^2\alpha=2cos^2\alpha-1=1-2sin^2\alpha$$ $$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha$$
+                </p>
+                <h5>Rezolvare:</h5>
+                <p>
+                    $$sin^(\alpha)=1-cos^2\alpha=1-\dfrac{16}{25}=\dfrac{9}{25}$$ $$sin\alpha=\sqrt{\dfrac{9}{25}}=\dfrac{3}{5}$$ $$cos(2\alpha)=2*cos^2\alpha-1=2*\dfrac{16}{25}-1=\dfrac{7}{25}$$ $$sin(3\alpha)=3*sin\alpha-4*sin^3\alpha=3*\dfrac{3}{5}-4*\dfrac{108}{125}$$
+                    $$sin(3\alpha)=\dfrac{117}{125}$$ $$\dfrac{sin(3\alpha}{cos(2\alpha)}=\dfrac{117}{125}*\dfrac{25}{7}$$ $$\dfrac{sin(3\alpha}{cos(2\alpha)}=\dfrac{117}{35}$$
 
-        </p>
-      </div>
+                </p>
+            </div>
 
-      <div id="probNerezolvate">
-        <h2>Probleme nerezolvate</h2>
-        <h4>Problema 1.</h4>
-        <div class="identareformule">
-          <p>
-            $$
-            \begin{align}
-            \text{ Sa se calculeze }
-            sin\dfrac{\pi}{12}\text{.}
-            \end{align}
-            $$
-          </p>
-        </div>
-        <div class="answerVar">
-          <form>
-
-            <div class="right">
-              <input type="checkbox" id="1" name="$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{2}$$">
-              <label for="1">$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{2}$$</label>
+            <div id="probNerezolvate">
+                <p>
+                    <?php 
+                require_once ("../php/selectEx.php");
+                selectareExercitiu("trigonometrie");
+                ?>
+                </p>
+                <div class="altaProblema">
+                    <button onclick="location.reload()" class="butonAltaProblema">Generează altă problemă</button>
+                </div>
+            </div>
+            <div id="test">
+                <?php 
+        require_once ("../php/selectTest.php");
+        selectareTest("trigonometrie");
+        ?>
+                <div class="altaProblema">
+                    <button onclick="testFunction()" class="butonAltaProblema">Calculează punctaj test</button>
+                </div>
             </div>
 
 
-            <div class="right">
-              <input type="checkbox" id="2" name="$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2+\sqrt{3}}}{2}$$">
-              <label for="2">$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2+\sqrt{3}}}{2}$$</label>
-            </div>
 
-            <div class="right">
-              <input type="checkbox" id="3" name="$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{3}$$">
-              <label for="3">$$sin\dfrac{\pi}{12}=\dfrac{\sqrt{2-\sqrt{3}}}{3}$$</label>
-            </div>
-
-          </form>
+        </div>
+        <div class="clasament">
+            <table id="topClasament">
+                <tr class="elemClasament">
+                    <td colspan="2" class="elemClasament">
+                        <h3><a href="../php/download.php" id="csvLink">Top 10 cursanți</a></h3>
+                    </td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament1"></td>
+                    <td class="elemClasament" id="puncteClasament1"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament2"></td>
+                    <td class="elemClasament" id="puncteClasament2"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament3"></td>
+                    <td class="elemClasament" id="puncteClasament3"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament4"></td>
+                    <td class="elemClasament" id="puncteClasament4"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament5"></td>
+                    <td class="elemClasament" id="puncteClasament5"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament6"></td>
+                    <td class="elemClasament" id="puncteClasament6"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament7"></td>
+                    <td class="elemClasament" id="puncteClasament7"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament8"></td>
+                    <td class="elemClasament" id="puncteClasament8"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament9"></td>
+                    <td class="elemClasament" id="puncteClasament9"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament10"></td>
+                    <td class="elemClasament" id="puncteClasament10"></td>
+                </tr>
+            </table>
         </div>
 
-        <h4>Problema 2.</h4>
-        <div class="identareformule">
-          <p>
-            $$
-            \begin{align}
-            \text{ Sa se determine }tan\alpha \text{ cu } \alpha \in \begin{pmatrix}
-            0, \dfrac{\pi}{2}
-            \end{pmatrix} \text{ si } sin\alpha=\dfrac{1}{4} \text{.}
-            \end{align}
-            $$
-          </p>
-        </div>
-        <div class="answerVar">
-          <form action="#">
-            <div class="right">
-              <input type="checkbox" id="4" name="$$tan\alpha=\dfrac{\sqrt{15}}{15}$$">
-              <label for="4">$$tan\alpha=\dfrac{\sqrt{15}}{15}$$</label>
-            </div>
-            <div class="right">
-              <input type="checkbox" id="5" name="$$tan\alpha=\dfrac{1}{4}$$">
-              <label for="5">$$tan\alpha=\dfrac{1}{4}$$</label>
-            </div>
-            <div class="right">
-              <input type="checkbox" id="6" name="$$tan\alpha=\dfrac{1}{3}$$">
-              <label for="6">$$tan\alpha=\dfrac{1}{3}$$</label>
-            </div>
-          </form>
-        </div>
-
-      </div>
-
-      <div id="test">
-        <h2>Test</h2>
-        <h4>Problema 1.</h4>
-        <div class="identareformule">
-          <p> $$
-            \begin{align}
-            \text{Sa se determine } cot\alpha \text{ daca } \alpha \in \begin{pmatrix}
-            \dfrac{\pi}{2},\pi
-            \end{pmatrix} \text{ si } cos\alpha=-\dfrac{1}{3} \text{.}
-            \end{align}
-            $$ </p>
-        </div>
-        <div class="answerVar">
-          <form action="#">
-            <div class="right">
-              <input type="checkbox" id="7">
-              <label for="7">$$-\dfrac{1}{\sqrt{2}}$$</label>
-            </div>
-            <div class="right">
-              <input type="checkbox" id="8">
-              <label for="8">$$-\dfrac{\sqrt{2}}{4}$$</label>
-            </div>
-            <div class="right">
-              <input type="checkbox" id="9">
-              <label for="9">$$\dfrac{\sqrt{2}}{3}$$</label>
-            </div>
-          </form>
-        </div>
-        <h4>Problema 2.</h4>
-        <div class="identareformule">
-          <p>$$
-            \begin{align}
-            \text{Sa se calculeze } E=2*sin\alpha+1 \text{ daca } sin\alpha=\dfrac{3}{4} si \alpha \in \begin{pmatrix}
-            \dfrac{\pi}{2},\pi
-            \end{pmatrix} \text{.}
-            \end{align}
-            $$</p>
-        </div>
-        <div class="answerVar">
-          <form action="#">
-            <div class="right">
-              <input type="checkbox" id="10">
-              <label for="10">$$\dfrac{-3\sqrt{17}+16}{16}$$</label>
-            </div>
-            <div class="right">
-              <input type="checkbox" id="11">
-              <label for="11">0</label>
-            </div>
-            <div class="right">
-              <input type="checkbox" id="12">
-              <label for="12">1</label>
-            </div>
-          </form>
-        </div>
-      </div>
 
 
 
     </div>
-    <div class="clasament">
-      <table id="topClasament">
-        <tr class="elemClasament">
-          <td colspan="2" class="elemClasament">
-            <h3>Top 10 cursanți</h3>
-          </td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant1</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant2</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant3</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant4</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant5</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant6</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant7</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant8</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant9</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant10</td>
-          <td class="elemClasament">10</td>
-        </tr>
-      </table>
-    </div>
 
-
-
-
-  </div>
-
-  <footer>
-    <p id="citat"></p>
-  </footer>
+    <footer>
+        <p id="citat"></p>
+    </footer>
 </body>
 
 </html>
