@@ -2,39 +2,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
 
 <head>
-  <title>Formular înregistrare</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/registerstyle.css">
+    <title>Formular înregistrare</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/registerstyle.css">
+    <link rel="icon" href="../images/logo.jpg">
+    <script src="../javascript/register.js"></script>
 </head>
 
 <body>
-  <div class="formular-inregistrare">
-    <form>
-      <div class="container">
-        <h1>Înregistrare</h1>
-        <p>Completați formularul pentru a vă crea un cont.</p>
-        <hr>
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <div class="formular-inregistrare">
+        <form method="POST" action="../php/adauga_utilizator.php" name="formular_register" onsubmit="return validare_formular();">
+            <div class="container">
+                <h1>Înregistrare</h1>
+                <p>Completați formularul pentru a vă crea un cont.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-        <label for="email"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+                <label for="email"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-        <hr>
-        <button type="button" class="registerbtn" onclick="window.location.href='index.html';">Register</button>
-      </div>
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+                <input type="submit" class="registerbtn" value="Register" name="upload">
+            </div>
+            <p id="parola"></p>
 
-      <div class="signin">
-        <p>Aveți deja un cont? <a href="index.html">Vă așteptăm pe site</a>.</p>
-      </div>
-    </form>
-  </div>
+            <div class="signin ">
+                <p>Aveți deja un cont? <a href="index.html ">Vă așteptăm pe site</a>.</p>
+            </div>
+        </form>
+    </div>
 
 </body>
 
