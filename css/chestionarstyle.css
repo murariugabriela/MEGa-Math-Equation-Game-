@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -64,6 +66,8 @@ a {
 
 .pageContent {
     overflow: scroll;
+    /* scrollbar-width: thin;
+    scrollbar-color: #8c92f0 rgba(255, 0, 0, 0); */
 }
 
 .elem_meniu {
@@ -89,13 +93,51 @@ a {
     width: 1.5cm;
     height: 1.5cm;
 }
-.enunt{
+
+.enunt {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: fit-content;
 }
-.timer{
+
+.altaProblema {
+    display: flex;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.butonAltaProblema {
+    border: none;
+    background-color: #8c92f0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.butonAltaProblema:hover {
+    background-color: #6f76db;
+}
+
+.divTimer {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 0.5cm;
+    left: 0;
+    position: absolute;
+    right: 0.5cm;
+    width: 90vw;
+}
+
+.timer {
     display: flex;
     align-content: center;
     align-items: center;
@@ -105,6 +147,7 @@ a {
     background: green;
     border-radius: 50%;
 }
+
 .pageContent {
     background: white;
     opacity: 0.8;
@@ -176,6 +219,7 @@ a {
     background-color: #82b2ce;
 }
 
+
 /* The popup form - hidden by default */
 
 .form-popup {
@@ -187,6 +231,7 @@ a {
     z-index: 9;
 }
 
+
 /* Add styles to the form container */
 
 .form-container {
@@ -195,21 +240,26 @@ a {
     background-color: white;
 }
 
+
 /* Full-width input fields */
 
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text],
+.form-container input[type=password] {
     width: 100%;
     padding: 15px;
     border: none;
     background: #f1f1f1;
 }
 
+
 /* When the inputs get focus, do something */
 
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
+
 
 /* Set a style for the submit/login button */
 
@@ -230,10 +280,10 @@ button {
 
 @media only screen and (min-width: 320px) {
     /* For phones: */
-    #ex4{
+    #ex4 {
         width: fit-content;
     }
-    #test{
+    #test {
         font-size: 14px;
         width: 100%;
     }
@@ -258,23 +308,23 @@ button {
     .meniu_icon {
         width: 5%;
     }
-    .pageContent{
+    .pageContent {
         height: 75vh;
         overflow-y: scroll;
         margin-bottom: 2cm;
     }
-    .raspunsuri-ex-1{
+    .raspunsuri-ex-1 {
         flex-direction: column;
     }
 }
 
 @media only screen and (min-width: 768px) {
     /* For tablets: */
-    #test{
+    #test {
         font-size: 18px;
         width: 100%;
     }
-    .raspunsuri-ex-1{
+    .raspunsuri-ex-1 {
         flex-direction: row;
     }
     .send-answer {
