@@ -2,891 +2,601 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
 
 <head>
-  <meta charset="UTF-8">
-  <title>MEGa - Analiză</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/analizastyle.css">
-  <script src="../javascript/myscript.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+    <meta charset="UTF-8">
+    <title>MEGa - Analiză</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/analizastyle.css">
+    <script src="../javascript/myscript.js"></script>
+    <script src="../javascript/login.js"></script>
+    <script src="../javascript/clasament.js"></script>
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
 " integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
 " integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
-" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
 </head>
 
 <body onload="citat();">
-  <div>
-    <table class="meniu">
-      <tr>
-        <td class="meniu_icon"><a href="index.html">
-            <div class="elem_meniu_link"><img src="../emblema.svg" alt="emblema" id="emblema"></div>
-          </a></td>
-        <td class="elem_meniu"><a href="algebra.html">
-            <div class="elem_meniu_link">Algebră</div>
-          </a></td>
-        <td class="elem_meniu ales"><a href="analiza.html">
-            <div class="elem_meniu_link">Analiză</div>
-          </a></td>
-        <td class="elem_meniu"><a href="geometrie.html">
-            <div class="elem_meniu_link">Geometrie</div>
-          </a></td>
-        <td class="elem_meniu"><a href="trigonometrie.html">
-            <div class="elem_meniu_link">Trigonometrie</div>
-          </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+    <div>
+        <table class="meniu">
+            <tr>
+                <td class="meniu_icon">
+                    <a href="index.html">
+                        <div class="elem_meniu_link"><img src="../images/emblema.svg" alt="emblema" id="emblema"></div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="algebra.html">
+                        <div class="elem_meniu_link">Algebră</div>
+                    </a>
+                </td>
+                <td class="elem_meniu ales">
+                    <a href="analiza.html">
+                        <div class="elem_meniu_link">Analiză</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="geometrie.html">
+                        <div class="elem_meniu_link">Geometrie</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="trigonometrie.html">
+                        <div class="elem_meniu_link">Trigonometrie</div>
+                    </a>
+                </td>
+                <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
               <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
             </svg></button></td>
-      </tr>
-    </table>
-  </div>
-  <div class="form-popup" id="myForm">
-    <form class="form-container">
-      <h1>Login</h1>
-      <label><b>Email</b>
-        <input type="text" placeholder="Enter Email" name="email" required>
-      </label>
-      <label><b>Password</b>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-      </label>
-      <button type="button" class="btn">Login</button>
-      <button type="button" class="btn" onclick="window.location.href='register.html';">Register</button>
-    </form>
-  </div>
-  <div class="pageContent">
-    <div class="leftMenu">
-      <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
-      <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
+            </tr>
+        </table>
     </div>
-    <div class="centerContent">
-      <div id="teorie">
-        <h2>Formule:</h2>
-        <div class="limite-integrale">
-          <table class="formule-derivate-integrale">
-            <tr>
-              <td colspan="2"><span class="td-title">Derivate</span></td>
-              <td><span class="td-title">Integrale</span></td>
-            </tr>
-            <tr>
-              <td class="table-number">1</td>
-              <td>$$c'=0$$</td>
-              <td>$$\int dx = x + \mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">2</td>
-              <td>$$x'=1$$</td>
-              <td>$$ \int xdx = \frac{x^2}{2}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">3</td>
-              <td>$$(x^n)'=n\cdot x^{n-1}$$</td>
-              <td>$$ \int x^n dx = \frac{x^{n+1}}{n+1}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">4</td>
-              <td>$$\left(\sqrt{x}\right)'=\frac{1}{2\cdot\sqrt{x}}$$</td>
-              <td>$$ \int \sqrt{x}dx = \frac{2}{3}x\sqrt{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">5</td>
-              <td>$$\left(e^x\right)'= e^x$$</td>
-              <td>$$\int e^x dx = e^x$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">6</td>
-              <td>$$\left(a^x\right)' = a^x \cdot \ln a$$</td>
-              <td>$$\int a^x dx = \frac{a^x}{\ln a} + \mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">7</td>
-              <td>$$\left(\ln x \right)'= \frac{1}{x}$$</td>
-              <td>$$\int\frac{1}{x} dx=\ln{|x|}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">8</td>
-              <td>$$\left( \log_a x \right)'=\frac{1}{x\cdot \ln a}$$</td>
-              <td>$$\int\frac{1}{x^2-a^2} dx=\frac{1}{2a}\ln \left|\frac{x-a}{x+a}\right| +\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">9</td>
-              <td>$$\left(\arctg{x}\right)'=\frac{1}{x^2+1}$$</td>
-              <td>$$\int \frac{1}{x^2+1}dx=\left(\arctg{x}\right)+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">10</td>
-              <td>$$\left(\arcctg{x}\right)'=-\frac{1}{x^2+1}$$</td>
-              <td>$$\int \frac{1}{x^2+a^2}dx=\frac{1}{a}\left(\arctg{\frac{x}{a}}\right)+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">11</td>
-              <td>$$\left(\arcsin{x}\right)'=\frac{1}{\sqrt{1-x^2}}$$</td>
-              <td>$$\int \frac{1}{\sqrt{x^2-a^2}}dx=\ln\left|x+\sqrt{x^2-a^2}\right|+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">12</td>
-              <td>$$\left(\arccos{x}\right)'=-\frac{1}{\sqrt{1-x^2}}$$</td>
-              <td>$$\int \frac{1}{\sqrt{x^2+a^2}}dx=\ln\left(x+\sqrt{x^2+a^2}\right)+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">13</td>
-              <td>$$\left(\sin{x}\right)'=\cos{x}$$</td>
-              <td>$$\int \frac{1}{\sqrt{1-x^2}}dx=\arcsin{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">14</td>
-              <td>$$\left(\cos{x}\right)'=-\sin{x}$$</td>
-              <td>$$\int \frac{1}{\sqrt{a^2-x^2}}dx=\arcsin{\frac{x}{a}}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">15</td>
-              <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
-              <td>$$\int \sin{x}dx=-\cos{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">16</td>
-              <td>$$\left(\ctg{x}\right)'=-\frac{1}{\sin^2{x}}$$</td>
-              <td>$$\int \cos{x}dx=\sin{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">17</td>
-              <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
-              <td>$$\int \tg{x}dx=-\ln\left|\cos{x}\right|+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">18</td>
-              <td>$$\left(\sqrt{x^2-a^2}\right)'=\frac{x}{\sqrt{x^2-a^2}}$$</td>
-              <td>$$\int \ctg{x}dx=\ln\left|\sin{x}\right|+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">19</td>
-              <td>$$\left(\sqrt{x^2+a^2}\right)'=\frac{x}{\sqrt{x^2+a^2}}$$</td>
-              <td>$$\int \frac{1}{\cos^2{x}}dx=\tg{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">20</td>
-              <td>$$\left(\sqrt{a^2-x^2}\right)'=-\frac{x}{\sqrt{a^2-x^2}}$$</td>
-              <td>$$\int \frac{1}{\sin^2{x}}dx=-\ctg{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number empty-cell" colspan="2">21</td>
-              <td>$$\int \frac{x}{\sqrt{x^2-a^2}}dx=\sqrt{x^2-a^2}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number empty-cell" colspan="2">22</td>
-              <td>$$\int \frac{x}{\sqrt{x^2+a^2}}dx=\sqrt{x^2+a^2}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number empty-cell" colspan="2">23</td>
-              <td>$$\int \frac{x}{\sqrt{a^2-x^2}}dx=-\sqrt{a^2-x^2}+\mathscr{C}$$</td>
-            </tr>
-          </table>
-          <table class="formule-derivate">
-            <tr>
-              <td colspan="2"><span class="td-title">Derivate</span></td>
-            </tr>
-            <tr>
-              <td class="table-number">1</td>
-              <td>$$c'=0$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">2</td>
-              <td>$$x'=1$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">3</td>
-              <td>$$(x^n)'=n\cdot x^{n-1}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">4</td>
-              <td>$$\left(\sqrt{x}\right)'=\frac{1}{2\cdot\sqrt{x}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">5</td>
-              <td>$$\left(e^x\right)'= e^x$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">6</td>
-              <td>$$\left(a^x\right)' = a^x \cdot \ln a$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">7</td>
-              <td>$$\left(\ln x \right)'= \frac{1}{x}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">8</td>
-              <td>$$\left( \log_a x \right)'=\frac{1}{x\cdot \ln a}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">9</td>
-              <td>$$\left(\arctg{x}\right)'=\frac{1}{x^2+1}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">10</td>
-              <td>$$\left(\arcctg{x}\right)'=-\frac{1}{x^2+1}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">11</td>
-              <td>$$\left(\arcsin{x}\right)'=\frac{1}{\sqrt{1-x^2}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">12</td>
-              <td>$$\left(\arccos{x}\right)'=-\frac{1}{\sqrt{1-x^2}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">13</td>
-              <td>$$\left(\sin{x}\right)'=\cos{x}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">14</td>
-              <td>$$\left(\cos{x}\right)'=-\sin{x}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">15</td>
-              <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">16</td>
-              <td>$$\left(\ctg{x}\right)'=-\frac{1}{\sin^2{x}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">17</td>
-              <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">18</td>
-              <td>$$\left(\sqrt{x^2-a^2}\right)'=\frac{x}{\sqrt{x^2-a^2}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">19</td>
-              <td>$$\left(\sqrt{x^2+a^2}\right)'=\frac{x}{\sqrt{x^2+a^2}}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">20</td>
-              <td>$$\left(\sqrt{a^2-x^2}\right)'=-\frac{x}{\sqrt{a^2-x^2}}$$</td>
-            </tr>
-          </table>
-          <table class="formule-integrale">
-            <tr>
-              <td colspan="2"><span class="td-title">Integrale</span></td>
-            </tr>
-            <tr>
-              <td class="table-number">1</td>
-              <td>$$\int dx = x + \mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">2</td>
-              <td>$$ \int xdx = \frac{x^2}{2}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">3</td>
-              <td>$$ \int x^n dx = \frac{x^{n+1}}{n+1}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">4</td>
-              <td>$$ \int \sqrt{x}dx = \frac{2}{3}x\sqrt{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">5</td>
-              <td>$$\int e^x dx = e^x$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">6</td>
-              <td>$$\int a^x dx = \frac{a^x}{\ln a} + \mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">7</td>
-              <td>$$\int\frac{1}{x} dx=\ln{|x|}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">8</td>
-              <td>$$\int\frac{1}{x^2-a^2} dx=\frac{1}{2a}\ln \left|\frac{x-a}{x+a}\right| +\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">9</td>
-              <td>$$\int \frac{1}{x^2+1}dx=\left(\arctg{x}\right)+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">10</td>
-              <td>$$\int \frac{1}{x^2+a^2}dx=\frac{1}{a}\left(\arctg{\frac{x}{a}}\right)+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">11</td>
-              <td>$$\int \frac{1}{\sqrt{x^2-a^2}}dx=\ln\left|x+\sqrt{x^2-a^2}\right|+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">12</td>
-              <td>$$\int \frac{1}{\sqrt{x^2+a^2}}dx=\ln\left(x+\sqrt{x^2+a^2}\right)+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">13</td>
-              <td>$$\int \frac{1}{\sqrt{1-x^2}}dx=\arcsin{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">14</td>
-              <td>$$\int \frac{1}{\sqrt{a^2-x^2}}dx=\arcsin{\frac{x}{a}}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">15</td>
-              <td>$$\int \sin{x}dx=-\cos{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">16</td>
-              <td>$$\int \cos{x}dx=\sin{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">17</td>
-              <td>$$\int \tg{x}dx=-\ln\left|\cos{x}\right|+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">18</td>
-              <td>$$\int \ctg{x}dx=\ln\left|\sin{x}\right|+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">19</td>
-              <td>$$\int \frac{1}{\cos^2{x}}dx=\tg{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">20</td>
-              <td>$$\int \frac{1}{\sin^2{x}}dx=-\ctg{x}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">21</td>
-              <td>$$\int \frac{x}{\sqrt{x^2-a^2}}dx=\sqrt{x^2-a^2}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">22</td>
-              <td>$$\int \frac{x}{\sqrt{x^2+a^2}}dx=\sqrt{x^2+a^2}+\mathscr{C}$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">23</td>
-              <td>$$\int \frac{x}{\sqrt{a^2-x^2}}dx=-\sqrt{a^2-x^2}+\mathscr{C}$$</td>
-            </tr>
-          </table>
+    <div class="form-popup" id="myForm">
+        <form method="POST" action="../php/logare_utilizator.php" class="form-container" id="formLogin">
+            <div id="inputForLogin">
+                <h1>Login</h1>
+                <label><b>Email</b>
+               <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            </label>
+                <label><b>Password</b>
+               <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            </label>
+            </div>
+            <p id="currentUser"></p>
+            <button type="submit" class="btn" id="butonLogin" value="Login">Login</button>
+            <button type="button" class="btn" id="butonLogout" value="Logout" onclick="logout();">Logout</button>
+            <button type="button" class="btn" id="registerButton" onclick="window.location.href='register.html';">Register</button>
+            <button type="button" class="btn" id="butonPaginaAdmin" onclick="window.location.href='adminPage.html';">Verifică exercițiu</button>
+            <button type="button" class="btn" onclick="window.location.href='adaugareExercitiu.html';">Adaugă exercițiu </button>
+            <p id="loggedIn"> </p>
+        </form>
+    </div>
+    <div class="pageContent">
+        <div class="leftMenu">
+            <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
+            <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
         </div>
-        <div class="limite-integrale">
-          <table class="formule-derivate-integrale">
-            <tr>
-              <td colspan="2"><span class="td-title">Limite fundamentale</span></td>
-            </tr>
-            <tr>
-              <td class="table-number">1</td>
-              <td>$$\lim\limits_{x\rarr0}\frac{\sin{x}}{x} = 1$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">2</td>
-              <td>$$\lim\limits_{x\rarr 0}\frac{\tg{x}}{x} = 1$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">3</td>
-              <td>$$\lim\limits_{x\rarr 0}\frac{\arcsin{x}}{x} = 1$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">4</td>
-              <td>$$\lim\limits_{x\rarr 0}\frac{\arctg{x}}{x} = 1$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">5</td>
-              <td>$$\lim\limits_{x\pm \infty}\left(1+\frac{1}{x}\right)^x = e$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">6</td>
-              <td>$$\lim\limits_{x\pm 0}\left(1+x\right)^{\frac{1}{x}} = e$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">7</td>
-              <td>$$\lim\limits_{x\pm 0}\frac{\ln\left(1+x\right)}{x} = 1$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">8</td>
-              <td>$$\lim\limits_{x\pm 0}\frac{a^x-1}{x} = \ln{a}, a > 0$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">9</td>
-              <td>$$\lim\limits_{x\pm 0}\frac{e^x-1}{x} = 1$$</td>
-            </tr>
-            <tr>
-              <td class="table-number">10</td>
-              <td>$$\lim\limits_{x\pm 0}\frac{\left(1+x\right)^r-1}{x}=r, r\in \R$$</td>
-            </tr>
-          </table>
-        </div>
-        <div>
-          <table class="formule-derivate-integrale tabel2">
-            <tr>
-              <td colspan="2"><span class="td-title">Operații</span></td>
-              <td><span class="td-title">Formule</span></td>
-            </tr>
-            <tr>
-              <td class="table-number">1</td>
-              <td>$$ {(f ± g)}^{'} = f^{'} ± g^{'} $$</td>
-              <td rowspan="3">$$ Derivarea \enspace funcțiilor \enspace compuse \newline
-                {\big(f(u)\big)}^{'} = f^{'}(u) \cdot u^{'}
+        <div class="centerContent">
+            <div id="teorie">
+                <h2>Formule:</h2>
+                <div class="limite-integrale">
+                    <table class="formule-derivate-integrale">
+                        <tr>
+                            <td colspan="2"><span class="td-title">Derivate</span></td>
+                            <td><span class="td-title">Integrale</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">1</td>
+                            <td>$$c'=0$$</td>
+                            <td>$$\int dx = x + \mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">2</td>
+                            <td>$$x'=1$$</td>
+                            <td>$$ \int xdx = \frac{x^2}{2}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">3</td>
+                            <td>$$(x^n)'=n\cdot x^{n-1}$$</td>
+                            <td>$$ \int x^n dx = \frac{x^{n+1}}{n+1}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">4</td>
+                            <td>$$\left(\sqrt{x}\right)'=\frac{1}{2\cdot\sqrt{x}}$$</td>
+                            <td>$$ \int \sqrt{x}dx = \frac{2}{3}x\sqrt{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">5</td>
+                            <td>$$\left(e^x\right)'= e^x$$</td>
+                            <td>$$\int e^x dx = e^x$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">6</td>
+                            <td>$$\left(a^x\right)' = a^x \cdot \ln a$$</td>
+                            <td>$$\int a^x dx = \frac{a^x}{\ln a} + \mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">7</td>
+                            <td>$$\left(\ln x \right)'= \frac{1}{x}$$</td>
+                            <td>$$\int\frac{1}{x} dx=\ln{|x|}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">8</td>
+                            <td>$$\left( \log_a x \right)'=\frac{1}{x\cdot \ln a}$$</td>
+                            <td>$$\int\frac{1}{x^2-a^2} dx=\frac{1}{2a}\ln \left|\frac{x-a}{x+a}\right| +\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">9</td>
+                            <td>$$\left(\arctg{x}\right)'=\frac{1}{x^2+1}$$</td>
+                            <td>$$\int \frac{1}{x^2+1}dx=\left(\arctg{x}\right)+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">10</td>
+                            <td>$$\left(\arcctg{x}\right)'=-\frac{1}{x^2+1}$$</td>
+                            <td>$$\int \frac{1}{x^2+a^2}dx=\frac{1}{a}\left(\arctg{\frac{x}{a}}\right)+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">11</td>
+                            <td>$$\left(\arcsin{x}\right)'=\frac{1}{\sqrt{1-x^2}}$$</td>
+                            <td>$$\int \frac{1}{\sqrt{x^2-a^2}}dx=\ln\left|x+\sqrt{x^2-a^2}\right|+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">12</td>
+                            <td>$$\left(\arccos{x}\right)'=-\frac{1}{\sqrt{1-x^2}}$$</td>
+                            <td>$$\int \frac{1}{\sqrt{x^2+a^2}}dx=\ln\left(x+\sqrt{x^2+a^2}\right)+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">13</td>
+                            <td>$$\left(\sin{x}\right)'=\cos{x}$$</td>
+                            <td>$$\int \frac{1}{\sqrt{1-x^2}}dx=\arcsin{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">14</td>
+                            <td>$$\left(\cos{x}\right)'=-\sin{x}$$</td>
+                            <td>$$\int \frac{1}{\sqrt{a^2-x^2}}dx=\arcsin{\frac{x}{a}}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">15</td>
+                            <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
+                            <td>$$\int \sin{x}dx=-\cos{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">16</td>
+                            <td>$$\left(\ctg{x}\right)'=-\frac{1}{\sin^2{x}}$$</td>
+                            <td>$$\int \cos{x}dx=\sin{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">17</td>
+                            <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
+                            <td>$$\int \tg{x}dx=-\ln\left|\cos{x}\right|+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">18</td>
+                            <td>$$\left(\sqrt{x^2-a^2}\right)'=\frac{x}{\sqrt{x^2-a^2}}$$</td>
+                            <td>$$\int \ctg{x}dx=\ln\left|\sin{x}\right|+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">19</td>
+                            <td>$$\left(\sqrt{x^2+a^2}\right)'=\frac{x}{\sqrt{x^2+a^2}}$$</td>
+                            <td>$$\int \frac{1}{\cos^2{x}}dx=\tg{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">20</td>
+                            <td>$$\left(\sqrt{a^2-x^2}\right)'=-\frac{x}{\sqrt{a^2-x^2}}$$</td>
+                            <td>$$\int \frac{1}{\sin^2{x}}dx=-\ctg{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number empty-cell" colspan="2">21</td>
+                            <td>$$\int \frac{x}{\sqrt{x^2-a^2}}dx=\sqrt{x^2-a^2}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number empty-cell" colspan="2">22</td>
+                            <td>$$\int \frac{x}{\sqrt{x^2+a^2}}dx=\sqrt{x^2+a^2}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number empty-cell" colspan="2">23</td>
+                            <td>$$\int \frac{x}{\sqrt{a^2-x^2}}dx=-\sqrt{a^2-x^2}+\mathscr{C}$$</td>
+                        </tr>
+                    </table>
+                    <table class="formule-derivate">
+                        <tr>
+                            <td colspan="2"><span class="td-title">Derivate</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">1</td>
+                            <td>$$c'=0$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">2</td>
+                            <td>$$x'=1$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">3</td>
+                            <td>$$(x^n)'=n\cdot x^{n-1}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">4</td>
+                            <td>$$\left(\sqrt{x}\right)'=\frac{1}{2\cdot\sqrt{x}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">5</td>
+                            <td>$$\left(e^x\right)'= e^x$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">6</td>
+                            <td>$$\left(a^x\right)' = a^x \cdot \ln a$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">7</td>
+                            <td>$$\left(\ln x \right)'= \frac{1}{x}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">8</td>
+                            <td>$$\left( \log_a x \right)'=\frac{1}{x\cdot \ln a}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">9</td>
+                            <td>$$\left(\arctg{x}\right)'=\frac{1}{x^2+1}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">10</td>
+                            <td>$$\left(\arcctg{x}\right)'=-\frac{1}{x^2+1}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">11</td>
+                            <td>$$\left(\arcsin{x}\right)'=\frac{1}{\sqrt{1-x^2}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">12</td>
+                            <td>$$\left(\arccos{x}\right)'=-\frac{1}{\sqrt{1-x^2}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">13</td>
+                            <td>$$\left(\sin{x}\right)'=\cos{x}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">14</td>
+                            <td>$$\left(\cos{x}\right)'=-\sin{x}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">15</td>
+                            <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">16</td>
+                            <td>$$\left(\ctg{x}\right)'=-\frac{1}{\sin^2{x}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">17</td>
+                            <td>$$\left(\tg{x}\right)'=\frac{1}{\cos^2{x}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">18</td>
+                            <td>$$\left(\sqrt{x^2-a^2}\right)'=\frac{x}{\sqrt{x^2-a^2}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">19</td>
+                            <td>$$\left(\sqrt{x^2+a^2}\right)'=\frac{x}{\sqrt{x^2+a^2}}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">20</td>
+                            <td>$$\left(\sqrt{a^2-x^2}\right)'=-\frac{x}{\sqrt{a^2-x^2}}$$</td>
+                        </tr>
+                    </table>
+                    <table class="formule-integrale">
+                        <tr>
+                            <td colspan="2"><span class="td-title">Integrale</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">1</td>
+                            <td>$$\int dx = x + \mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">2</td>
+                            <td>$$ \int xdx = \frac{x^2}{2}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">3</td>
+                            <td>$$ \int x^n dx = \frac{x^{n+1}}{n+1}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">4</td>
+                            <td>$$ \int \sqrt{x}dx = \frac{2}{3}x\sqrt{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">5</td>
+                            <td>$$\int e^x dx = e^x$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">6</td>
+                            <td>$$\int a^x dx = \frac{a^x}{\ln a} + \mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">7</td>
+                            <td>$$\int\frac{1}{x} dx=\ln{|x|}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">8</td>
+                            <td>$$\int\frac{1}{x^2-a^2} dx=\frac{1}{2a}\ln \left|\frac{x-a}{x+a}\right| +\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">9</td>
+                            <td>$$\int \frac{1}{x^2+1}dx=\left(\arctg{x}\right)+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">10</td>
+                            <td>$$\int \frac{1}{x^2+a^2}dx=\frac{1}{a}\left(\arctg{\frac{x}{a}}\right)+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">11</td>
+                            <td>$$\int \frac{1}{\sqrt{x^2-a^2}}dx=\ln\left|x+\sqrt{x^2-a^2}\right|+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">12</td>
+                            <td>$$\int \frac{1}{\sqrt{x^2+a^2}}dx=\ln\left(x+\sqrt{x^2+a^2}\right)+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">13</td>
+                            <td>$$\int \frac{1}{\sqrt{1-x^2}}dx=\arcsin{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">14</td>
+                            <td>$$\int \frac{1}{\sqrt{a^2-x^2}}dx=\arcsin{\frac{x}{a}}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">15</td>
+                            <td>$$\int \sin{x}dx=-\cos{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">16</td>
+                            <td>$$\int \cos{x}dx=\sin{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">17</td>
+                            <td>$$\int \tg{x}dx=-\ln\left|\cos{x}\right|+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">18</td>
+                            <td>$$\int \ctg{x}dx=\ln\left|\sin{x}\right|+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">19</td>
+                            <td>$$\int \frac{1}{\cos^2{x}}dx=\tg{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">20</td>
+                            <td>$$\int \frac{1}{\sin^2{x}}dx=-\ctg{x}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">21</td>
+                            <td>$$\int \frac{x}{\sqrt{x^2-a^2}}dx=\sqrt{x^2-a^2}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">22</td>
+                            <td>$$\int \frac{x}{\sqrt{x^2+a^2}}dx=\sqrt{x^2+a^2}+\mathscr{C}$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">23</td>
+                            <td>$$\int \frac{x}{\sqrt{a^2-x^2}}dx=-\sqrt{a^2-x^2}+\mathscr{C}$$</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="limite-integrale">
+                    <table class="formule-derivate-integrale">
+                        <tr>
+                            <td colspan="2"><span class="td-title">Limite fundamentale</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">1</td>
+                            <td>$$\lim\limits_{x\rarr0}\frac{\sin{x}}{x} = 1$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">2</td>
+                            <td>$$\lim\limits_{x\rarr 0}\frac{\tg{x}}{x} = 1$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">3</td>
+                            <td>$$\lim\limits_{x\rarr 0}\frac{\arcsin{x}}{x} = 1$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">4</td>
+                            <td>$$\lim\limits_{x\rarr 0}\frac{\arctg{x}}{x} = 1$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">5</td>
+                            <td>$$\lim\limits_{x\pm \infty}\left(1+\frac{1}{x}\right)^x = e$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">6</td>
+                            <td>$$\lim\limits_{x\pm 0}\left(1+x\right)^{\frac{1}{x}} = e$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">7</td>
+                            <td>$$\lim\limits_{x\pm 0}\frac{\ln\left(1+x\right)}{x} = 1$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">8</td>
+                            <td>$$\lim\limits_{x\pm 0}\frac{a^x-1}{x} = \ln{a}, a > 0$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">9</td>
+                            <td>$$\lim\limits_{x\pm 0}\frac{e^x-1}{x} = 1$$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">10</td>
+                            <td>$$\lim\limits_{x\pm 0}\frac{\left(1+x\right)^r-1}{x}=r, r\in \R$$</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="formule-derivate-integrale tabel2">
+                        <tr>
+                            <td colspan="2"><span class="td-title">Operații</span></td>
+                            <td><span class="td-title">Formule</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">1</td>
+                            <td>$$ {(f ± g)}^{'} = f^{'} ± g^{'} $$</td>
+                            <td rowspan="3">$$ Derivarea \enspace funcțiilor \enspace compuse \newline {\big(f(u)\big)}^{'} = f^{'}(u) \cdot u^{'} $$
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">2</td>
+                            <td>$$(f \cdot g)^{'} = f^{'} \cdot g + f \cdot g^{'} $$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">3</td>
+                            <td>$$(c \cdot f)^{'} = c \cdot f^{'} $$</td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">4</td>
+                            <td> $$ {\Big( \frac{f}{g} \Big)}^{'} = \frac{f^{'} \cdot g - f \cdot g^{'}}{g^2} $$</td>
+                            <td>$$ Derivata \enspace funcției \enspace inverse \newline (f^{-1})^{'}(y) = \frac {1}{f^{'}(x)}, \enspace unde \enspace y = f(x) $$
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">5</td>
+                            <td>$$\int \left( f(x) + g(x) \right) dx = \int f(x)dx + \int g(x)dx $$</td>
+                            <td>$$ Formula \enspace Leibniz-Newton \enspace \newline \enspace \enspace \int_{a}^{b} f(x)dx = F(x) \vert_{a}^{b} = F(b) - F(a), \enspace F \enspace o \enspace primitivă \enspace f $$
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">6</td>
+                            <td>$$ \int \alpha \cdot f(x) = \alpha \cdot \int f(x)dx $$</td>
+                            <td>$$ Integrarea\enspace prin\enspace părți \newline \enspace \enspace \int_{a}^{b} f(x) \cdot g^{'}(x)dx = f(x) \cdot g(x) \vert_{a}^{b} - \int_{a}^{b} f^{'}(x) \cdot g(x)dx $$
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">7</td>
+                            <td>$$ \int [ f(x) - g(x) ]dx = \int f(x)dx - \int g(x)dx $$</td>
+                            <td>$$ Prima \enspace schimbare\enspace de\enspace variabilă \newline \enspace \enspace \int_{a}^{b} f( \varphi (x) ) \cdot \varphi^{'}(x)dx = \int_{\varphi(a)}^{\varphi(b)} f(t)dt $$
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="limite-integrale">
+                    <h2>Integrale definite</h2>
+                    <p>
+
+                        $$Fie \enspace F:I \rightarrow \R \enspace o \enspace primitivă \enspace a \enspace funcției \enspace continue \enspace f:I \rightarrow \R, \enspace unde \enspace I=[a;b] $$ $$ \begin{align*} & Se \enspace numește \enspace integrală \enspace definită
+                        \enspace a \enspace funcției \enspace f \enspace de \enspace la \enspace a \enspace la \enspace b \enspace numărul \enspace real \newline & notat \enspace și \enspace definit \enspace prin \enspace relația: \int_{a}^{b} f(x)dx
+                        = F(b) - F(a) \enspace (formula \enspace Leibniz-Newton). \newline & Formula \enspace se \enspace mai \enspace scrie: \int_{a}^{b} f(x)dx = F(x) \vert_{a}^{b}, \newline & unde \enspace s-a \enspace notat \enspace F(b) - F(a) =
+                        F(x) \vert_{a}{b}. \end{align*} $$
+
+                    </p>
+                    <h2>Proprietăți ale integralelor definite</h2>
+
+                    <h3>Fie funcțiile continue</h3>
+                    <p>
+                        $$ f:[a;b] \rightarrow \R, g:[a;b] \rightarrow \R \newline $$ $$ \begin{align*} & 1. \enspace Proprietatea \enspace de \enspace liniaritate \enspace a \enspace integralei: \newline & \forall \lambda, \mu \in R, \int_{a}^{b} (\lambda \cdot f(x) ) + \mu
+                        \cdot g(x) dx = \lambda \int_{a}^{b} f(x)dx + \mu \int_{a}^{b} g(x)dx. \newline & 2. \enspace Proprietatea \enspace de \enspace aditivitate \enspace a \enspace integralei: \newline & \forall c \in [a;b], \int_{a}^{b} f(x)dx = \int_{a}^{c}
+                        f(x)dx + \int_{b}^{c} f(x)dx. \newline & 3. \enspace Proprietatea de medie a integralei: \newline & \exist c \in (a,b) \enspace astfel \enspace încât \enspace \int_{a}^{b} f(x)fx = f(c) \cdot (b-a). \newline & 4. \enspace Proprietatea
+                        \enspace de \enspace pozitivitate \enspace a \enspace integralei: \newline & dacă \enspace f \geq 0 \enspace pe \enspace [a;b], \enspace \int_{a}^{b} f(x)dx \geq 0. \newline & 5. \enspace Proprietatea \enspace de \enspace monotonie
+                        \enspace a \enspace integralei: \newline & dacă f \leq g \enspace pe \enspace [a;b], \int_{a}^{b} f(x)dx \leq \int_{a}^{b} g(x)dx. & \end{align*} $$
+                    </p>
+                </div>
+            </div>
+            <div id="probRezolvate">
+                <h2>Problema 1</h2>
+                <p>
+                    Calculați următoarea limită: $$ \begin{align*} & \lim_{x\to\infin} \frac{-4 \cdot x + 5}{x^2 + 6} \newline & = \lim_{x\to\infin} \frac{-4 \cdot x}{x^2} \newline & = \lim_{x\to\infin} \frac{-4}{x} \newline & = \frac{-4}{-\infin} \newline & = 0 \end{align*}
+                    $$
+                </p>
+                <h2>Problema 2</h2>
+                <p>
+                    Calculați următoarea integrală: </p>$$ I = \int \frac{dx}{\sqrt{9 \cdot x^2 +1}}, x \in \R $$ $$ \begin{align*} I & = \int \frac{dx}{\sqrt{9 \cdot x^2 +1}} \newline & = \int \frac{1}{\sqrt{9 \cdot (x^2 + \frac{1}{9})}} dx \newline
+                & = \int \frac{1}{3 \cdot \sqrt{x^2 + {(\frac{1}{3})}^2}} dx \newline & = \frac{1}{3} \int \frac{1}{\sqrt{x^2 + {(\frac{1}{3})}^2}} dx \newline & = \frac{1}{3} \cdot ln \cdot (x + \sqrt{x^2 + \Big(\frac{1}{3}\Big)^2}) + C \end{align*}
                 $$
-              </td>
-            </tr>
-            <tr>
-              <td class="table-number">2</td>
-              <td>$$(f \cdot g)^{'} = f^{'} \cdot g + f \cdot g^{'} $$</td>
-            </tr>
-            <tr>
-              <td class="table-number">3</td>
-              <td>$$(c \cdot f)^{'} = c \cdot f^{'} $$</td>
-            </tr>
-            <tr>
-              <td class="table-number">4</td>
-              <td> $$ {\Big( \frac{f}{g} \Big)}^{'} = \frac{f^{'} \cdot g - f \cdot g^{'}}{g^2} $$</td>
-              <td>$$ Derivata \enspace funcției \enspace inverse \newline
-                (f^{-1})^{'}(y) = \frac {1}{f^{'}(x)}, \enspace unde \enspace y = f(x) $$
-              </td>
-            </tr>
-            <tr>
-              <td class="table-number">5</td>
-              <td>$$\int \left( f(x) + g(x) \right) dx = \int f(x)dx + \int g(x)dx $$</td>
-              <td>$$ Formula \enspace Leibniz-Newton \enspace \newline
-                \enspace \enspace \int_{a}^{b} f(x)dx = F(x) \vert_{a}^{b} = F(b) - F(a), \enspace F \enspace o \enspace
-                primitivă \enspace f
-                $$
-              </td>
-            </tr>
-            <tr>
-              <td class="table-number">6</td>
-              <td>$$ \int \alpha \cdot f(x) = \alpha \cdot \int f(x)dx $$</td>
-              <td>$$ Integrarea\enspace prin\enspace părți \newline
-                \enspace \enspace \int_{a}^{b} f(x) \cdot g^{'}(x)dx = f(x) \cdot g(x) \vert_{a}^{b} - \int_{a}^{b}
-                f^{'}(x) \cdot g(x)dx
-                $$</td>
-            </tr>
-            <tr>
-              <td class="table-number">7</td>
-              <td>$$ \int [ f(x) - g(x) ]dx = \int f(x)dx - \int g(x)dx $$</td>
-              <td>$$ Prima \enspace schimbare\enspace de\enspace variabilă \newline
-                \enspace \enspace \int_{a}^{b} f( \varphi (x) ) \cdot \varphi^{'}(x)dx = \int_{\varphi(a)}^{\varphi(b)}
-                f(t)dt $$
-              </td>
-            </tr>
-          </table>
+
+                <h2>Problema 3</h2>
+                <p>
+                    Să se calculeze derivata funcției f: $$f:\R \rightarrow \R, \enspace f(x)=(1-3 \cdot x) \cdot (11 + 5 \cdot x) $$ $$ \begin{align*} f^{'}(x) & =[(1-3 \cdot x) \cdot (11 + 5 \cdot x)]^{'} \newline & = (1 - 3 \cdot x)^{'} \cdot (11 + 5 \cdot x) + (1 - 3
+                    \cdot x) \cdot (11 + 5 \cdot x)^{'} \newline & = (0 - 3 \cdot 1) \cdot (11 + 5 \cdot x) + (1 - 3 \cdot x) \cdot (0 + 5 \cdot 1) \newline & = -3 \cdot (11 + 5 \cdot x) + (1 - 3 \cdot x) \cdot 5 \newline & = -33 - 15 \cdot x + 5 - 15
+                    \cdot x \newline & = -28 - 30 \cdot x. \end{align*} $$
+                </p>
+            </div>
+            <div id="probNerezolvate">
+                <p>
+                    <?php 
+                require_once ("../php/selectEx.php");
+                selectareExercitiu("analiza");
+                ?>
+                </p>
+                <div class="altaProblema">
+                    <button onclick="location.reload()" class="butonAltaProblema">Generează altă problemă</button>
+                </div>
+            </div>
+            <div id="test">
+                <?php 
+        require_once ("../php/selectTest.php");
+        selectareTest("analiza");
+        ?>
+                <div class="altaProblema">
+                    <button onclick="testFunction()" class="butonAltaProblema">Calculează punctaj test</button>
+                </div>
+            </div>
         </div>
-        <div class="limite-integrale">
-          <h2>Integrale definite</h2>
-          <p>
-
-            $$Fie \enspace F:I \rightarrow \R \enspace o \enspace primitivă \enspace a \enspace funcției \enspace
-            continue
-            \enspace f:I \rightarrow \R, \enspace unde \enspace I=[a;b] $$
-            $$
-            \begin{align*}
-            &
-            Se \enspace numește \enspace integrală \enspace definită \enspace a \enspace funcției \enspace f
-            \enspace de
-            \enspace la \enspace a \enspace la \enspace b \enspace numărul \enspace real \newline
-            &
-            notat \enspace și \enspace definit \enspace prin \enspace relația:
-
-            \int_{a}^{b} f(x)dx = F(b) - F(a) \enspace (formula \enspace Leibniz-Newton). \newline
-            &
-            Formula \enspace se \enspace mai \enspace scrie: \int_{a}^{b} f(x)dx = F(x) \vert_{a}^{b}, \newline
-            &
-            unde \enspace s-a \enspace notat \enspace F(b) - F(a) = F(x) \vert_{a}{b}.
-            \end{align*}
-            $$
-
-          </p>
-          <h2>Proprietăți ale integralelor definite</h2>
-          
-          <h3>Fie funcțiile continue</h3>
-          <p>
-          $$ f:[a;b] \rightarrow \R, g:[a;b] \rightarrow \R \newline $$
-          $$
-          \begin{align*}
-          &
-          1. \enspace Proprietatea \enspace de \enspace liniaritate \enspace a \enspace integralei: \newline
-          &
-          \forall \lambda, \mu \in R, \int_{a}^{b} (\lambda \cdot f(x) ) + \mu \cdot g(x) dx = \lambda \int_{a}^{b}
-          f(x)dx + \mu \int_{a}^{b} g(x)dx. \newline
-          &
-          2. \enspace Proprietatea \enspace de \enspace aditivitate \enspace a \enspace integralei: \newline
-          &
-          \forall c \in [a;b], \int_{a}^{b} f(x)dx = \int_{a}^{c} f(x)dx + \int_{b}^{c} f(x)dx. \newline
-          &
-          3. \enspace Proprietatea de medie a integralei: \newline
-          &
-          \exist c \in (a,b) \enspace astfel \enspace încât \enspace \int_{a}^{b} f(x)fx = f(c) \cdot (b-a). \newline
-          &
-          4. \enspace Proprietatea \enspace de \enspace pozitivitate \enspace a \enspace integralei: \newline
-          &
-          dacă \enspace f \geq 0 \enspace pe \enspace [a;b], \enspace \int_{a}^{b} f(x)dx \geq 0. \newline
-          &
-          5. \enspace Proprietatea \enspace de \enspace monotonie \enspace a \enspace integralei: \newline
-          &
-          dacă f \leq g \enspace pe \enspace [a;b], \int_{a}^{b} f(x)dx \leq \int_{a}^{b} g(x)dx.
-          &
-          \end{align*}
-          $$
-          </p>
+        <div class="clasament">
+            <table id="topClasament">
+                <tr class="elemClasament">
+                    <td colspan="2" class="elemClasament">
+                        <h3><a href="../php/download.php" id="csvLink">Top 10 cursanți</a></h3>
+                    </td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament1"></td>
+                    <td class="elemClasament" id="puncteClasament1"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament2"></td>
+                    <td class="elemClasament" id="puncteClasament2"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament3"></td>
+                    <td class="elemClasament" id="puncteClasament3"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament4"></td>
+                    <td class="elemClasament" id="puncteClasament4"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament5"></td>
+                    <td class="elemClasament" id="puncteClasament5"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament6"></td>
+                    <td class="elemClasament" id="puncteClasament6"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament7"></td>
+                    <td class="elemClasament" id="puncteClasament7"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament8"></td>
+                    <td class="elemClasament" id="puncteClasament8"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament9"></td>
+                    <td class="elemClasament" id="puncteClasament9"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament10"></td>
+                    <td class="elemClasament" id="puncteClasament10"></td>
+                </tr>
+            </table>
         </div>
-      </div>
-      <div id="probRezolvate">
-        <h2>Problema 1</h2>
-        <p>
-          Calculați următoarea limită:
-          $$
-          \begin{align*}
-          &
-          \lim_{x\to\infin} \frac{-4 \cdot x + 5}{x^2 + 6} \newline
-          &
-          = \lim_{x\to\infin} \frac{-4 \cdot x}{x^2} \newline
-          &
-          = \lim_{x\to\infin} \frac{-4}{x} \newline
-          &
-          = \frac{-4}{-\infin} \newline
-          &
-          = 0
-
-          \end{align*}
-          $$
-        </p>
-        <h2>Problema 2</h2>
-        <p>
-          Calculați următoarea integrală: </p>$$ I = \int \frac{dx}{\sqrt{9 \cdot x^2 +1}}, x \in
-        \R $$
-        $$
-        \begin{align*}
-
-        I & = \int \frac{dx}{\sqrt{9 \cdot x^2 +1}} \newline
-        &
-        = \int \frac{1}{\sqrt{9 \cdot (x^2 + \frac{1}{9})}} dx \newline
-        &
-        = \int \frac{1}{3 \cdot \sqrt{x^2 + {(\frac{1}{3})}^2}} dx \newline
-        &
-        = \frac{1}{3} \int \frac{1}{\sqrt{x^2 + {(\frac{1}{3})}^2}} dx \newline
-        &
-        = \frac{1}{3} \cdot ln \cdot (x + \sqrt{x^2 + \Big(\frac{1}{3}\Big)^2}) + C
-        \end{align*}
-        $$
-
-        <h2>Problema 3</h2>
-        <p>
-          Să se calculeze derivata funcției f: $$f:\R \rightarrow
-          \R, \enspace f(x)=(1-3 \cdot x) \cdot (11 + 5 \cdot x) $$
-          $$
-          \begin{align*}
-
-          f^{'}(x) & =[(1-3 \cdot x) \cdot (11 + 5 \cdot x)]^{'} \newline
-          &
-          = (1 - 3 \cdot x)^{'} \cdot (11 + 5 \cdot x) + (1 - 3 \cdot x) \cdot (11 + 5 \cdot x)^{'} \newline
-          &
-          = (0 - 3 \cdot 1) \cdot (11 + 5 \cdot x) + (1 - 3 \cdot x) \cdot (0 + 5 \cdot 1) \newline
-          &
-          = -3 \cdot (11 + 5 \cdot x) + (1 - 3 \cdot x) \cdot 5 \newline
-          &
-          = -33 - 15 \cdot x + 5 - 15 \cdot x \newline
-          &
-          = -28 - 30 \cdot x.
-          \end{align*}
-          $$
-        </p>
-      </div>
-      <div id="probNerezolvate">
-        <h2>Problema 1 <i><b>20p</b></i></h2>
-        <p>
-          $$
-          Calculați \enspace \lim_{x \to 3} \frac{f(x)-f(3)}{x-3}, \enspace pentru \enspace f(x)=x^3
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var1" value="true">
-                <label for="var1">$$f'(x), \enspace x=3$$</label>
-              </div>
-              <p id="input1"></p>
-            </div>
-            <div id="b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var2" value="true">
-                <label for="var2">$$f'(3)$$</label>
-              </div>
-              <p id="input2"></p>
-            </div>
-            <div id="c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var3" value="false">
-                <label for="var3">$$18$$</label>
-              </div>
-              <p id="input3"></p>
-            </div>
-            <div id="d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var4" value="true">
-                <label for="var4">$$27$$</label>
-              </div>
-              <p id="input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('')">Verifica raspuns</button>
-          </div>
-        </form>
-      </div>
-      <div id="test">
-        <h2>Test1</h2>
-        <p>Exercițiul 1. <i><b>15p</b></i></p>
-        <p>Să se calculeze derivata funcției f:
-          $$
-          f:(0,\infin) \rightarrow \R, \enspace f(x) = x \cdot ln x.
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t11a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var1" value="true">
-                <label for="t11var1">$$\ln{x}+1$$</label>
-              </div>
-              <p id="t11input1"></p>
-            </div>
-            <div id="t11b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var2" value="true">
-                <label for="t11var2">$$\ln{x}+x\cdot\frac{1}{x}$$</label>
-              </div>
-              <p id="t11input2"></p>
-            </div>
-            <div id="t11c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var3" value="false">
-                <label for="t11var3">$$\ln{x}$$</label>
-              </div>
-              <p id="t11input3"></p>
-            </div>
-            <div id="t11d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var4" value="false">
-                <label for="t11var4">$$\ln{x}\cdot x$$</label>
-              </div>
-              <p id="t11input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t11')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>Exercițiul 2. <i><b>12p</b></i></p>
-        <p>Să se calculeze integrala următoare:
-          $$
-          I = \int \frac{cos^2 x - sin^2 x}{sin^2 x \cdot cos^2 x}dx.
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t12a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var1" value="false">
-                <label for="t12var1">$$\tg{x}$$</label>
-              </div>
-              <p id="t12input1"></p>
-            </div>
-            <div id="t12b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var2" value="false">
-                <label for="t12var2">$$\tg{x}+\ctg{x}$$</label>
-              </div>
-              <p id="t12input2"></p>
-            </div>
-            <div id="t12c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var3" value="true">
-                <label for="t12var3">$$\tg{x}+\ctg{x}+\mathscr{C}$$</label>
-              </div>
-              <p id="t12input3"></p>
-            </div>
-            <div id="t12d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var4" value="true">
-                <label for="t12var4">$$\int \frac{1}{\sin^2{x}}-\int \frac{1}{\cos^2{x}}$$</label>
-              </div>
-              <p id="t12input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t12')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>Exercițiul 3. <i><b>20p</b></i></p>
-        <p>Determinați F:(0, ∞) → R, o primitivă pentru f, astfel încât F(1) = 3, unde
-          $$
-          f:(0,+\infin) \rightarrow \R, f(x) = 3 - \frac{1}{x}.
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t13a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var1" value="false">
-                <label for="t13var1">$$\int{3 - \frac{1}{x}dx}$$</label>
-              </div>
-              <p id="t13input1"></p>
-            </div>
-            <div id="t13b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var2" value="false">
-                <label for="t13var2">$$3\cdot x + \ln{|x|} + \mathscr{C}$$</label>
-              </div>
-              <p id="t13input2"></p>
-            </div>
-            <div id="t13c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var3" value="true">
-                <label for="t13var3">$$3\cdot x + \ln{|x|}$$</label>
-              </div>
-              <p id="t13input3"></p>
-            </div>
-            <div id="t13d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var4" value="true">
-                <label for="t13var4">$$3\cdot x + \ln{x}$$</label>
-              </div>
-              <p id="t13input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t13')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>Exercițiul 4. <i><b>14p</b></i></p>
-        <p>Să se calculeze derivata funcției f:
-          $$
-          f:R \rightarrow \R, f(x) = 2 \cdot arctgx + 5 \cdot arcctg x.
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t14a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var1" value="true">
-                <label for="t14var1">$$\frac{2}{x^2+1}-\frac{5}{x^2+1}$$</label>
-              </div>
-              <p id="t14input1"></p>
-            </div>
-            <div id="t14b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var2" value="false">
-                <label for="t14var2">$$\frac{1}{x^2+1}-5\cdot\frac{1}{x^2+1}$$</label>
-              </div>
-              <p id="t14input2"></p>
-            </div>
-            <div id="t14c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var3" value="true">
-                <label for="t14var3">$$2\frac{1}{x^2+1}-5\frac{1}{x^2+1}$$</label>
-              </div>
-              <p id="t14input3"></p>
-            </div>
-            <div id="t14d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var4" value="true">
-                <label for="t14var4">$$-3\cdot\frac{1}{x^2+1}$$</label>
-              </div>
-              <p id="t14input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t14')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>Exercițiul 5. <i><b>12p</b></i></p>
-        <p>Calculați următoarea integrală definită:
-          $$
-          \int_{-2}^{1} (x^3 - 3 \cdot x + 4)dx.
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t15a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var1" value="false">
-                <label for="t15var1">$$\frac{x^4}{4}-3\frac{x^2}{2}+4x$$</label>
-              </div>
-              <p id="t15input1"></p>
-            </div>
-            <div id="t15b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var2" value="true">
-                <label for="t15var2">$$\frac{1}{4}-3\frac{1}{2}+14$$</label>
-              </div>
-              <p id="t15input2"></p>
-            </div>
-            <div id="t15c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var3" value="true">
-                <label for="t15var3">$$13-\frac{1}{4}$$</label>
-              </div>
-              <p id="t15input3"></p>
-            </div>
-            <div id="t15d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var4" value="true">
-                <label for="t15var4">$$14-\frac{5}{4}$$</label>
-              </div>
-              <p id="t15input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t15')">Verifica raspuns</button>
-          </div>
-        </form>
-      </div>
     </div>
-    <div class="clasament">
-      <table id="topClasament">
-        <tr class="elemClasament">
-          <td colspan="2" class="elemClasament">
-            <h3>Top 10 cursanți</h3>
-          </td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant1</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant2</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant3</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant4</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant5</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant6</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant7</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant8</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant9</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant10</td>
-          <td class="elemClasament">10</td>
-        </tr>
-      </table>
-    </div>
-  </div>
 
-  <div class="footer">
-    <p id="citat"></p>
-  </div>
+    <div class="footer">
+        <p id="citat"></p>
+    </div>
 </body>
 
 </html>
