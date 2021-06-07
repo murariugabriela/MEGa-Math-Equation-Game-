@@ -2,721 +2,248 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
 
 <head>
-  <meta charset="UTF-8">
-  <title>MEGa - Algebră</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/algebrastyle.css">
-  <script src="../javascript/myscript.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+    <meta charset="UTF-8">
+    <title>MEGa - Algebră</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/algebrastyle.css">
+    <script src="../javascript/login.js"></script>
+    <script src="../javascript/myscript.js"></script>
+    <script src="../javascript/clasament.js"></script>
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
 " integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
 " integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
-" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
 </head>
 
 <body onload="citat();">
 
 
-  <div>
-    <table class="meniu">
-      <tr>
-        <td class="meniu_icon"><a href="index.html">
-            <div class="elem_meniu_link"><img src="../emblema.svg" alt="emblema" id="emblema"></div>
-          </a></td>
-        <td class="elem_meniu ales"><a href="algebra.html">
-            <div class="elem_meniu_link">Algebră</div>
-          </a></td>
-        <td class="elem_meniu"><a href="analiza.html">
-            <div class="elem_meniu_link">Analiză</div>
-          </a></td>
-        <td class="elem_meniu"><a href="geometrie.html">
-            <div class="elem_meniu_link">Geometrie</div>
-          </a></td>
-        <td class="elem_meniu"><a href="trigonometrie.html">
-            <div class="elem_meniu_link">Trigonometrie</div>
-          </a></td>
-        <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+    <div>
+        <table class="meniu">
+            <tr>
+                <td class="meniu_icon">
+                    <a href="index.html">
+                        <div class="elem_meniu_link"><img src="../images/emblema.svg" alt="emblema" id="emblema"></div>
+                    </a>
+                </td>
+                <td class="elem_meniu ales">
+                    <a href="algebra.html">
+                        <div class="elem_meniu_link">Algebră</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="analiza.html">
+                        <div class="elem_meniu_link">Analiză</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="geometrie.html">
+                        <div class="elem_meniu_link">Geometrie</div>
+                    </a>
+                </td>
+                <td class="elem_meniu">
+                    <a href="trigonometrie.html">
+                        <div class="elem_meniu_link">Trigonometrie</div>
+                    </a>
+                </td>
+                <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
               <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
               <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
             </svg></button></td>
-      </tr>
-    </table>
-  </div>
-  <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <h1>Login</h1>
-      <label><b>Email</b>
-        <input type="text" placeholder="Enter Email" name="email" required>
-      </label>
-      <label><b>Password</b>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-      </label>
-      <button type="submit" class="btn">Login</button>
-      <button onclick="document.location='register.html'" class="btnRegister">Înregistare</button>
-    </form>
-  </div>
-
-
-  <div class="pageContent">
-    <div class="leftMenu">
-      <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
-      <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
-      <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
+            </tr>
+        </table>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form method="POST" action="../php/logare_utilizator.php" class="form-container" id="formLogin">
+            <div id="inputForLogin">
+                <h1>Login</h1>
+                <label><b>Email</b>
+               <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            </label>
+                <label><b>Password</b>
+               <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            </label>
+            </div>
+            <p id="currentUser"></p>
+            <button type="submit" class="btn" id="butonLogin" value="Login">Login</button>
+            <button type="button" class="btn" id="butonLogout" value="Logout" onclick="logout();">Logout</button>
+            <button type="button" class="btn" id="registerButton" onclick="window.location.href='register.html';">Register</button>
+            <button type="button" class="btn" id="butonPaginaAdmin" onclick="window.location.href='adminPage.html';">Verifică exercițiu</button>
+            <button type="button" class="btn" onclick="window.location.href='adaugareExercitiu.html';">Adaugă exercițiu </button>
+            <p id="loggedIn"> </p>
+        </form>
     </div>
 
-    <div class="centerContent">
-      <div id="teorie">
-        <h2>Puteri, operații cu puteri</h2>
-          $$ 
-          \begin{align*}
-          &
-            1. \enspace a^0 = 1, (\forall) a \in  ℕ^* \newline
-          &
-            2. \enspace a^m \cdot a^n = a^{m+n}, (\forall) m,n \in ℕ, a \in ℕ^* \newline
-          &  
-            3. \enspace a^m : a^n = a^{m-n}, (\forall) m,n \in ℕ, a \in ℕ^*, m \ge n \newline
-          & 
-            4. \enspace (a^m)^{n} = a^{m \cdot n}, (\forall) m,n \in ℕ, a \in ℕ^* \newline
-          & 
-            5. \enspace (a \cdot b)^m = a^m \cdot b^m, (\forall) m \in ℕ, a,b \in ℕ^* \newline
-          & 
-            6. \enspace (a : b)^m = a^m : b^m, (\forall) m \in ℕ, a,b \in ℕ^* \newline
-          &
-          \end{align*}
-          $$
-          
-          <h2>Modulul unui număr întreg</h2>
-          $$
-          \vert a \vert = \begin{cases} 
-          &
-          a, & \text{dacă} \enspace a \gt 0 \newline
-          &
-          0, & \text{dacă} \enspace a = 0 \newline
-          &
-          -a, & \text{dacă} \enspace a \lt 0 
-          \end{cases}
-          $$
-
-          <h2>Proprietățile modulului unui număr întreg</h2>
-          $$
-          \begin{align*}
-          &
-          1. \enspace \vert a \vert \geq 0, (\forall) a \in Z \newline
-          &
-          2. \enspace \vert a \cdot b \vert = \vert a \vert \cdot \vert b \vert , (\forall) a, b \in Z \newline
-          &
-          3. \enspace \vert a \vert = \vert -a \vert, (\forall) a \in Z \newline
-          &
-          4. \enspace \vert a \vert - \vert b \vert \leq \vert a + b \vert \leq \vert a \vert + \vert b \vert, (\forall) a,b \in Z \newline
-          &
-          5. \enspace \bigg\vert \frac{a}{b} \bigg\vert = \frac {\vert a \vert}{\vert b \vert} , (\forall) a, b \in Z \newline
-          &
-          6. \enspace \vert x \vert = a \Leftrightarrow x = ± a, ( a > 0) \newline
-          &
-          7. \enspace \vert x \vert \leq a \Leftrightarrow -a \leq x \leq a , (a > 0) \newline
-          &
-          8. \enspace \vert x \vert \geq a \Leftrightarrow x \leq -a \enspace sau \enspace x \geq a, (a>0) 
-          \end{align*}
-          $$
-
-          <h2>Radicali</h2>
-          $$
-          \begin{align*}
-          &
-          Definim: \sqrt{a} = b, b > 0, \Leftrightarrow a = b^2. \newline
-          & 
-          1. \enspace \sqrt{a^2} = \vert a \vert, a \in R \newline
-          &
-          2. \enspace \sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}, a,b \geq 0 \newline
-          &
-          3. \enspace \sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}, a \geq 0, b > 0 \newline
-          &
-          4. \enspace a\sqrt{b} = \sqrt{a^2 \cdot b}, a,b \geq 0 \newline
-          &
-          5. \enspace \frac{b}{\sqrt {a}} = \frac{b \sqrt {a}}{a}, a \neq 0 \newline
-          &
-          6. \enspace \frac{c}{a ± \sqrt{b}} = \frac{c (a ± \sqrt{b})}{a^2 - b}, b \neq a^2 \newline
-          &
-          7. \enspace \frac{m}{\sqrt{a} ± \sqrt{b}} = \frac{m(\sqrt{a} ± \sqrt{b})}{a - b}, a \neq b \newline
-          &
-          8. \enspace max(a,b) = \begin{cases} 
-          &
-          a, & a \geq b \newline
-          &
-          b, & a \lt b
-          \end{cases} ,
-          \enspace min(a,b) = \begin{cases} 
-          &
-          a, & a \leq b \newline
-          &
-          b, & a \gt b
-          \end{cases} \newline
-          &
-          9. \enspace max(a,b) = \frac{a + b + \vert a - b \vert}{2}, \enspace min(a,b) = \frac{a + b - \vert a-b \vert}{2} \newline
-          \end{align*}
-          $$
-
-        <h2>Modulul unui număr real</h2>
-        $$
-        \begin{align*}
-        &
-        \vert x \vert = \begin{cases} 
-        & x, & dacă &  x \in [0, \infin) \newline
-        & -x, & dacă & x \in (-\infin, 0)
-        \end{cases} \newline
-        & 
-        1. \enspace \vert x \vert \geq 0, (\forall) x \in R \newline
-        &
-        2. \enspace \vert x \vert = 0, \enspace dacă \enspace și \enspace numai \enspace dacă \enspace x = 0 \newline 
-        &
-        3. \enspace \vert -x \vert = \vert x \vert, (\forall) x \in R \newline
-        &
-        4. \enspace \vert x \cdot y \vert = \vert x \vert \cdot \vert y \vert, (\forall) x,y \in R \newline
-        &
-        5. \enspace \bigg\vert \frac{x}{y} \bigg\vert = \frac{\vert x \vert}{\vert y \vert}, (\forall) x \in R, y \in R^* \newline
-        &
-        6. \enspace \vert x + y \vert \leq \vert x \vert + \vert y \vert, (\forall) x,y \in R \newline
-        &
-        7. \enspace \vert x \vert \leq a \Leftrightarrow x \in [-a,a], \enspace cu \enspace a \geq 0 \newline
-        &
-        8. \enspace \vert x \vert \geq a \Leftrightarrow x \in (-\infin, -a] ∪ [a, +\infin], \enspace cu \enspace a \geq 0.
-        
-        \end{align*}
-        $$
-      <h2>Media aritmetică</h2>
-      $$
-      \begin{align*}
-      &
-      Media \enspace aritmetică \enspace a \enspace n \enspace numere \enspace reale \enspace a_1, a_2...a_n \enspace este: 
-      M_a = \frac{a_1 + a_2 +...+ a_n}{n}
-      \end{align*}
-      $$ 
-      <h2>Media aritmetică ponderată</h2>
-       $$
-      \begin{align*}
-      &
-      Media \enspace aritmetică \enspace ponderată \enspace a \enspace n \enspace numere \enspace reale \enspace a_1, a_2, ..., a_n \enspace cu \enspace ponderile \enspace p_1, p_2, ..., p_3 \enspace este:
-      &
-      M_{ap}=\frac{a_1 \cdot p_1 + a_2 \cdot p_2 + ... + a_n \cdot p_n}{p_1 + p_2 + ... +p_n} \newline
-      \end{align*}
-      $$
-      <h2>Media geometrică</h2>
-      $$
-      \begin{align*}
-      &
-      Media \enspace geometrică \enspace (proporțională) \enspace a \enspace două \enspace numere \enspace reale \enspace pozitive \enspace este:
-      M_g=\sqrt{a \cdot b}.
-      \end{align*}
-      $$
-      <h2>Media armonică</h2>
-      $$
-      \begin{align*}
-      &
-      Media \enspace armonică \enspace a \enspace două \enspace numere \enspace reale \enspace nenule \enspace este: 
-      M_h=\frac{2}{\frac{1}{a}+\frac{1}{b}}=\frac{2 \cdot a \cdot b}{a + b} 
-      \end{align*}
-      $$
-      <h2>Inegalitatea mediilor</h2>
-      $$
-      \begin{align*}
-      &
-      Oricare \enspace ar \enspace fi \enspace a > 0, b > 0 \Rightarrow  \frac{2 \cdot a \cdot b}{a + b} \leq \sqrt{a \cdot b} \leq \frac{a + b}{2}, \enspace adică \enspace (M_h \leq M_g \leq M_a) \newline
-      &
-      \end{align*}
-      $$
-      <h2>Formule de calcul prescurtat</h2>
-      $$
-      \begin{align*}
-      &
-      1. \enspace (a + b) \cdot (a - b) = a^2 - b^2 \newline 
-      & 
-      2. \enspace (a + b)^2 = a^2 + 2 \cdot a \cdot b + b^2 \enspace (pătratul \enspace binomului \enspace sumă) \newline 
-      &
-      3. \enspace (a - b)^2 = a^2 - 2 \cdot a \cdot b + b^2 \enspace (pătratul \enspace binomului \enspace diferență) \newline 
-      &
-      4. \enspace (a + b + c)^2 = a^2 + b^2 + c^2 + 2 \cdot a \cdot b + 2 \cdot a \cdot c + 2 \cdot b \cdot c \newline
-      &
-      \end{align*}
-      $$
-      <h2>Alte formule de calcul prescurtat*</h2>
-      $$
-      \begin{align*} 
-      &
-      1. \enspace (a - b)(a^2 + a \cdot b + b^2) = a^3 - b^3 \newline 
-      &
-      2. \enspace (a + b)(a^2 + a \cdot b + b^2) = a^3 + b^3 \newline 
-      &
-      3. \enspace (a + b)^3 = a^3 + 3 \cdot a^2 \cdot b + 3 \cdot a \cdot b^2 + b^3 \newline 
-      &
-      4. \enspace (a - b)^3 = a^3 - 3 \cdot a^2 \cdot b + 3 \cdot a \cdot b^2 - b^3 \newline
-      &
-      5. \enspace a^2 + b^2 \geq 2 \cdot a \cdot b, (\forall) a,b \in R \newline
-      &
-      6. \enspace a + b \geq 2\sqrt{a \cdot b}, (\forall) a,b \in R \newline 
-      &
-      7. \enspace a + \frac{1}{a} \geq 2, (\forall) a \in (0, +\infin) \newline
-      &
-      8. \enspace a^2 + b^2 + c^2 \geq a \cdot b + a \cdot c + b \cdot c, (\forall) a,b,c \in R.
-      \end{align*}
-      $$
-      <h2>Ecuații de gradul I cu o necunoscută</h2>
-      $$
-      \begin{align*}
-      &
-      Propoziția \enspace a \cdot x + b = 0, \enspace a,b,x \in R, a \neq 0, \enspace se \enspace numește \enspace ecuație \enspace de \enspace gradul\enspace I \enspace cu \enspace o \enspace necunoscută. \newline
-      &
-      Numărul -\frac{b}{a} \enspace se \enspace numește \enspace soluție \enspace a \enspace ecuației \enspace date \enspace și \enspace scriem \enspace S = \Big\{ -\frac{b}{a} \Big\}
-      \end{align*}
-      $$
-      <h2>Ecuații de gradul II cu o necunoscută</h2>
-      $$
-      \begin{align*}
-      &
-      Propoziția \enspace a \cdot x^2 + b \cdot x + c = 0, a,b,c,x \in R, a \neq 0, \enspace se \enspace numește \enspace ecuație \enspace de \enspace gradul \enspace al \enspace II-lea \enspace cu \enspace necunoscuta \enspace x. \newline
-      &
-      Etapele \enspace rezolvării \enspace ecuației \enspace de \enspace gradul \enspace II \enspace cu \enspace o \enspace necunoscută \newline 
-      &
-      1. \enspace \Delta = b^2 - 4 \cdot a \cdot c \newline
-      &
-      2. \enspace Dacă \enspace \Delta \lt 0, \enspace radicalul \enspace nu \enspace are \enspace sens \enspace și \enspace ecuația \enspace nu \enspace are \enspace soluții \enspace reale. \newline 
-      &
-         \enspace \enspace Dacă \enspace \Delta \geq 0, \enspace ecuația \enspace are \enspace soluțiile: \enspace x_{1,2} = \frac{-b ± \Delta}{2 \cdot a}.
-      \end{align*}
-      $$
-      </div>
-      <div id="probRezolvate">
-        <h2>Problema 1</h2>
-        <p>
-          Un țăran are de 5 ori mai multe găini decât rațe. Dacă vinde 5 găini și cumpără 3 rațe, atunci numărul găinilor devine de 3 ori mai mare decât al rațelor. Câte găini și câte rațe a avut țăranul? 
-        </p>
-        <p>
-          Notăm cu x numărul găinilor și cu y numărul rațelor. <br/>$$
-          x = 5 \cdot y
-          $$
-          Dar și ecuația:
-          $$
-          x - 5 = 3 \cdot (y+3)
-          $$
-          Cum am format cele două ecuații, rezolvăm ecuația:
-          $$
-          \begin{align*}
-          &
-          x-5 = 3 \cdot y + 3 \cdot 3 \newline
-          &
-          \Rightarrow x - 5 = 3 \cdot y + 9 \newline 
-          &
-          \Rightarrow x = 3 \cdot y + 9 + 5 \newline 
-          &
-          \Rightarrow x = 3 \cdot y + 14
-          \end{align*}
-          $$
-          Astfel, cu prima relație obținem:
-          $$
-          \begin{align*}
-          &
-          5 \cdot y = 3 \cdot y + 14 \newline
-          &
-          \Rightarrow 5 \cdot y - 3 \cdot y = 14 \newline
-          &
-          \Rightarrow 2 \cdot y = 14 \newline 
-          &
-          \Rightarrow y = \frac{14}{2} \newline
-          &
-          \Rightarrow y = 7
-          \end{align*}
-          $$
-          Așadar, am obținut că numărul rațelor este 7. Acum să aflăm numărul găinilor.
-          $$
-          \begin{align*}
-          &
-          x = 5 \cdot y \newline
-          &
-          \Rightarrow x = 5 \cdot 7 \newline 
-          &
-          \Rightarrow x = 35
-          \end{align*}
-          $$
-          Deci numărul găinilor este 35.
-        </p>
-        <h2>Problema 2</h2>
-        <p>
-          La un concurs de informatică, elevii trebuie să susțină patru probe. Mihai a obținut la primele trei probe 6 puncte, 8 puncte și 9 puncte. Câte puncte ar trebui să primească la ultima probă pentru a avea o medie de 8 puncte? <br>
-          Rezolvare (aplicăm formula pentru media aritmetică):
-          $$
-          \begin{align*}
-          &
-          M_{a} = \frac{6 + 8 + 9 + x}{4} = 8 \newline
-          &
-          \frac{23 + x}{4} = 8 \newline 
-          &
-          \Rightarrow 23 + x = 32 \newline 
-          &
-          \Rightarrow x = 32 - 24 \newline 
-          &
-          \Rightarrow x = 9. 
-          \end{align*}
-          $$
-          Așadar, Mihai ar trebui să primească 9 puncte la ultima probă pentru a avea o medie de 8 puncte.
-        </p>
-        <h2>Problema 3</h2>
-        <p>
-          Exercițiu cu ecuație de gradul II.
-          $$
-          \begin{align*}
-          &
-          x^2 + 14 \cdot x + 25 = 1 \newline
-          &
-          \Rightarrow x^2 + 14 \cdot x + 25 - 1 = 0 \newline 
-          & 
-          \Rightarrow x^2 + 14 \cdot x + 24 = 0.
-          \end{align*}
-          $$
-          Calculăm delta, iar dacă delta > 0 ecuația are două rădăcini. 
-          $$
-          \begin{align*}
-          &
-          \Delta = b^2 - 4 \cdot a \cdot c \newline
-          &
-          \Rightarrow \Delta = 14^2 - 4 \cdot 1 \cdot 24 \newline
-          & 
-          \Rightarrow \Delta = 196 - 96 \newline 
-          &
-          \Rightarrow \Delta = 100
-          \end{align*}
-          $$
-          Delta > 0, deci vom calcula rădăcinile ecuației.
-          $$
-          \begin{align*} 
-          &
-          x_{1,2} = \frac{-14 ± \sqrt{100}}{2} \newline 
-          &
-          \Rightarrow x_{1,2} = \frac{-14 ± 10}{2} \newline 
-          &
-          x_1 = \frac{-14 + 10}{2} \newline
-          &
-          \Rightarrow x_1 = \frac{-4}{2} \newline
-          &
-          \Rightarrow x_1 = -2 \newline 
-          &
-          x_2 = \frac{-14 - 10}{2} \newline 
-          &
-          \Rightarrow x_2 = \frac{-24}{2} \newline 
-          &
-          \Rightarrow x_2 = -12
-          \end{align*}
-          $$
-          Așadar, rădăcinile ecuației de gradul II sunt {-2, -12}.
-        </p>
-      </div>
-      <div id="probNerezolvate">
-        <h2>Problema1</h2>
-        <p>
-          Răspunde la următoarea întrebare:
-          $$
-            1 + 2 = \enspace ?
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var1" value="false">
-                <label for="var1">$$1$$</label>
-              </div>
-              <p id="input1"></p>
-            </div>
-            <div id="b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var2" value="true">
-                <label for="var2">$$2+1$$</label>
-              </div>
-              <p id="input2"></p>
-            </div>
-            <div id="c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var3" value="true">
-                <label for="var3">$$3$$</label>
-              </div>
-              <p id="input3"></p>
-            </div>
-            <div id="d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="var4" value="true">
-                <label for="var4">$$-(-3)$$</label>
-              </div>
-              <p id="input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('')">Verifică raspuns</button>
-          </div>
-        </form>
-        <div class="altaProblema">
-            <button type="submit" class="butonAltaProblema">Generează altă problemă</button>
+    <div class="pageContent">
+        <div class="leftMenu">
+            <button class="itemLeftMenu first" onclick="displayCenterContentItem('teorie')">Teorie</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probRezolvate')">Probleme rezolvate</button>
+            <button class="itemLeftMenu" onclick="displayCenterContentItem('probNerezolvate')">Probleme nerezolvate</button>
+            <button class="itemLeftMenu final" onclick="displayCenterContentItem('test')">Test</button>
         </div>
-      </div>
-      <div id="test">
-        <h2>Test1</h2>
-        <p>
-          Exercițiul 1. <br />
-          Se consideră o progresie aritmetică cu a2 = 7 și a3 = 1. Determinați rația acestei progresii.
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t11a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var1" value="false">
-                <label for="t11var1">$$3$$</label>
-              </div>
-              <p id="t11input1"></p>
+
+        <div class="centerContent">
+            <div id="teorie">
+                <h2>Puteri, operații cu puteri</h2>
+                $$ \begin{align*} & 1. \enspace a^0 = 1, (\forall) a \in ℕ^* \newline & 2. \enspace a^m \cdot a^n = a^{m+n}, (\forall) m,n \in ℕ, a \in ℕ^* \newline & 3. \enspace a^m : a^n = a^{m-n}, (\forall) m,n \in ℕ, a \in ℕ^*, m \ge n \newline & 4. \enspace (a^m)^{n}
+                = a^{m \cdot n}, (\forall) m,n \in ℕ, a \in ℕ^* \newline & 5. \enspace (a \cdot b)^m = a^m \cdot b^m, (\forall) m \in ℕ, a,b \in ℕ^* \newline & 6. \enspace (a : b)^m = a^m : b^m, (\forall) m \in ℕ, a,b \in ℕ^* \newline & \end{align*} $$
+
+                <h2>Modulul unui număr întreg</h2>
+                $$ \vert a \vert = \begin{cases} & a, & \text{dacă} \enspace a \gt 0 \newline & 0, & \text{dacă} \enspace a = 0 \newline & -a, & \text{dacă} \enspace a \lt 0 \end{cases} $$
+
+                <h2>Proprietățile modulului unui număr întreg</h2>
+                $$ \begin{align*} & 1. \enspace \vert a \vert \geq 0, (\forall) a \in Z \newline & 2. \enspace \vert a \cdot b \vert = \vert a \vert \cdot \vert b \vert , (\forall) a, b \in Z \newline & 3. \enspace \vert a \vert = \vert -a \vert, (\forall) a \in Z \newline
+                & 4. \enspace \vert a \vert - \vert b \vert \leq \vert a + b \vert \leq \vert a \vert + \vert b \vert, (\forall) a,b \in Z \newline & 5. \enspace \bigg\vert \frac{a}{b} \bigg\vert = \frac {\vert a \vert}{\vert b \vert} , (\forall) a, b
+                \in Z \newline & 6. \enspace \vert x \vert = a \Leftrightarrow x = ± a, ( a > 0) \newline & 7. \enspace \vert x \vert \leq a \Leftrightarrow -a \leq x \leq a , (a > 0) \newline & 8. \enspace \vert x \vert \geq a \Leftrightarrow x \leq
+                -a \enspace sau \enspace x \geq a, (a>0) \end{align*} $$
+
+                <h2>Radicali</h2>
+                $$ \begin{align*} & Definim: \sqrt{a} = b, b > 0, \Leftrightarrow a = b^2. \newline & 1. \enspace \sqrt{a^2} = \vert a \vert, a \in R \newline & 2. \enspace \sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}, a,b \geq 0 \newline & 3. \enspace \sqrt{\frac{a}{b}}
+                = \frac{\sqrt{a}}{\sqrt{b}}, a \geq 0, b > 0 \newline & 4. \enspace a\sqrt{b} = \sqrt{a^2 \cdot b}, a,b \geq 0 \newline & 5. \enspace \frac{b}{\sqrt {a}} = \frac{b \sqrt {a}}{a}, a \neq 0 \newline & 6. \enspace \frac{c}{a ± \sqrt{b}} =
+                \frac{c (a ± \sqrt{b})}{a^2 - b}, b \neq a^2 \newline & 7. \enspace \frac{m}{\sqrt{a} ± \sqrt{b}} = \frac{m(\sqrt{a} ± \sqrt{b})}{a - b}, a \neq b \newline & 8. \enspace max(a,b) = \begin{cases} & a, & a \geq b \newline & b, & a \lt b
+                \end{cases} , \enspace min(a,b) = \begin{cases} & a, & a \leq b \newline & b, & a \gt b \end{cases} \newline & 9. \enspace max(a,b) = \frac{a + b + \vert a - b \vert}{2}, \enspace min(a,b) = \frac{a + b - \vert a-b \vert}{2} \newline \end{align*}
+                $$
+
+                <h2>Modulul unui număr real</h2>
+                $$ \begin{align*} & \vert x \vert = \begin{cases} & x, & dacă & x \in [0, \infin) \newline & -x, & dacă & x \in (-\infin, 0) \end{cases} \newline & 1. \enspace \vert x \vert \geq 0, (\forall) x \in R \newline & 2. \enspace \vert x \vert = 0, \enspace
+                dacă \enspace și \enspace numai \enspace dacă \enspace x = 0 \newline & 3. \enspace \vert -x \vert = \vert x \vert, (\forall) x \in R \newline & 4. \enspace \vert x \cdot y \vert = \vert x \vert \cdot \vert y \vert, (\forall) x,y \in R
+                \newline & 5. \enspace \bigg\vert \frac{x}{y} \bigg\vert = \frac{\vert x \vert}{\vert y \vert}, (\forall) x \in R, y \in R^* \newline & 6. \enspace \vert x + y \vert \leq \vert x \vert + \vert y \vert, (\forall) x,y \in R \newline & 7.
+                \enspace \vert x \vert \leq a \Leftrightarrow x \in [-a,a], \enspace cu \enspace a \geq 0 \newline & 8. \enspace \vert x \vert \geq a \Leftrightarrow x \in (-\infin, -a] ∪ [a, +\infin], \enspace cu \enspace a \geq 0. \end{align*} $$
+                <h2>Media aritmetică</h2>
+                $$ \begin{align*} & Media \enspace aritmetică \enspace a \enspace n \enspace numere \enspace reale \enspace a_1, a_2...a_n \enspace este: M_a = \frac{a_1 + a_2 +...+ a_n}{n} \end{align*} $$
+                <h2>Media aritmetică ponderată</h2>
+                $$ \begin{align*} & Media \enspace aritmetică \enspace ponderată \enspace a \enspace n \enspace numere \enspace reale \enspace a_1, a_2, ..., a_n \enspace cu \enspace ponderile \enspace p_1, p_2, ..., p_3 \enspace este: & M_{ap}=\frac{a_1 \cdot p_1 +
+                a_2 \cdot p_2 + ... + a_n \cdot p_n}{p_1 + p_2 + ... +p_n} \newline \end{align*} $$
+                <h2>Media geometrică</h2>
+                $$ \begin{align*} & Media \enspace geometrică \enspace (proporțională) \enspace a \enspace două \enspace numere \enspace reale \enspace pozitive \enspace este: M_g=\sqrt{a \cdot b}. \end{align*} $$
+                <h2>Media armonică</h2>
+                $$ \begin{align*} & Media \enspace armonică \enspace a \enspace două \enspace numere \enspace reale \enspace nenule \enspace este: M_h=\frac{2}{\frac{1}{a}+\frac{1}{b}}=\frac{2 \cdot a \cdot b}{a + b} \end{align*} $$
+                <h2>Inegalitatea mediilor</h2>
+                $$ \begin{align*} & Oricare \enspace ar \enspace fi \enspace a > 0, b > 0 \Rightarrow \frac{2 \cdot a \cdot b}{a + b} \leq \sqrt{a \cdot b} \leq \frac{a + b}{2}, \enspace adică \enspace (M_h \leq M_g \leq M_a) \newline & \end{align*} $$
+                <h2>Formule de calcul prescurtat</h2>
+                $$ \begin{align*} & 1. \enspace (a + b) \cdot (a - b) = a^2 - b^2 \newline & 2. \enspace (a + b)^2 = a^2 + 2 \cdot a \cdot b + b^2 \enspace (pătratul \enspace binomului \enspace sumă) \newline & 3. \enspace (a - b)^2 = a^2 - 2 \cdot a \cdot b + b^2 \enspace
+                (pătratul \enspace binomului \enspace diferență) \newline & 4. \enspace (a + b + c)^2 = a^2 + b^2 + c^2 + 2 \cdot a \cdot b + 2 \cdot a \cdot c + 2 \cdot b \cdot c \newline & \end{align*} $$
+                <h2>Alte formule de calcul prescurtat*</h2>
+                $$ \begin{align*} & 1. \enspace (a - b)(a^2 + a \cdot b + b^2) = a^3 - b^3 \newline & 2. \enspace (a + b)(a^2 + a \cdot b + b^2) = a^3 + b^3 \newline & 3. \enspace (a + b)^3 = a^3 + 3 \cdot a^2 \cdot b + 3 \cdot a \cdot b^2 + b^3 \newline & 4. \enspace
+                (a - b)^3 = a^3 - 3 \cdot a^2 \cdot b + 3 \cdot a \cdot b^2 - b^3 \newline & 5. \enspace a^2 + b^2 \geq 2 \cdot a \cdot b, (\forall) a,b \in R \newline & 6. \enspace a + b \geq 2\sqrt{a \cdot b}, (\forall) a,b \in R \newline & 7. \enspace
+                a + \frac{1}{a} \geq 2, (\forall) a \in (0, +\infin) \newline & 8. \enspace a^2 + b^2 + c^2 \geq a \cdot b + a \cdot c + b \cdot c, (\forall) a,b,c \in R. \end{align*} $$
+                <h2>Ecuații de gradul I cu o necunoscută</h2>
+                $$ \begin{align*} & Propoziția \enspace a \cdot x + b = 0, \enspace a,b,x \in R, a \neq 0, \enspace se \enspace numește \enspace ecuație \enspace de \enspace gradul\enspace I \enspace cu \enspace o \enspace necunoscută. \newline & Numărul -\frac{b}{a}
+                \enspace se \enspace numește \enspace soluție \enspace a \enspace ecuației \enspace date \enspace și \enspace scriem \enspace S = \Big\{ -\frac{b}{a} \Big\} \end{align*} $$
+                <h2>Ecuații de gradul II cu o necunoscută</h2>
+                $$ \begin{align*} & Propoziția \enspace a \cdot x^2 + b \cdot x + c = 0, a,b,c,x \in R, a \neq 0, \enspace se \enspace numește \enspace ecuație \enspace de \enspace gradul \enspace al \enspace II-lea \enspace cu \enspace necunoscuta \enspace x. \newline
+                & Etapele \enspace rezolvării \enspace ecuației \enspace de \enspace gradul \enspace II \enspace cu \enspace o \enspace necunoscută \newline & 1. \enspace \Delta = b^2 - 4 \cdot a \cdot c \newline & 2. \enspace Dacă \enspace \Delta \lt
+                0, \enspace radicalul \enspace nu \enspace are \enspace sens \enspace și \enspace ecuația \enspace nu \enspace are \enspace soluții \enspace reale. \newline & \enspace \enspace Dacă \enspace \Delta \geq 0, \enspace ecuația \enspace are
+                \enspace soluțiile: \enspace x_{1,2} = \frac{-b ± \Delta}{2 \cdot a}. \end{align*} $$
             </div>
-            <div id="t11b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var2" value="true">
-                <label for="t11var2">$$-6$$</label>
-              </div>
-              <p id="t11input2"></p>
+            <div id="probRezolvate">
+                <h2>Problema 1</h2>
+                <p>
+                    Un țăran are de 5 ori mai multe găini decât rațe. Dacă vinde 5 găini și cumpără 3 rațe, atunci numărul găinilor devine de 3 ori mai mare decât al rațelor. Câte găini și câte rațe a avut țăranul?
+                </p>
+                <p>
+                    Notăm cu x numărul găinilor și cu y numărul rațelor. <br/>$$ x = 5 \cdot y $$ Dar și ecuația: $$ x - 5 = 3 \cdot (y+3) $$ Cum am format cele două ecuații, rezolvăm ecuația: $$ \begin{align*} & x-5 = 3 \cdot y + 3 \cdot 3 \newline &
+                    \Rightarrow x - 5 = 3 \cdot y + 9 \newline & \Rightarrow x = 3 \cdot y + 9 + 5 \newline & \Rightarrow x = 3 \cdot y + 14 \end{align*} $$ Astfel, cu prima relație obținem: $$ \begin{align*} & 5 \cdot y = 3 \cdot y + 14 \newline & \Rightarrow
+                    5 \cdot y - 3 \cdot y = 14 \newline & \Rightarrow 2 \cdot y = 14 \newline & \Rightarrow y = \frac{14}{2} \newline & \Rightarrow y = 7 \end{align*} $$ Așadar, am obținut că numărul rațelor este 7. Acum să aflăm numărul găinilor. $$
+                    \begin{align*} & x = 5 \cdot y \newline & \Rightarrow x = 5 \cdot 7 \newline & \Rightarrow x = 35 \end{align*} $$ Deci numărul găinilor este 35.
+                </p>
+                <h2>Problema 2</h2>
+                <p>
+                    La un concurs de informatică, elevii trebuie să susțină patru probe. Mihai a obținut la primele trei probe 6 puncte, 8 puncte și 9 puncte. Câte puncte ar trebui să primească la ultima probă pentru a avea o medie de 8 puncte? <br> Rezolvare
+                    (aplicăm formula pentru media aritmetică): $$ \begin{align*} & M_{a} = \frac{6 + 8 + 9 + x}{4} = 8 \newline & \frac{23 + x}{4} = 8 \newline & \Rightarrow 23 + x = 32 \newline & \Rightarrow x = 32 - 24 \newline & \Rightarrow x = 9.
+                    \end{align*} $$ Așadar, Mihai ar trebui să primească 9 puncte la ultima probă pentru a avea o medie de 8 puncte.
+                </p>
+                <h2>Problema 3</h2>
+                <p>
+                    Exercițiu cu ecuație de gradul II. $$ \begin{align*} & x^2 + 14 \cdot x + 25 = 1 \newline & \Rightarrow x^2 + 14 \cdot x + 25 - 1 = 0 \newline & \Rightarrow x^2 + 14 \cdot x + 24 = 0. \end{align*} $$ Calculăm delta, iar dacă delta > 0 ecuația are două
+                    rădăcini. $$ \begin{align*} & \Delta = b^2 - 4 \cdot a \cdot c \newline & \Rightarrow \Delta = 14^2 - 4 \cdot 1 \cdot 24 \newline & \Rightarrow \Delta = 196 - 96 \newline & \Rightarrow \Delta = 100 \end{align*} $$ Delta > 0, deci vom
+                    calcula rădăcinile ecuației. $$ \begin{align*} & x_{1,2} = \frac{-14 ± \sqrt{100}}{2} \newline & \Rightarrow x_{1,2} = \frac{-14 ± 10}{2} \newline & x_1 = \frac{-14 + 10}{2} \newline & \Rightarrow x_1 = \frac{-4}{2} \newline & \Rightarrow
+                    x_1 = -2 \newline & x_2 = \frac{-14 - 10}{2} \newline & \Rightarrow x_2 = \frac{-24}{2} \newline & \Rightarrow x_2 = -12 \end{align*} $$ Așadar, rădăcinile ecuației de gradul II sunt {-2, -12}.
+                </p>
             </div>
-            <div id="t11c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var3" value="false">
-                <label for="t11var3">$$6$$</label>
-              </div>
-              <p id="t11input3"></p>
+            <div id="probNerezolvate">
+                <p>
+                    <?php 
+        require_once ("../php/selectEx.php");
+        selectareExercitiu("algebra");
+        ?>
+                </p>
+                <div class="altaProblema">
+                    <button onclick="location.reload()" class="butonAltaProblema">Generează altă problemă</button>
+                </div>
             </div>
-            <div id="t11d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t11var4" value="true">
-                <label for="t11var4">$$-\sqrt{36}$$</label>
-              </div>
-              <p id="t11input4"></p>
+            <div id="test">
+                <?php 
+        require_once ("../php/selectTest.php");
+        selectareTest("algebra");
+        ?>
+                <div class="altaProblema">
+                    <button onclick="testFunction()" class="butonAltaProblema">Calculează punctaj test</button>
+                </div>
             </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t11')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>
-          Exercițiul 2. <br/>
-          Care sunt rădăcinile următoarei ecuații de gradul 2?
-          $$
-          x^2 + 4 \cdot x + 3 = 0.
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t12a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var1" value="false">
-                <label for="t12var1">$$\{-3, 1\}$$</label>
-              </div>
-              <p id="t12input1"></p>
-            </div>
-            <div id="t12b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var2" value="true">
-                <label for="t12var2">$$\{-3, -1\}$$</label>
-              </div>
-              <p id="t12input2"></p>
-            </div>
-            <div id="t12c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var3" value="true">
-                <label for="t12var3">$$\{-1, -3\}$$</label>
-              </div>
-              <p id="t12input3"></p>
-            </div>
-            <div id="t12d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t12var4" value="false">
-                <label for="t12var4">$$\{4, 9\}$$</label>
-              </div>
-              <p id="t12input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t12')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>
-          Exercițiul 3. <br/>
-          Care este rezultatul următoarei expresii?
-          $$
-          E = \frac{\sqrt{2} + \sqrt{5}}{\sqrt{6} + 5 \cdot \sqrt{3}}.
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t13a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var1" value="false">
-                <label for="t13var1">$$\sqrt{3}$$</label>
-              </div>
-              <p id="t13input1"></p>
-            </div>
-            <div id="t13b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var2" value="true">
-                <label for="t13var2">$$\frac{\sqrt{3}}{3}$$</label>
-              </div>
-              <p id="t13input2"></p>
-            </div>
-            <div id="t13c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var3" value="false">
-                <label for="t13var3">$$3$$</label>
-              </div>
-              <p id="t13input3"></p>
-            </div>
-            <div id="t13d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t13var4" value="false">
-                <label for="t13var4">$$\frac{3}{\sqrt{3}}$$</label>
-              </div>
-              <p id="t13input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t13')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>
-          Exercițiul 4. <br/>
-          Calculați:
-          $$
-          \sqrt{14 - 6 \cdot \sqrt{5}}
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t14a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var1" value="true">
-                <label for="t14var1">$$3-\sqrt{5}$$</label>
-              </div>
-              <p id="t14input1"></p>
-            </div>
-            <div id="t14b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var2" value="false">
-                <label for="t14var2">$$\sqrt{5}-3$$</label>
-              </div>
-              <p id="t14input2"></p>
-            </div>
-            <div id="t14c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var3" value="true">
-                <label for="t14var3">$$-\sqrt{5}+3$$</label>
-              </div>
-              <p id="t14input3"></p>
-            </div>
-            <div id="t14d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t14var4" value="false">
-                <label for="t14var4">$$4\sqrt{2}$$</label>
-              </div>
-              <p id="t14input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t14')">Verifica raspuns</button>
-          </div>
-        </form>
-        <p>
-          Exercițiul 5. <br/>
-          Cărui interval aparține x din următoarea expresie?
-          $$
-          2^x \leq 0,25
-          $$
-        </p>
-        <form class="raspunsuri">
-          <div class="raspunsuri-ex-1">
-            <div id="t15a" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var1" value="false">
-                <label for="t15var1">$$(-\infin,+\infin)$$</label>
-              </div>
-              <p id="t15input1"></p>
-            </div>
-            <div id="t15b" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var2" value="false">
-                <label for="t15var2">$$(4,2]$$</label>
-              </div>
-              <p id="t15input2"></p>
-            </div>
-            <div id="t15c" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var3" value="false">
-                <label for="t15var3">$$(2,\infin)$$</label>
-              </div>
-              <p id="t15input3"></p>
-            </div>
-            <div id="t15d" class="var">
-              <div class="checkbox">
-                <input type="checkbox" id="t15var4" value="true">
-                <label for="t15var4">$$(-\infin, -2]$$</label>
-              </div>
-              <p id="t15input4"></p>
-            </div>
-            <button type="button" class="send-answer" onclick="verifyAnswer('t15')">Verifica raspuns</button>
-          </div>
-        </form>
-      </div>
+        </div>
+
+        <div class="clasament">
+            <table id="topClasament">
+                <tr class="elemClasament">
+                    <td colspan="2" class="elemClasament">
+                        <h3><a href="../php/download.php" id="csvLink">Top 10 cursanți</a></h3>
+                    </td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament1"></td>
+                    <td class="elemClasament" id="puncteClasament1"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament2"></td>
+                    <td class="elemClasament" id="puncteClasament2"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament3"></td>
+                    <td class="elemClasament" id="puncteClasament3"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament4"></td>
+                    <td class="elemClasament" id="puncteClasament4"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament5"></td>
+                    <td class="elemClasament" id="puncteClasament5"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament6"></td>
+                    <td class="elemClasament" id="puncteClasament6"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament7"></td>
+                    <td class="elemClasament" id="puncteClasament7"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament8"></td>
+                    <td class="elemClasament" id="puncteClasament8"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament9"></td>
+                    <td class="elemClasament" id="puncteClasament9"></td>
+                </tr>
+                <tr class="elemClasament">
+                    <td class="elemClasament" id="numeClasament10"></td>
+                    <td class="elemClasament" id="puncteClasament10"></td>
+                </tr>
+            </table>
+        </div>
     </div>
 
-    <div class="clasament">
-      <table id="topClasament">
-        <tr class="elemClasament">
-          <td colspan="2" class="elemClasament">
-            <h3>Top 10 cursanți</h3>
-          </td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant1</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant2</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant3</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant4</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant5</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant6</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant7</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant8</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant9</td>
-          <td class="elemClasament">10</td>
-        </tr>
-        <tr class="elemClasament">
-          <td class="elemClasament">Cursant10</td>
-          <td class="elemClasament">10</td>
-        </tr>
-      </table>
+
+
+    <div class="footer">
+        <p id="citat"></p>
     </div>
-  </div>
-
-
-
-  <footer>
-    <p id="citat"></p>
-  </footer>
 </body>
 
 </html>
