@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MEGa - Adaugare Exercitiu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adaugareExercitiu.css">
+    <script src="../javascript/myscript.js"></script>
+    <script src="../javascript/verificareFormAdEx.js"></script>
+    <script src="../javascript/login.js"></script>
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body onload="citat();">
+    <!-- <div> -->
+    <table class="meniu">
+        <tr>
+            <td class="meniu_icon">
+                <a href="index.html">
+                    <div class="elem_meniu_link"><img src="../images/emblema.svg" alt="emblema" id="emblema"></div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="algebra.html">
+                    <div class="elem_meniu_link">Algebră</div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="analiza.html">
+                    <div class="elem_meniu_link">Analiză</div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="geometrie.html">
+                    <div class="elem_meniu_link">Geometrie</div>
+                </a>
+            </td>
+            <td class="elem_meniu">
+                <a href="trigonometrie.html">
+                    <div class="elem_meniu_link">Trigonometrie</div>
+                </a>
+            </td>
+            <td class="cerc_meniu"> <button class="cerc_meniu" onclick="openCloseForm()"><svg height="18" width="18">
+                        <line x1="2" y1="15" x2="17" y2="15" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                        <line x1="2" y1="9" x2="17" y2="9" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                        <line x1="2" y1="3" x2="17" y2="3" style="stroke:rgb(170, 175, 241);stroke-width:4" />
+                    </svg></button></td>
+        </tr>
+    </table>
+    <div class="form-popup" id="myForm">
+        <form method="POST" action="../php/logare_utilizator.php" class="form-container" id="formLogin">
+            <div id="inputForLogin">
+                <h1>Login</h1>
+                <label><b>Email</b>
+               <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            </label>
+                <label><b>Password</b>
+               <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            </label>
+            </div>
+            <p id="currentUser"></p>
+            <button type="submit" class="btn" id="butonLogin" value="Login">Login</button>
+            <button type="button" class="btn" id="butonLogout" value="Logout" onclick="logout();">Logout</button>
+            <button type="button" class="btn" id="registerButton" onclick="window.location.href='register.html';">Register</button>
+            <button type="button" class="btn" id="butonPaginaAdmin" onclick="window.location.href='adminPage.html';">Verifică exercițiu</button>
+            <button type="button" class="btn" onclick="window.location.href='adaugareExercitiu.html';">Adaugă exercițiu </button>
+            <p id="loggedIn"> </p>
+        </form>
+    </div>
+    <div class="pageContent">
+        <div id="forLaptop">
+            <div id="butoane">
+                <div id="butoane1">
+                    <button class="operatori" id="adunare" onclick="buttonSymbol('adunare')">$$+$$</button>
+                    <button class="operatori" id="scadere" onclick="buttonSymbol('scadere')">$$-$$</button>
+                    <button class="operatori" id="inmultire" onclick="buttonSymbol('inmultire')">$$\cdot$$</button>
+                    <button class="operatori" id="impartire" onclick="buttonSymbol('impartire')">$$:$$</button>
+                    <button class="operatori" id="plusMinus" onclick="buttonSymbol('plusMinus')">$$±$$</button>
+                    <button class="operatori" id="diferit" onclick="buttonSymbol('diferit')">$$\neq$$</button>
+                    <button class="operatori" id="oricareArFi" onclick="buttonSymbol('oricareArFi')">$$\forall$$</button>
+                    <button class="operatori" id="exista" onclick="buttonSymbol('exista')">$$\exist$$</button>
+                    <button class="operatori" id="nuExista" onclick="buttonSymbol('nuExista')">$$\nexists$$</button>
+                    <button class="operatori" id="apartine" onclick="buttonSymbol('apartine')">$$\in$$</button>
+                </div>
+                <div id="butoane2">
+                    <button class="operatori" id="nuApartine" onclick="buttonSymbol('nuApartine')">$$\notin$$</button>
+                    <button class="operatori" id="fractie" onclick="buttonSymbol('fractie')">$$\frac{x}{y}$$</button>
+                    <button class="operatori" id="modul" onclick="buttonSymbol('modul')">$$\vert$$</button>
+                    <button class="operatori" id="xLaY" onclick="buttonSymbol('xLaY')">$${x}^{y}$$</button>
+                    <button class="operatori" id="radical" onclick="buttonSymbol('radical')">$$\sqrt{x}$$</button>
+                    <button class="operatori" id="integrala" onclick="buttonSymbol('integrala')">$$\int$$</button>
+                    <button class="operatori" id="parantezaRotundaDeschisa" onclick="buttonSymbol('parantezaRotundaDeschisa')">$$($$</button>
+                    <button class="operatori" id="parantezaRotundaInchisa" onclick="buttonSymbol('parantezaRotundaInchisa')">$$)$$</button>
+                    <button class="operatori" id="parantezaPatrataDeschisa" onclick="buttonSymbol('parantezaPatrataDeschisa')">$$[$$</button>
+                    <button class="operatori" id="parantezaPatrataInchisa" onclick="buttonSymbol('parantezaPatrataInchisa')">$$]$$</button>
+                </div>
+            </div>
+        </div>
+        <div id="forPhone">
+            <div id="butoaneTelefon">
+                <div id="butoane1Telefon">
+                    <button class="operatori" id="adunareTelefon" onclick="buttonSymbol('adunareTelefon')">$$+$$</button>
+                    <button class="operatori" id="scadereTelefon" onclick="buttonSymbol('scadereTelefon')">$$-$$</button>
+                    <button class="operatori" id="inmultireTelefon" onclick="buttonSymbol('inmultireTelefon')">$$\cdot$$</button>
+                    <button class="operatori" id="impartireTelefon" onclick="buttonSymbol('impartireTelefon')">$$:$$</button>
+                    <button class="operatori" id="plusMinusTelefon" onclick="buttonSymbol('plusMinusTelefon')">$$±$$</button>
+                </div>
+                <div id="butoane2Telefon">
+                    <button class="operatori" id="diferitTelefon" onclick="buttonSymbol('diferitTelefon')">$$\neq$$</button>
+                    <button class="operatori" id="oricareArFiTelefon" onclick="buttonSymbol('oricareArFiTelefon')">$$\forall$$</button>
+                    <button class="operatori" id="existaTelefon" onclick="buttonSymbol('existaTelefon')">$$\exist$$</button>
+                    <button class="operatori" id="nuExistaTelefon" onclick="buttonSymbol('nuExistaTelefon')">$$\nexists$$</button>
+                    <button class="operatori" id="apartineTelefon" onclick="buttonSymbol('apartineTelefon')">$$\in$$</button>
+                </div>
+                <div id="butoane3Telefon">
+                    <button class="operatori" id="nuApartineTelefon" onclick="buttonSymbol('nuApartineTelefon')">$$\notin$$</button>
+                    <button class="operatori" id="fractieTelefon" onclick="buttonSymbol('fractieTelefon')">$$\frac{x}{y}$$</button>
+                    <button class="operatori" id="modulTelefon" onclick="buttonSymbol('modulTelefon')">$$\vert$$</button>
+                    <button class="operatori" id="xLaYTelefon" onclick="buttonSymbol('xLaYTelefon')">$${x}^{y}$$</button>
+                    <button class="operatori" id="radicalTelefon" onclick="buttonSymbol('radicalTelefon')">$$\sqrt{x}$$</button>
+                </div>
+                <div id="butoane4Telefon">
+                    <button class="operatori" id="integralaTelefon" onclick="buttonSymbol('integralaTelefon')">$$\int$$</button>
+                    <button class="operatori" id="parantezaRotundaDeschisaTelefon" onclick="buttonSymbol('parantezaRotundaDeschisaTelefon')">$$($$</button>
+                    <button class="operatori" id="parantezaRotundaInchisaTelefon" onclick="buttonSymbol('parantezaRotundaInchisaTelefon')">$$)$$</button>
+                    <button class="operatori" id="parantezaPatrataDeschisaTelefon" onclick="buttonSymbol('parantezaPatrataDeschisaTelefon')">$$[$$</button>
+                    <button class="operatori" id="parantezaPatrataInchisaTelefon" onclick="buttonSymbol('parantezaPatrataInchisaTelefon')">$$]$$</button>
+                </div>
+            </div>
+        </div>
+        <form method="POST" name="sendAdaugareExercitiu" action="../php/inserareExercitiu.php" onsubmit="return verificareDateAdaugareExercitiu();">
+            <div class="enuntContent">
+                <h2>Enunț</h2>
+                <div id="textEnunt">
+                    <textarea id="enunt" name="enunt" wrap="soft"> </textarea>
+                    <p id="katexSymbols">
+
+                    </p>
+                </div>
+                <div id="categorieExercitiu">
+                    <h3>Alege categoria exercițiului</h3>
+                    <!-- <form> -->
+                    <div class="categoriiExercitii">
+                        <input type="radio" id="checkboxCategorie1" name="cat" value="algebra">
+                        <label for="checkboxCategorie1">Algebră</label>
+                    </div>
+                    <div class="categoriiExercitii">
+                        <input type="radio" id="checkboxCategorie2" name="cat" value="analiza">
+                        <label for="checkboxCategorie2">Analiză</label>
+                    </div>
+                    <div class="categoriiExercitii">
+                        <input type="radio" id="checkboxCategorie3" name="cat" value="geometrie">
+                        <label for="checkboxCategorie3">Geometrie</label>
+                    </div>
+                    <div class="categoriiExercitii">
+                        <input type="radio" id="checkboxCategorie4" name="cat" value="trigonometrie">
+                        <label for="checkboxCategorie4">Trigonometrie</label>
+                    </div>
+                    <!-- </form> -->
+                </div>
+                <h2>Introdu variantele de răspuns</h2>
+                <h3>Bifează-le pe cele corecte!</h3>
+                <div id="varianteRaspuns">
+                    <div class="variante">
+                        <input type="checkbox" id="checkbox1" name="checkbox1">
+                        <textarea id="varRasp1" name="varRasp1" wrap="soft"> </textarea>
+                    </div>
+                    <div class="variante">
+                        <input type="checkbox" id="checkbox2" name="checkbox2">
+                        <textarea id="varRasp2" name="varRasp2" wrap="soft"> </textarea>
+                    </div>
+                    <div class="variante">
+                        <input type="checkbox" id="checkbox3" name="checkbox3">
+                        <textarea id="varRasp3" name="varRasp3" wrap="soft"> </textarea>
+                    </div>
+                    <div class="variante">
+                        <input type="checkbox" id="checkbox4" name="checkbox4">
+                        <textarea id="varRasp4" name="varRasp4" wrap="soft"> </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="trimiteExercitiul">
+                <button type="submit" class="butonTrimiteExercitiul">Trimite exercitiul</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p id="citat"></p>
+    </div>
+</body>
+
+</html>
